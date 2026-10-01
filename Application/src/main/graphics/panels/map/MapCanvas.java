@@ -1,6 +1,7 @@
 package main.graphics.panels.map;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
@@ -38,6 +39,7 @@ public class MapCanvas extends JPanel {
 		}
 		
 		setLayout(new BorderLayout());
+		setBackground(new Color(0,0,0));
 		
 		stopCanvas = new StopCanvas();
 		add(stopCanvas);
@@ -169,6 +171,7 @@ public class MapCanvas extends JPanel {
 		AffineTransform at = new AffineTransform();
 		at.translate(translateX, translateY);
 		at.scale(scale, scale);
+		
 		
 		g2d.drawImage(img, at, this);
 		

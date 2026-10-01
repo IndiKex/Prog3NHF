@@ -1,5 +1,6 @@
 package main.graphics.panels.map;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
@@ -26,7 +27,6 @@ public class StopCanvas extends JPanel {
 	Stop lastHoveredStop;
 	Stop lastSelectedStop;
 	
-	Point start, end;
 	
 	public StopCanvas() {
 		setLayout(null);
@@ -36,13 +36,6 @@ public class StopCanvas extends JPanel {
 		
 		loadPoints();
 		
-		Table shapeTable = DataBaseOrganizer.MAVBase.getTable("shapes");
-		float startLonX = Float.parseFloat(shapeTable.searchFieldByKey("shape_pt_lon", "1"));
-		float startLatY = Float.parseFloat(shapeTable.searchFieldByKey("shape_pt_lat", "1"));
-		float endLonX = Float.parseFloat(shapeTable.searchFieldByKey("shape_pt_lon", "19"));
-		float endLatY = Float.parseFloat(shapeTable.searchFieldByKey("shape_pt_lat", "19"));
-		start = calculatePixel(startLonX, startLatY);
-		end = calculatePixel(endLonX, endLatY);
 		
 	}
 	
@@ -131,6 +124,17 @@ public class StopCanvas extends JPanel {
 		}
 	}
 	
+	private Point calculateScreenShapePoint(int i) {
+		Table shapeTable = DataBaseOrganizer.MAVBase.getTable("shapes");
+		float lonX = Float.parseFloat(shapeTable.searchFieldByKey("shape_pt_lon", "" + i));
+		float latY = Float.parseFloat(shapeTable.searchFieldByKey("shape_pt_lat", "" + i));
+		Point screenPoint = calculatePixel(lonX, latY);
+		Point res = new Point();
+		res.x = (int)((float)screenPoint.x * scale + translateX);
+		res.y = (int)((float)screenPoint.y * scale + translateY);
+		return res;
+	}
+	
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		
@@ -138,12 +142,24 @@ public class StopCanvas extends JPanel {
 			stop.draw(g);
 		}
 		
-		float startX = (float)start.x * scale + translateX;
-		float startY = (float)start.y * scale + translateY;
-		float endX = (float)end.x * scale + translateX;
-		float endY = (float)end.y * scale + translateY;
-		
-		g.drawLine((int)startX, (int)startY, (int)endX, (int)endY);
+		Color prevColor = g.getColor();
+		g.setColor(Color.ORANGE);
+		Table shapeTable = DataBaseOrganizer.MAVBase.getTable("shapes");
+		int prevID = Integer.parseInt(shapeTable.searchFieldByKey("shape_id", "0"));
+		Point prevPoint = calculateScreenShapePoint(0);
+		for (int i = 1; i < 10000; i++) {
+			int currentID = Integer.parseInt(shapeTable.searchFieldByKey("shape_id", "" + i));
+			if (currentID == prevID) {
+				Point currentPoint = calculateScreenShapePoint(i);
+				g.drawLine(prevPoint.x, prevPoint.y, currentPoint.x, currentPoint.y);
+				prevPoint = currentPoint;
+				prevID = currentID;
+			} else {
+				prevPoint = calculateScreenShapePoint(i);
+				prevID = currentID;
+			}
+		}
+		g.setColor(prevColor);
 	}
 	
 }
