@@ -53,12 +53,20 @@ public class StopCanvas extends JPanel {
 	}
 	
 	public void onMouseClicked(MouseEvent e) {
-		if (lastHoveredStop != null) {
+		if (lastHoveredStop != null && lastSelectedStop != lastHoveredStop) {
 			System.out.println("Chose " + lastHoveredStop.name + " stop");
 			lastHoveredStop.setSelected(true);
 			if (lastSelectedStop != null)
 				lastSelectedStop.setSelected(false);
 			lastSelectedStop = lastHoveredStop;
+			repaint();
+		} else if (lastHoveredStop != null) {
+			lastSelectedStop.setSelected(false);
+			lastSelectedStop = null;
+			repaint();
+		} else if (lastSelectedStop != null) {
+			lastSelectedStop.setSelected(false);
+			lastSelectedStop = null;
 			repaint();
 		}
 	}

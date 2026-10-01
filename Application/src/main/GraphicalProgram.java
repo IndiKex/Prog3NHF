@@ -5,7 +5,6 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.BoxLayout;
 
-import main.graphics.panels.map.MapCanvas;
 import main.graphics.panels.map.MapPanel;
 import main.graphics.panels.sidebar.SideBarPanel;
 import main.graphics.window.Window;
