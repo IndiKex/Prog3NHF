@@ -26,6 +26,7 @@ public class StopCanvas extends JPanel {
 	Stop lastHoveredStop;
 	Stop lastSelectedStop;
 	
+	Point start, end;
 	
 	public StopCanvas() {
 		setLayout(null);
@@ -35,6 +36,13 @@ public class StopCanvas extends JPanel {
 		
 		loadPoints();
 		
+		Table shapeTable = DataBaseOrganizer.MAVBase.getTable("shapes");
+		float startLonX = Float.parseFloat(shapeTable.searchFieldByKey("shape_pt_lon", "1"));
+		float startLatY = Float.parseFloat(shapeTable.searchFieldByKey("shape_pt_lat", "1"));
+		float endLonX = Float.parseFloat(shapeTable.searchFieldByKey("shape_pt_lon", "19"));
+		float endLatY = Float.parseFloat(shapeTable.searchFieldByKey("shape_pt_lat", "19"));
+		start = calculatePixel(startLonX, startLatY);
+		end = calculatePixel(endLonX, endLatY);
 		
 	}
 	
@@ -130,6 +138,12 @@ public class StopCanvas extends JPanel {
 			stop.draw(g);
 		}
 		
+		float startX = (float)start.x * scale + translateX;
+		float startY = (float)start.y * scale + translateY;
+		float endX = (float)end.x * scale + translateX;
+		float endY = (float)end.y * scale + translateY;
+		
+		g.drawLine((int)startX, (int)startY, (int)endX, (int)endY);
 	}
 	
 }
