@@ -3,15 +3,14 @@ package main.graphics.panels.map;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionAdapter;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JPanel;
 
+import databases.main.interfaces.Table;
+import main.DataBaseOrganizer;
 import main.graphics.panels.map.stop.Stop;
 
 // latitude szélességi - y
@@ -27,13 +26,16 @@ public class StopCanvas extends JPanel {
 	Stop lastHoveredStop;
 	Stop lastSelectedStop;
 	
+	
 	public StopCanvas() {
 		setLayout(null);
 		setOpaque(false);
 		
 		calculateZeroLonLat();
 		
-		readDataFiles();
+		loadPoints();
+		
+		
 	}
 	
 	public void onMouseMoved(MouseEvent e) {
@@ -84,36 +86,16 @@ public class StopCanvas extends JPanel {
 		return null;
 	}
 	
- 	private void readDataFiles() {
-		try {
-			FileReader fr = new FileReader(new File("assets/MAVData/gtfsMavMenetrend/stops.txt"));
+ 	private void loadPoints() {
 			
-			List<String> allLines = fr.readAllLines();
-			
-			int latID = 4;
-			int lonID = 5;
-			
-			for (int i = 1; i < allLines.size(); i++) {
-				String line = allLines.get(i);
-				String[] lineData = line.split(",");
-				
-				
-				if (lineData.length == 12) {
-					float latY = Float.parseFloat(lineData[latID]);
-					float lonX = Float.parseFloat(lineData[lonID]);
-					addPoint(lonX, latY, lineData[2]);
-				} else if (lineData.length == 13) {
-					float latY = Float.parseFloat(lineData[latID+1]);
-					float lonX = Float.parseFloat(lineData[lonID+1]);
-					addPoint(lonX, latY, lineData[2]);
-				} else
-					System.out.println("Anyád szopjon le kétszer bazdmeg! >:(");
-			}
-			
-			fr.close();
-		} catch (IOException e) {
-			e.printStackTrace();
+		Table stopTable = DataBaseOrganizer.MAVBase.getTable("stops");
+		for (int i = 1; i < stopTable.getSize(); i++) {
+		
+			float latY = Float.parseFloat(stopTable.searchFieldByKey("stop_lat", "" + i));
+			float lonX = Float.parseFloat(stopTable.searchFieldByKey("stop_lon", "" + i));
+			addPoint(lonX, latY, stopTable.searchFieldByKey("stop_name", "" + i));
 		}
+		
 	}
 	
 	private void addPoint(float longitudeX, float latitudeY, String name) {
@@ -147,6 +129,7 @@ public class StopCanvas extends JPanel {
 		for (Stop stop : stops) {
 			stop.draw(g);
 		}
+		
 	}
 	
 }
