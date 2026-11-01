@@ -1,0 +1,8763 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-10-27T15:06:31Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/99702733",
+      "properties": {
+        "@id": "way/99702733",
+        "CLC:code": "112",
+        "CLC:id": "HU-32721",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "source": "© EEA, Koppenhága (2009); Készítette a FÖMI a KvVM megbízásából (2009)",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8919007,
+              46.4507973
+            ],
+            [
+              20.9155636,
+              46.4507973
+            ],
+            [
+              20.9155636,
+              46.4708301
+            ],
+            [
+              20.8919007,
+              46.4708301
+            ],
+            [
+              20.8919007,
+              46.4507973
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/99702854",
+      "properties": {
+        "@id": "way/99702854",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0264306,
+              46.4117684
+            ],
+            [
+              21.0662383,
+              46.4117684
+            ],
+            [
+              21.0662383,
+              46.4377677
+            ],
+            [
+              21.0264306,
+              46.4377677
+            ],
+            [
+              21.0264306,
+              46.4117684
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/99703003",
+      "properties": {
+        "@id": "way/99703003",
+        "CLC:code": "112",
+        "CLC:id": "HU-30670",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "source": "© EEA, Koppenhága (2009); Készítette a FÖMI a KvVM megbízásából (2009)",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6286964,
+              46.5843161
+            ],
+            [
+              20.6425589,
+              46.5843161
+            ],
+            [
+              20.6425589,
+              46.5884371
+            ],
+            [
+              20.6286964,
+              46.5884371
+            ],
+            [
+              20.6286964,
+              46.5843161
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/99703062",
+      "properties": {
+        "@id": "way/99703062",
+        "CLC:code": "112",
+        "CLC:id": "HU-28097",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "source": "© EEA, Koppenhága (2009); Készítette a FÖMI a KvVM megbízásából (2009)",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8791812,
+              46.7166508
+            ],
+            [
+              20.8949661,
+              46.7166508
+            ],
+            [
+              20.8949661,
+              46.7258429
+            ],
+            [
+              20.8791812,
+              46.7258429
+            ],
+            [
+              20.8791812,
+              46.7166508
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/99708904",
+      "properties": {
+        "@id": "way/99708904",
+        "CLC:code": "112",
+        "CLC:id": "HU-28301",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "source": "© EEA, Koppenhága (2009); Készítette a FÖMI a KvVM megbízásából (2009)",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.175309,
+              46.6959763
+            ],
+            [
+              21.1926052,
+              46.6959763
+            ],
+            [
+              21.1926052,
+              46.7085742
+            ],
+            [
+              21.175309,
+              46.7085742
+            ],
+            [
+              21.175309,
+              46.6959763
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/99709162",
+      "properties": {
+        "@id": "way/99709162",
+        "landuse": "residential",
+        "residential": "rural",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0819011,
+              46.453719
+            ],
+            [
+              21.1035745,
+              46.453719
+            ],
+            [
+              21.1035745,
+              46.4717567
+            ],
+            [
+              21.0819011,
+              46.4717567
+            ],
+            [
+              21.0819011,
+              46.453719
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/99709912",
+      "properties": {
+        "@id": "way/99709912",
+        "CLC:code": "112",
+        "CLC:id": "HU-34314",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "source": "© EEA, Koppenhága (2009); Készítette a FÖMI a KvVM megbízásából (2009)",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8565354,
+              46.3668927
+            ],
+            [
+              20.8659112,
+              46.3668927
+            ],
+            [
+              20.8659112,
+              46.3750935
+            ],
+            [
+              20.8565354,
+              46.3750935
+            ],
+            [
+              20.8565354,
+              46.3668927
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/99710977",
+      "properties": {
+        "@id": "way/99710977",
+        "CLC:code": "112",
+        "CLC:id": "HU-28106",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "source": "© EEA, Koppenhága (2009); Készítette a FÖMI a KvVM megbízásából (2009)",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0540491,
+              46.7113344
+            ],
+            [
+              21.0774091,
+              46.7113344
+            ],
+            [
+              21.0774091,
+              46.7221259
+            ],
+            [
+              21.0540491,
+              46.7221259
+            ],
+            [
+              21.0540491,
+              46.7113344
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/101327312",
+      "properties": {
+        "@id": "way/101327312",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.787518,
+              46.7157715
+            ],
+            [
+              20.7950994,
+              46.7157715
+            ],
+            [
+              20.7950994,
+              46.722487
+            ],
+            [
+              20.787518,
+              46.722487
+            ],
+            [
+              20.787518,
+              46.7157715
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/101327379",
+      "properties": {
+        "@id": "way/101327379",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0324012,
+              46.7552118
+            ],
+            [
+              21.0499126,
+              46.7552118
+            ],
+            [
+              21.0499126,
+              46.766151
+            ],
+            [
+              21.0324012,
+              46.766151
+            ],
+            [
+              21.0324012,
+              46.7552118
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/101327385",
+      "properties": {
+        "@id": "way/101327385",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0635597,
+              46.3744911
+            ],
+            [
+              21.0853779,
+              46.3744911
+            ],
+            [
+              21.0853779,
+              46.3828986
+            ],
+            [
+              21.0635597,
+              46.3828986
+            ],
+            [
+              21.0635597,
+              46.3744911
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/101327411",
+      "properties": {
+        "@id": "way/101327411",
+        "CLC:code": "112",
+        "CLC:id": "HU-26176",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "source": "© EEA, Koppenhága (2009); Készítette a FÖMI a KvVM megbízásából (2009)",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6377306,
+              46.8171904
+            ],
+            [
+              20.6660262,
+              46.8171904
+            ],
+            [
+              20.6660262,
+              46.8316114
+            ],
+            [
+              20.6377306,
+              46.8316114
+            ],
+            [
+              20.6377306,
+              46.8171904
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/102272558",
+      "properties": {
+        "@id": "way/102272558",
+        "CLC:code": "112",
+        "CLC:id": "HU-26784",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "source": "© EEA, Koppenhága (2009); Készítette a FÖMI a KvVM megbízásából (2009)",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7092754,
+              46.7896206
+            ],
+            [
+              20.7219443,
+              46.7896206
+            ],
+            [
+              20.7219443,
+              46.7988013
+            ],
+            [
+              20.7092754,
+              46.7988013
+            ],
+            [
+              20.7092754,
+              46.7896206
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/169335027",
+      "properties": {
+        "@id": "way/169335027",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9127672,
+              47.1385123
+            ],
+            [
+              20.9349816,
+              47.1385123
+            ],
+            [
+              20.9349816,
+              47.1603389
+            ],
+            [
+              20.9127672,
+              47.1603389
+            ],
+            [
+              20.9127672,
+              47.1385123
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228352273",
+      "properties": {
+        "@id": "way/228352273",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2270292,
+              46.7247711
+            ],
+            [
+              21.258769,
+              46.7247711
+            ],
+            [
+              21.258769,
+              46.7434349
+            ],
+            [
+              21.2270292,
+              46.7434349
+            ],
+            [
+              21.2270292,
+              46.7247711
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228354405",
+      "properties": {
+        "@id": "way/228354405",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7315282,
+              46.8264358
+            ],
+            [
+              20.7411081,
+              46.8264358
+            ],
+            [
+              20.7411081,
+              46.8345634
+            ],
+            [
+              20.7315282,
+              46.8345634
+            ],
+            [
+              20.7315282,
+              46.8264358
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228355528",
+      "properties": {
+        "@id": "way/228355528",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4255539,
+              46.8559982
+            ],
+            [
+              21.437832,
+              46.8559982
+            ],
+            [
+              21.437832,
+              46.863092
+            ],
+            [
+              21.4255539,
+              46.863092
+            ],
+            [
+              21.4255539,
+              46.8559982
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228356953",
+      "properties": {
+        "@id": "way/228356953",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.5815972,
+              46.656258
+            ],
+            [
+              20.6090176,
+              46.656258
+            ],
+            [
+              20.6090176,
+              46.6772003
+            ],
+            [
+              20.5815972,
+              46.6772003
+            ],
+            [
+              20.5815972,
+              46.656258
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228356956",
+      "properties": {
+        "@id": "way/228356956",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.6282528,
+              47.0012254
+            ],
+            [
+              21.6494767,
+              47.0012254
+            ],
+            [
+              21.6494767,
+              47.0140723
+            ],
+            [
+              21.6282528,
+              47.0140723
+            ],
+            [
+              21.6282528,
+              47.0012254
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228357179",
+      "properties": {
+        "@id": "way/228357179",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3289282,
+              46.8888053
+            ],
+            [
+              21.3636556,
+              46.8888053
+            ],
+            [
+              21.3636556,
+              46.9068786
+            ],
+            [
+              21.3289282,
+              46.9068786
+            ],
+            [
+              21.3289282,
+              46.8888053
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228382044",
+      "properties": {
+        "@id": "way/228382044",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4305835,
+              46.7651587
+            ],
+            [
+              21.4573525,
+              46.7651587
+            ],
+            [
+              21.4573525,
+              46.7811282
+            ],
+            [
+              21.4305835,
+              46.7811282
+            ],
+            [
+              21.4305835,
+              46.7651587
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228382672",
+      "properties": {
+        "@id": "way/228382672",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0791679,
+              46.9355653
+            ],
+            [
+              21.0879485,
+              46.9355653
+            ],
+            [
+              21.0879485,
+              46.9481786
+            ],
+            [
+              21.0791679,
+              46.9481786
+            ],
+            [
+              21.0791679,
+              46.9355653
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228383227",
+      "properties": {
+        "@id": "way/228383227",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.5838879,
+              46.9619905
+            ],
+            [
+              21.623703,
+              46.9619905
+            ],
+            [
+              21.623703,
+              46.97827
+            ],
+            [
+              21.5838879,
+              46.97827
+            ],
+            [
+              21.5838879,
+              46.9619905
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228383485",
+      "properties": {
+        "@id": "way/228383485",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2437812,
+              46.8995898
+            ],
+            [
+              21.2900055,
+              46.8995898
+            ],
+            [
+              21.2900055,
+              46.9445677
+            ],
+            [
+              21.2437812,
+              46.9445677
+            ],
+            [
+              21.2437812,
+              46.8995898
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228385383",
+      "properties": {
+        "@id": "way/228385383",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4925308,
+              46.810331
+            ],
+            [
+              21.4944375,
+              46.810331
+            ],
+            [
+              21.4944375,
+              46.8115457
+            ],
+            [
+              21.4925308,
+              46.8115457
+            ],
+            [
+              21.4925308,
+              46.810331
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228385459",
+      "properties": {
+        "@id": "way/228385459",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9819664,
+              47.1975505
+            ],
+            [
+              21.0111279,
+              47.1975505
+            ],
+            [
+              21.0111279,
+              47.2156
+            ],
+            [
+              20.9819664,
+              47.2156
+            ],
+            [
+              20.9819664,
+              47.1975505
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/228385587",
+      "properties": {
+        "@id": "way/228385587",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.5614812,
+              46.878458
+            ],
+            [
+              21.5742587,
+              46.878458
+            ],
+            [
+              21.5742587,
+              46.8865622
+            ],
+            [
+              21.5614812,
+              46.8865622
+            ],
+            [
+              21.5614812,
+              46.878458
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/258506304",
+      "properties": {
+        "@id": "way/258506304",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.5329709,
+              46.8649475
+            ],
+            [
+              20.5387553,
+              46.8649475
+            ],
+            [
+              20.5387553,
+              46.8676777
+            ],
+            [
+              20.5329709,
+              46.8676777
+            ],
+            [
+              20.5329709,
+              46.8649475
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/288865029",
+      "properties": {
+        "@id": "way/288865029",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7386502,
+              46.9724473
+            ],
+            [
+              20.7452985,
+              46.9724473
+            ],
+            [
+              20.7452985,
+              46.9777914
+            ],
+            [
+              20.7386502,
+              46.9777914
+            ],
+            [
+              20.7386502,
+              46.9724473
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/294287545",
+      "properties": {
+        "@id": "way/294287545",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7453348,
+              46.9742573
+            ],
+            [
+              20.7460292,
+              46.9742573
+            ],
+            [
+              20.7460292,
+              46.9747014
+            ],
+            [
+              20.7453348,
+              46.9747014
+            ],
+            [
+              20.7453348,
+              46.9742573
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/348012114",
+      "properties": {
+        "@id": "way/348012114",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3177103,
+              46.6992838
+            ],
+            [
+              21.3299654,
+              46.6992838
+            ],
+            [
+              21.3299654,
+              46.703302
+            ],
+            [
+              21.3177103,
+              46.703302
+            ],
+            [
+              21.3177103,
+              46.6992838
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/441461663",
+      "properties": {
+        "@id": "way/441461663",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3217905,
+              46.6983058
+            ],
+            [
+              21.3226561,
+              46.6983058
+            ],
+            [
+              21.3226561,
+              46.6989628
+            ],
+            [
+              21.3217905,
+              46.6989628
+            ],
+            [
+              21.3217905,
+              46.6983058
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/448826455",
+      "properties": {
+        "@id": "way/448826455",
+        "landuse": "residential",
+        "name": "Komlósfecskéspuszta (6-os major)",
+        "population": "114",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7975611,
+              46.3452935
+            ],
+            [
+              20.8087614,
+              46.3452935
+            ],
+            [
+              20.8087614,
+              46.3556801
+            ],
+            [
+              20.7975611,
+              46.3556801
+            ],
+            [
+              20.7975611,
+              46.3452935
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/449275258",
+      "properties": {
+        "@id": "way/449275258",
+        "landuse": "residential",
+        "name": "46-os major",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8863619,
+              46.300176
+            ],
+            [
+              20.8937018,
+              46.300176
+            ],
+            [
+              20.8937018,
+              46.3045567
+            ],
+            [
+              20.8863619,
+              46.3045567
+            ],
+            [
+              20.8863619,
+              46.300176
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/492530848",
+      "properties": {
+        "@id": "way/492530848",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4207596,
+              46.6525183
+            ],
+            [
+              21.4226018,
+              46.6525183
+            ],
+            [
+              21.4226018,
+              46.6542673
+            ],
+            [
+              21.4207596,
+              46.6542673
+            ],
+            [
+              21.4207596,
+              46.6525183
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/492530852",
+      "properties": {
+        "@id": "way/492530852",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4132519,
+              46.6585644
+            ],
+            [
+              21.4206081,
+              46.6585644
+            ],
+            [
+              21.4206081,
+              46.6617551
+            ],
+            [
+              21.4132519,
+              46.6617551
+            ],
+            [
+              21.4132519,
+              46.6585644
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/532716367",
+      "properties": {
+        "@id": "way/532716367",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.5267541,
+              46.8690051
+            ],
+            [
+              20.5286935,
+              46.8690051
+            ],
+            [
+              20.5286935,
+              46.8698087
+            ],
+            [
+              20.5267541,
+              46.8698087
+            ],
+            [
+              20.5267541,
+              46.8690051
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/532716379",
+      "properties": {
+        "@id": "way/532716379",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.5263752,
+              46.8737387
+            ],
+            [
+              20.5273595,
+              46.8737387
+            ],
+            [
+              20.5273595,
+              46.8743307
+            ],
+            [
+              20.5263752,
+              46.8743307
+            ],
+            [
+              20.5263752,
+              46.8737387
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/533430393",
+      "properties": {
+        "@id": "way/533430393",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1520843,
+              46.7568975
+            ],
+            [
+              21.1523858,
+              46.7568975
+            ],
+            [
+              21.1523858,
+              46.7572669
+            ],
+            [
+              21.1520843,
+              46.7572669
+            ],
+            [
+              21.1520843,
+              46.7568975
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/533430394",
+      "properties": {
+        "@id": "way/533430394",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1513749,
+              46.7570105
+            ],
+            [
+              21.1519057,
+              46.7570105
+            ],
+            [
+              21.1519057,
+              46.7574764
+            ],
+            [
+              21.1513749,
+              46.7574764
+            ],
+            [
+              21.1513749,
+              46.7570105
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/542134015",
+      "properties": {
+        "@id": "way/542134015",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7089858,
+              46.476557
+            ],
+            [
+              20.7100111,
+              46.476557
+            ],
+            [
+              20.7100111,
+              46.4777026
+            ],
+            [
+              20.7089858,
+              46.4777026
+            ],
+            [
+              20.7089858,
+              46.476557
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/549360878",
+      "properties": {
+        "@id": "way/549360878",
+        "check_date": "2024-08-22",
+        "landuse": "residential",
+        "note": "Volt szőnyeggyár",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4922488,
+              46.8708788
+            ],
+            [
+              20.4943804,
+              46.8708788
+            ],
+            [
+              20.4943804,
+              46.8724684
+            ],
+            [
+              20.4922488,
+              46.8724684
+            ],
+            [
+              20.4922488,
+              46.8708788
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/591241882",
+      "properties": {
+        "@id": "way/591241882",
+        "landuse": "residential",
+        "name": "Nagyráta",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6147193,
+              46.7856787
+            ],
+            [
+              20.6234701,
+              46.7856787
+            ],
+            [
+              20.6234701,
+              46.7920605
+            ],
+            [
+              20.6147193,
+              46.7920605
+            ],
+            [
+              20.6147193,
+              46.7856787
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/603085717",
+      "properties": {
+        "@id": "way/603085717",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0202023,
+              46.6966638
+            ],
+            [
+              21.0243605,
+              46.6966638
+            ],
+            [
+              21.0243605,
+              46.6993247
+            ],
+            [
+              21.0202023,
+              46.6993247
+            ],
+            [
+              21.0202023,
+              46.6966638
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/610104923",
+      "properties": {
+        "@id": "way/610104923",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2914272,
+              46.6350974
+            ],
+            [
+              21.2918311,
+              46.6350974
+            ],
+            [
+              21.2918311,
+              46.6355919
+            ],
+            [
+              21.2914272,
+              46.6355919
+            ],
+            [
+              21.2914272,
+              46.6350974
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/610175765",
+      "properties": {
+        "@id": "way/610175765",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2510409,
+              46.646928
+            ],
+            [
+              21.2515823,
+              46.646928
+            ],
+            [
+              21.2515823,
+              46.6473771
+            ],
+            [
+              21.2510409,
+              46.6473771
+            ],
+            [
+              21.2510409,
+              46.646928
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/611173530",
+      "properties": {
+        "@id": "way/611173530",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2693957,
+              46.6562699
+            ],
+            [
+              21.2700001,
+              46.6562699
+            ],
+            [
+              21.2700001,
+              46.6564852
+            ],
+            [
+              21.2693957,
+              46.6564852
+            ],
+            [
+              21.2693957,
+              46.6562699
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/611738603",
+      "properties": {
+        "@id": "way/611738603",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2365772,
+              46.6539735
+            ],
+            [
+              21.2374515,
+              46.6539735
+            ],
+            [
+              21.2374515,
+              46.6547476
+            ],
+            [
+              21.2365772,
+              46.6547476
+            ],
+            [
+              21.2365772,
+              46.6539735
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/626317197",
+      "properties": {
+        "@id": "way/626317197",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6101002,
+              46.8441346
+            ],
+            [
+              20.615629,
+              46.8441346
+            ],
+            [
+              20.615629,
+              46.8530441
+            ],
+            [
+              20.6101002,
+              46.8530441
+            ],
+            [
+              20.6101002,
+              46.8441346
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/626317198",
+      "properties": {
+        "@id": "way/626317198",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6131746,
+              46.8430972
+            ],
+            [
+              20.6196637,
+              46.8430972
+            ],
+            [
+              20.6196637,
+              46.8507622
+            ],
+            [
+              20.6131746,
+              46.8507622
+            ],
+            [
+              20.6131746,
+              46.8430972
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/626317199",
+      "properties": {
+        "@id": "way/626317199",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6171622,
+              46.8426521
+            ],
+            [
+              20.6209157,
+              46.8426521
+            ],
+            [
+              20.6209157,
+              46.848299
+            ],
+            [
+              20.6171622,
+              46.848299
+            ],
+            [
+              20.6171622,
+              46.8426521
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/626317291",
+      "properties": {
+        "@id": "way/626317291",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6772923,
+              46.88831
+            ],
+            [
+              20.6811223,
+              46.88831
+            ],
+            [
+              20.6811223,
+              46.8895526
+            ],
+            [
+              20.6772923,
+              46.8895526
+            ],
+            [
+              20.6772923,
+              46.88831
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/626317294",
+      "properties": {
+        "@id": "way/626317294",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6728254,
+              46.8886807
+            ],
+            [
+              20.6757195,
+              46.8886807
+            ],
+            [
+              20.6757195,
+              46.890482
+            ],
+            [
+              20.6728254,
+              46.890482
+            ],
+            [
+              20.6728254,
+              46.8886807
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/626317295",
+      "properties": {
+        "@id": "way/626317295",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6169888,
+              46.8503677
+            ],
+            [
+              20.6273865,
+              46.8503677
+            ],
+            [
+              20.6273865,
+              46.8526439
+            ],
+            [
+              20.6169888,
+              46.8526439
+            ],
+            [
+              20.6169888,
+              46.8503677
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/632463691",
+      "properties": {
+        "@id": "way/632463691",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3419938,
+              46.8366661
+            ],
+            [
+              21.3548952,
+              46.8366661
+            ],
+            [
+              21.3548952,
+              46.8443095
+            ],
+            [
+              21.3419938,
+              46.8443095
+            ],
+            [
+              21.3419938,
+              46.8366661
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/643967580",
+      "properties": {
+        "@id": "way/643967580",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0602743,
+              46.6881148
+            ],
+            [
+              21.0623227,
+              46.6881148
+            ],
+            [
+              21.0623227,
+              46.6894131
+            ],
+            [
+              21.0602743,
+              46.6894131
+            ],
+            [
+              21.0602743,
+              46.6881148
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/658400452",
+      "properties": {
+        "@id": "way/658400452",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0396307,
+              46.6725008
+            ],
+            [
+              21.0423534,
+              46.6725008
+            ],
+            [
+              21.0423534,
+              46.6759581
+            ],
+            [
+              21.0396307,
+              46.6759581
+            ],
+            [
+              21.0396307,
+              46.6725008
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/662771905",
+      "properties": {
+        "@id": "way/662771905",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3361232,
+              46.9573686
+            ],
+            [
+              21.3372539,
+              46.9573686
+            ],
+            [
+              21.3372539,
+              46.9584938
+            ],
+            [
+              21.3361232,
+              46.9584938
+            ],
+            [
+              21.3361232,
+              46.9573686
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/662771906",
+      "properties": {
+        "@id": "way/662771906",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3354007,
+              46.9588061
+            ],
+            [
+              21.3380871,
+              46.9588061
+            ],
+            [
+              21.3380871,
+              46.9598301
+            ],
+            [
+              21.3354007,
+              46.9598301
+            ],
+            [
+              21.3354007,
+              46.9588061
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/664324355",
+      "properties": {
+        "@id": "way/664324355",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3743389,
+              46.7978045
+            ],
+            [
+              21.3970092,
+              46.7978045
+            ],
+            [
+              21.3970092,
+              46.822594
+            ],
+            [
+              21.3743389,
+              46.822594
+            ],
+            [
+              21.3743389,
+              46.7978045
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/664324356",
+      "properties": {
+        "@id": "way/664324356",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3734742,
+              46.801922
+            ],
+            [
+              21.3801297,
+              46.801922
+            ],
+            [
+              21.3801297,
+              46.8049828
+            ],
+            [
+              21.3734742,
+              46.8049828
+            ],
+            [
+              21.3734742,
+              46.801922
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/664324367",
+      "properties": {
+        "@id": "way/664324367",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3772388,
+              46.8069031
+            ],
+            [
+              21.3775186,
+              46.8069031
+            ],
+            [
+              21.3775186,
+              46.8071076
+            ],
+            [
+              21.3772388,
+              46.8071076
+            ],
+            [
+              21.3772388,
+              46.8069031
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/665042541",
+      "properties": {
+        "@id": "way/665042541",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4879371,
+              46.8071766
+            ],
+            [
+              21.4928403,
+              46.8071766
+            ],
+            [
+              21.4928403,
+              46.8166891
+            ],
+            [
+              21.4879371,
+              46.8166891
+            ],
+            [
+              21.4879371,
+              46.8071766
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/665339773",
+      "properties": {
+        "@id": "way/665339773",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3983164,
+              46.7355984
+            ],
+            [
+              21.399122,
+              46.7355984
+            ],
+            [
+              21.399122,
+              46.735978
+            ],
+            [
+              21.3983164,
+              46.735978
+            ],
+            [
+              21.3983164,
+              46.7355984
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/758565754",
+      "properties": {
+        "@id": "way/758565754",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0570874,
+              46.6823061
+            ],
+            [
+              21.0592292,
+              46.6823061
+            ],
+            [
+              21.0592292,
+              46.6836291
+            ],
+            [
+              21.0570874,
+              46.6836291
+            ],
+            [
+              21.0570874,
+              46.6823061
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/772558582",
+      "properties": {
+        "@id": "way/772558582",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6272422,
+              46.586488
+            ],
+            [
+              20.6278949,
+              46.586488
+            ],
+            [
+              20.6278949,
+              46.5879311
+            ],
+            [
+              20.6272422,
+              46.5879311
+            ],
+            [
+              20.6272422,
+              46.586488
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/772558584",
+      "properties": {
+        "@id": "way/772558584",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6274964,
+              46.5842089
+            ],
+            [
+              20.6278593,
+              46.5842089
+            ],
+            [
+              20.6278593,
+              46.5845942
+            ],
+            [
+              20.6274964,
+              46.5845942
+            ],
+            [
+              20.6274964,
+              46.5842089
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/917192314",
+      "properties": {
+        "@id": "way/917192314",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9153395,
+              46.3122687
+            ],
+            [
+              20.9170152,
+              46.3122687
+            ],
+            [
+              20.9170152,
+              46.3142879
+            ],
+            [
+              20.9153395,
+              46.3142879
+            ],
+            [
+              20.9153395,
+              46.3122687
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/919961017",
+      "properties": {
+        "@id": "way/919961017",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1099994,
+              46.4827849
+            ],
+            [
+              21.1111701,
+              46.4827849
+            ],
+            [
+              21.1111701,
+              46.4837203
+            ],
+            [
+              21.1099994,
+              46.4837203
+            ],
+            [
+              21.1099994,
+              46.4827849
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/920980917",
+      "properties": {
+        "@id": "way/920980917",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2385254,
+              46.4470128
+            ],
+            [
+              21.2406093,
+              46.4470128
+            ],
+            [
+              21.2406093,
+              46.4478371
+            ],
+            [
+              21.2385254,
+              46.4478371
+            ],
+            [
+              21.2385254,
+              46.4470128
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1071121436",
+      "properties": {
+        "@id": "way/1071121436",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6443644,
+              46.5602119
+            ],
+            [
+              20.6452755,
+              46.5602119
+            ],
+            [
+              20.6452755,
+              46.5608913
+            ],
+            [
+              20.6443644,
+              46.5608913
+            ],
+            [
+              20.6443644,
+              46.5602119
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1074936570",
+      "properties": {
+        "@id": "way/1074936570",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0937568,
+              46.5048944
+            ],
+            [
+              21.094505,
+              46.5048944
+            ],
+            [
+              21.094505,
+              46.5054651
+            ],
+            [
+              21.0937568,
+              46.5054651
+            ],
+            [
+              21.0937568,
+              46.5048944
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1075912430",
+      "properties": {
+        "@id": "way/1075912430",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6417249,
+              46.5846212
+            ],
+            [
+              20.6450918,
+              46.5846212
+            ],
+            [
+              20.6450918,
+              46.5860329
+            ],
+            [
+              20.6417249,
+              46.5860329
+            ],
+            [
+              20.6417249,
+              46.5846212
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1075912431",
+      "properties": {
+        "@id": "way/1075912431",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6430282,
+              46.5859258
+            ],
+            [
+              20.6444118,
+              46.5859258
+            ],
+            [
+              20.6444118,
+              46.5907255
+            ],
+            [
+              20.6430282,
+              46.5907255
+            ],
+            [
+              20.6430282,
+              46.5859258
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1075912432",
+      "properties": {
+        "@id": "way/1075912432",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6419186,
+              46.5852654
+            ],
+            [
+              20.6422774,
+              46.5852654
+            ],
+            [
+              20.6422774,
+              46.5856646
+            ],
+            [
+              20.6419186,
+              46.5856646
+            ],
+            [
+              20.6419186,
+              46.5852654
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1079799018",
+      "properties": {
+        "@id": "way/1079799018",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7398518,
+              46.6820817
+            ],
+            [
+              20.7413881,
+              46.6820817
+            ],
+            [
+              20.7413881,
+              46.6842895
+            ],
+            [
+              20.7398518,
+              46.6842895
+            ],
+            [
+              20.7398518,
+              46.6820817
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1079799019",
+      "properties": {
+        "@id": "way/1079799019",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.739269,
+              46.6851553
+            ],
+            [
+              20.7406241,
+              46.6851553
+            ],
+            [
+              20.7406241,
+              46.686007
+            ],
+            [
+              20.739269,
+              46.686007
+            ],
+            [
+              20.739269,
+              46.6851553
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1079799020",
+      "properties": {
+        "@id": "way/1079799020",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7402752,
+              46.6846105
+            ],
+            [
+              20.7414716,
+              46.6846105
+            ],
+            [
+              20.7414716,
+              46.6850188
+            ],
+            [
+              20.7402752,
+              46.6850188
+            ],
+            [
+              20.7402752,
+              46.6846105
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1086642388",
+      "properties": {
+        "@id": "way/1086642388",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3421869,
+              46.8783156
+            ],
+            [
+              21.3442415,
+              46.8783156
+            ],
+            [
+              21.3442415,
+              46.8795257
+            ],
+            [
+              21.3421869,
+              46.8795257
+            ],
+            [
+              21.3421869,
+              46.8783156
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1238712261",
+      "properties": {
+        "@id": "way/1238712261",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9400204,
+              46.8635445
+            ],
+            [
+              20.9430434,
+              46.8635445
+            ],
+            [
+              20.9430434,
+              46.865546
+            ],
+            [
+              20.9400204,
+              46.865546
+            ],
+            [
+              20.9400204,
+              46.8635445
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1238712263",
+      "properties": {
+        "@id": "way/1238712263",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9429384,
+              46.8655652
+            ],
+            [
+              20.9434907,
+              46.8655652
+            ],
+            [
+              20.9434907,
+              46.8659318
+            ],
+            [
+              20.9429384,
+              46.8659318
+            ],
+            [
+              20.9429384,
+              46.8655652
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1299362780",
+      "properties": {
+        "@id": "way/1299362780",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0988793,
+              46.764776
+            ],
+            [
+              21.1044361,
+              46.764776
+            ],
+            [
+              21.1044361,
+              46.7666758
+            ],
+            [
+              21.0988793,
+              46.7666758
+            ],
+            [
+              21.0988793,
+              46.764776
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1315654622",
+      "properties": {
+        "@id": "way/1315654622",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.5807932,
+              46.8348702
+            ],
+            [
+              20.5816671,
+              46.8348702
+            ],
+            [
+              20.5816671,
+              46.835798
+            ],
+            [
+              20.5807932,
+              46.835798
+            ],
+            [
+              20.5807932,
+              46.8348702
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1365827723",
+      "properties": {
+        "@id": "way/1365827723",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1743915,
+              47.0101307
+            ],
+            [
+              21.1808569,
+              47.0101307
+            ],
+            [
+              21.1808569,
+              47.0128993
+            ],
+            [
+              21.1743915,
+              47.0128993
+            ],
+            [
+              21.1743915,
+              47.0101307
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1373674585",
+      "properties": {
+        "@id": "way/1373674585",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7592245,
+              46.8981285
+            ],
+            [
+              20.777503,
+              46.8981285
+            ],
+            [
+              20.777503,
+              46.9075759
+            ],
+            [
+              20.7592245,
+              46.9075759
+            ],
+            [
+              20.7592245,
+              46.8981285
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1373675870",
+      "properties": {
+        "@id": "way/1373675870",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7867345,
+              46.8908652
+            ],
+            [
+              20.7874379,
+              46.8908652
+            ],
+            [
+              20.7874379,
+              46.8914093
+            ],
+            [
+              20.7867345,
+              46.8914093
+            ],
+            [
+              20.7867345,
+              46.8908652
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1386283174",
+      "properties": {
+        "@id": "way/1386283174",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.222183,
+              47.0005022
+            ],
+            [
+              21.2241908,
+              47.0005022
+            ],
+            [
+              21.2241908,
+              47.0034954
+            ],
+            [
+              21.222183,
+              47.0034954
+            ],
+            [
+              21.222183,
+              47.0005022
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389015921",
+      "properties": {
+        "@id": "way/1389015921",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2100163,
+              47.1088384
+            ],
+            [
+              21.2116686,
+              47.1088384
+            ],
+            [
+              21.2116686,
+              47.1098978
+            ],
+            [
+              21.2100163,
+              47.1098978
+            ],
+            [
+              21.2100163,
+              47.1088384
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389015967",
+      "properties": {
+        "@id": "way/1389015967",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2053745,
+              47.1138111
+            ],
+            [
+              21.2064603,
+              47.1138111
+            ],
+            [
+              21.2064603,
+              47.1143255
+            ],
+            [
+              21.2053745,
+              47.1143255
+            ],
+            [
+              21.2053745,
+              47.1138111
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389015968",
+      "properties": {
+        "@id": "way/1389015968",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2029889,
+              47.1135365
+            ],
+            [
+              21.2051894,
+              47.1135365
+            ],
+            [
+              21.2051894,
+              47.1140554
+            ],
+            [
+              21.2029889,
+              47.1140554
+            ],
+            [
+              21.2029889,
+              47.1135365
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389015972",
+      "properties": {
+        "@id": "way/1389015972",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.21425,
+              47.1131903
+            ],
+            [
+              21.2146875,
+              47.1131903
+            ],
+            [
+              21.2146875,
+              47.1134209
+            ],
+            [
+              21.21425,
+              47.1134209
+            ],
+            [
+              21.21425,
+              47.1131903
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389015973",
+      "properties": {
+        "@id": "way/1389015973",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2127433,
+              47.1133161
+            ],
+            [
+              21.2138433,
+              47.1133161
+            ],
+            [
+              21.2138433,
+              47.113748
+            ],
+            [
+              21.2127433,
+              47.113748
+            ],
+            [
+              21.2127433,
+              47.1133161
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389015988",
+      "properties": {
+        "@id": "way/1389015988",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2083344,
+              47.1097393
+            ],
+            [
+              21.2089721,
+              47.1097393
+            ],
+            [
+              21.2089721,
+              47.1101309
+            ],
+            [
+              21.2083344,
+              47.1101309
+            ],
+            [
+              21.2083344,
+              47.1097393
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1390965301",
+      "properties": {
+        "@id": "way/1390965301",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2065637,
+              47.0953398
+            ],
+            [
+              21.207615,
+              47.0953398
+            ],
+            [
+              21.207615,
+              47.0961391
+            ],
+            [
+              21.2065637,
+              47.0961391
+            ],
+            [
+              21.2065637,
+              47.0953398
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1390965302",
+      "properties": {
+        "@id": "way/1390965302",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2055162,
+              47.0941645
+            ],
+            [
+              21.206157,
+              47.0941645
+            ],
+            [
+              21.206157,
+              47.0946564
+            ],
+            [
+              21.2055162,
+              47.0946564
+            ],
+            [
+              21.2055162,
+              47.0941645
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1417496679",
+      "properties": {
+        "@id": "way/1417496679",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4138877,
+              46.6512716
+            ],
+            [
+              21.4188842,
+              46.6512716
+            ],
+            [
+              21.4188842,
+              46.6555434
+            ],
+            [
+              21.4138877,
+              46.6555434
+            ],
+            [
+              21.4138877,
+              46.6512716
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1417496680",
+      "properties": {
+        "@id": "way/1417496680",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4114675,
+              46.654868
+            ],
+            [
+              21.414203,
+              46.654868
+            ],
+            [
+              21.414203,
+              46.656401
+            ],
+            [
+              21.4114675,
+              46.656401
+            ],
+            [
+              21.4114675,
+              46.654868
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1417496681",
+      "properties": {
+        "@id": "way/1417496681",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4084062,
+              46.6576767
+            ],
+            [
+              21.4114978,
+              46.6576767
+            ],
+            [
+              21.4114978,
+              46.6598776
+            ],
+            [
+              21.4084062,
+              46.6598776
+            ],
+            [
+              21.4084062,
+              46.6576767
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1417496682",
+      "properties": {
+        "@id": "way/1417496682",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4115643,
+              46.6560286
+            ],
+            [
+              21.4166952,
+              46.6560286
+            ],
+            [
+              21.4166952,
+              46.6592871
+            ],
+            [
+              21.4115643,
+              46.6592871
+            ],
+            [
+              21.4115643,
+              46.6560286
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1417496690",
+      "properties": {
+        "@id": "way/1417496690",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4099802,
+              46.660789
+            ],
+            [
+              21.4106614,
+              46.660789
+            ],
+            [
+              21.4106614,
+              46.6615516
+            ],
+            [
+              21.4099802,
+              46.6615516
+            ],
+            [
+              21.4099802,
+              46.660789
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1417665403",
+      "properties": {
+        "@id": "way/1417665403",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4147331,
+              46.6547206
+            ],
+            [
+              21.4154413,
+              46.6547206
+            ],
+            [
+              21.4154413,
+              46.6554553
+            ],
+            [
+              21.4147331,
+              46.6554553
+            ],
+            [
+              21.4147331,
+              46.6547206
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1417665404",
+      "properties": {
+        "@id": "way/1417665404",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.415155,
+              46.6557488
+            ],
+            [
+              21.4185662,
+              46.6557488
+            ],
+            [
+              21.4185662,
+              46.6580136
+            ],
+            [
+              21.415155,
+              46.6580136
+            ],
+            [
+              21.415155,
+              46.6557488
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1417665405",
+      "properties": {
+        "@id": "way/1417665405",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4176367,
+              46.6573363
+            ],
+            [
+              21.4195994,
+              46.6573363
+            ],
+            [
+              21.4195994,
+              46.6585196
+            ],
+            [
+              21.4176367,
+              46.6585196
+            ],
+            [
+              21.4176367,
+              46.6573363
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1417665406",
+      "properties": {
+        "@id": "way/1417665406",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4181182,
+              46.6564252
+            ],
+            [
+              21.4185787,
+              46.6564252
+            ],
+            [
+              21.4185787,
+              46.6568183
+            ],
+            [
+              21.4181182,
+              46.6568183
+            ],
+            [
+              21.4181182,
+              46.6564252
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1421642258",
+      "properties": {
+        "@id": "way/1421642258",
+        "landuse": "residential",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.212558,
+              47.1069539
+            ],
+            [
+              21.2136208,
+              47.1069539
+            ],
+            [
+              21.2136208,
+              47.1076806
+            ],
+            [
+              21.212558,
+              47.1076806
+            ],
+            [
+              21.212558,
+              47.1069539
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/2744280",
+      "properties": {
+        "@id": "relation/2744280",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.803248,
+              46.3073352
+            ],
+            [
+              20.827927,
+              46.3073352
+            ],
+            [
+              20.827927,
+              46.3290501
+            ],
+            [
+              20.803248,
+              46.3290501
+            ],
+            [
+              20.803248,
+              46.3073352
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/2791300",
+      "properties": {
+        "@id": "relation/2791300",
+        "landuse": "residential",
+        "source": "bing",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0434174,
+              46.6453959
+            ],
+            [
+              21.0825599,
+              46.6453959
+            ],
+            [
+              21.0825599,
+              46.6816397
+            ],
+            [
+              21.0434174,
+              46.6816397
+            ],
+            [
+              21.0434174,
+              46.6453959
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/2791301",
+      "properties": {
+        "@id": "relation/2791301",
+        "CLC:code": "112",
+        "CLC:id": "HU-28860",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1267106,
+              46.6683013
+            ],
+            [
+              21.1393299,
+              46.6683013
+            ],
+            [
+              21.1393299,
+              46.6760963
+            ],
+            [
+              21.1267106,
+              46.6760963
+            ],
+            [
+              21.1267106,
+              46.6683013
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/2791302",
+      "properties": {
+        "@id": "relation/2791302",
+        "landuse": "residential",
+        "source": "bing",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1330331,
+              46.6594664
+            ],
+            [
+              21.1504752,
+              46.6594664
+            ],
+            [
+              21.1504752,
+              46.6679839
+            ],
+            [
+              21.1330331,
+              46.6679839
+            ],
+            [
+              21.1330331,
+              46.6594664
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/2791303",
+      "properties": {
+        "@id": "relation/2791303",
+        "landuse": "residential",
+        "source": "bing",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0640596,
+              46.6667025
+            ],
+            [
+              21.1125525,
+              46.6667025
+            ],
+            [
+              21.1125525,
+              46.6946497
+            ],
+            [
+              21.0640596,
+              46.6946497
+            ],
+            [
+              21.0640596,
+              46.6667025
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/2791304",
+      "properties": {
+        "@id": "relation/2791304",
+        "landuse": "residential",
+        "source": "bing",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0969496,
+              46.6791733
+            ],
+            [
+              21.1434521,
+              46.6791733
+            ],
+            [
+              21.1434521,
+              46.7011313
+            ],
+            [
+              21.0969496,
+              46.7011313
+            ],
+            [
+              21.0969496,
+              46.6791733
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/2791305",
+      "properties": {
+        "@id": "relation/2791305",
+        "landuse": "residential",
+        "source": "bing",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0792646,
+              46.6405339
+            ],
+            [
+              21.0973775,
+              46.6405339
+            ],
+            [
+              21.0973775,
+              46.6632921
+            ],
+            [
+              21.0792646,
+              46.6632921
+            ],
+            [
+              21.0792646,
+              46.6405339
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/2791345",
+      "properties": {
+        "@id": "relation/2791345",
+        "landuse": "residential",
+        "source": "bing",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0958734,
+              46.6874083
+            ],
+            [
+              21.1007764,
+              46.6874083
+            ],
+            [
+              21.1007764,
+              46.6908237
+            ],
+            [
+              21.0958734,
+              46.6908237
+            ],
+            [
+              21.0958734,
+              46.6874083
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/2810320",
+      "properties": {
+        "@id": "relation/2810320",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8834813,
+              46.4003462
+            ],
+            [
+              20.9394345,
+              46.4003462
+            ],
+            [
+              20.9394345,
+              46.4227246
+            ],
+            [
+              20.8834813,
+              46.4227246
+            ],
+            [
+              20.8834813,
+              46.4003462
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3062951",
+      "properties": {
+        "@id": "relation/3062951",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6300467,
+              46.5389252
+            ],
+            [
+              20.6897394,
+              46.5389252
+            ],
+            [
+              20.6897394,
+              46.5851665
+            ],
+            [
+              20.6300467,
+              46.5851665
+            ],
+            [
+              20.6300467,
+              46.5389252
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3171309",
+      "properties": {
+        "@id": "relation/3171309",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6244121,
+              46.5573462
+            ],
+            [
+              20.6413249,
+              46.5573462
+            ],
+            [
+              20.6413249,
+              46.5754604
+            ],
+            [
+              20.6244121,
+              46.5754604
+            ],
+            [
+              20.6244121,
+              46.5573462
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3171310",
+      "properties": {
+        "@id": "relation/3171310",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.5906978,
+              46.5594838
+            ],
+            [
+              20.6278405,
+              46.5594838
+            ],
+            [
+              20.6278405,
+              46.5939397
+            ],
+            [
+              20.5906978,
+              46.5939397
+            ],
+            [
+              20.5906978,
+              46.5594838
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3173108",
+      "properties": {
+        "@id": "relation/3173108",
+        "CLC:code": "112",
+        "CLC:id": "HU-32213",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.698489,
+              46.4927122
+            ],
+            [
+              20.7097382,
+              46.4927122
+            ],
+            [
+              20.7097382,
+              46.5048509
+            ],
+            [
+              20.698489,
+              46.5048509
+            ],
+            [
+              20.698489,
+              46.4927122
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3215145",
+      "properties": {
+        "@id": "relation/3215145",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8164083,
+              46.6191497
+            ],
+            [
+              20.8488784,
+              46.6191497
+            ],
+            [
+              20.8488784,
+              46.6412287
+            ],
+            [
+              20.8164083,
+              46.6412287
+            ],
+            [
+              20.8164083,
+              46.6191497
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3215146",
+      "properties": {
+        "@id": "relation/3215146",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8448764,
+              46.6466918
+            ],
+            [
+              20.8465056,
+              46.6466918
+            ],
+            [
+              20.8465056,
+              46.6474828
+            ],
+            [
+              20.8448764,
+              46.6474828
+            ],
+            [
+              20.8448764,
+              46.6466918
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3281755",
+      "properties": {
+        "@id": "relation/3281755",
+        "CLC:code": "112",
+        "CLC:id": "HU-28919",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "maxspeed": "50",
+        "source": "© EEA, Koppenhága (2009);Készítette a FÖMI a KvVM megbízásából (2009)",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6553747,
+              46.663463
+            ],
+            [
+              20.6906332,
+              46.663463
+            ],
+            [
+              20.6906332,
+              46.6824606
+            ],
+            [
+              20.6553747,
+              46.6824606
+            ],
+            [
+              20.6553747,
+              46.663463
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3287838",
+      "properties": {
+        "@id": "relation/3287838",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0012119,
+              46.5717763
+            ],
+            [
+              21.040594,
+              46.5717763
+            ],
+            [
+              21.040594,
+              46.6027796
+            ],
+            [
+              21.0012119,
+              46.6027796
+            ],
+            [
+              21.0012119,
+              46.5717763
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3287839",
+      "properties": {
+        "@id": "relation/3287839",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0590307,
+              46.5934471
+            ],
+            [
+              21.0915011,
+              46.5934471
+            ],
+            [
+              21.0915011,
+              46.6076268
+            ],
+            [
+              21.0590307,
+              46.6076268
+            ],
+            [
+              21.0590307,
+              46.5934471
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3287840",
+      "properties": {
+        "@id": "relation/3287840",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1578206,
+              46.6496965
+            ],
+            [
+              21.1958449,
+              46.6496965
+            ],
+            [
+              21.1958449,
+              46.6746159
+            ],
+            [
+              21.1578206,
+              46.6746159
+            ],
+            [
+              21.1578206,
+              46.6496965
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3478940",
+      "properties": {
+        "@id": "relation/3478940",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1709221,
+              46.8604856
+            ],
+            [
+              21.192096,
+              46.8604856
+            ],
+            [
+              21.192096,
+              46.8791456
+            ],
+            [
+              21.1709221,
+              46.8791456
+            ],
+            [
+              21.1709221,
+              46.8604856
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3911420",
+      "properties": {
+        "@id": "relation/3911420",
+        "CLC:code": "112",
+        "CLC:id": "HU-24956",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.5112012,
+              46.8651763
+            ],
+            [
+              21.538253,
+              46.8651763
+            ],
+            [
+              21.538253,
+              46.8778625
+            ],
+            [
+              21.5112012,
+              46.8778625
+            ],
+            [
+              21.5112012,
+              46.8651763
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/5994567",
+      "properties": {
+        "@id": "relation/5994567",
+        "CLC:code": "112",
+        "CLC:id": "HU-33374",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1103497,
+              46.4119729
+            ],
+            [
+              21.1259543,
+              46.4119729
+            ],
+            [
+              21.1259543,
+              46.4268326
+            ],
+            [
+              21.1103497,
+              46.4268326
+            ],
+            [
+              21.1103497,
+              46.4119729
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/7764887",
+      "properties": {
+        "@id": "relation/7764887",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2468606,
+              46.6342634
+            ],
+            [
+              21.2962714,
+              46.6342634
+            ],
+            [
+              21.2962714,
+              46.6566181
+            ],
+            [
+              21.2468606,
+              46.6566181
+            ],
+            [
+              21.2468606,
+              46.6342634
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8686931",
+      "properties": {
+        "@id": "relation/8686931",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9988593,
+              46.2768995
+            ],
+            [
+              21.0432765,
+              46.2768995
+            ],
+            [
+              21.0432765,
+              46.2984313
+            ],
+            [
+              20.9988593,
+              46.2984313
+            ],
+            [
+              20.9988593,
+              46.2768995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8900425",
+      "properties": {
+        "@id": "relation/8900425",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0950053,
+              46.6051757
+            ],
+            [
+              21.0992184,
+              46.6051757
+            ],
+            [
+              21.0992184,
+              46.6083096
+            ],
+            [
+              21.0950053,
+              46.6083096
+            ],
+            [
+              21.0950053,
+              46.6051757
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8903070",
+      "properties": {
+        "@id": "relation/8903070",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9457782,
+              46.5724447
+            ],
+            [
+              20.9578558,
+              46.5724447
+            ],
+            [
+              20.9578558,
+              46.5784507
+            ],
+            [
+              20.9457782,
+              46.5784507
+            ],
+            [
+              20.9457782,
+              46.5724447
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8903153",
+      "properties": {
+        "@id": "relation/8903153",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0018039,
+              46.534717
+            ],
+            [
+              21.0120036,
+              46.534717
+            ],
+            [
+              21.0120036,
+              46.5432551
+            ],
+            [
+              21.0018039,
+              46.5432551
+            ],
+            [
+              21.0018039,
+              46.534717
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8903164",
+      "properties": {
+        "@id": "relation/8903164",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8713489,
+              46.5286816
+            ],
+            [
+              20.9019554,
+              46.5286816
+            ],
+            [
+              20.9019554,
+              46.5534203
+            ],
+            [
+              20.8713489,
+              46.5534203
+            ],
+            [
+              20.8713489,
+              46.5286816
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8923216",
+      "properties": {
+        "@id": "relation/8923216",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7598865,
+              46.9117327
+            ],
+            [
+              20.8477108,
+              46.9117327
+            ],
+            [
+              20.8477108,
+              46.9466809
+            ],
+            [
+              20.7598865,
+              46.9466809
+            ],
+            [
+              20.7598865,
+              46.9117327
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8928828",
+      "properties": {
+        "@id": "relation/8928828",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0383886,
+              46.7264182
+            ],
+            [
+              21.0480461,
+              46.7264182
+            ],
+            [
+              21.0480461,
+              46.7306125
+            ],
+            [
+              21.0383886,
+              46.7306125
+            ],
+            [
+              21.0383886,
+              46.7264182
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8956396",
+      "properties": {
+        "@id": "relation/8956396",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1688391,
+              46.5302668
+            ],
+            [
+              21.2049862,
+              46.5302668
+            ],
+            [
+              21.2049862,
+              46.5545725
+            ],
+            [
+              21.1688391,
+              46.5545725
+            ],
+            [
+              21.1688391,
+              46.5302668
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8971450",
+      "properties": {
+        "@id": "relation/8971450",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1712652,
+              46.528583
+            ],
+            [
+              21.1739009,
+              46.528583
+            ],
+            [
+              21.1739009,
+              46.5310741
+            ],
+            [
+              21.1712652,
+              46.5310741
+            ],
+            [
+              21.1712652,
+              46.528583
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8972946",
+      "properties": {
+        "@id": "relation/8972946",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2375325,
+              46.5181414
+            ],
+            [
+              21.2643586,
+              46.5181414
+            ],
+            [
+              21.2643586,
+              46.5374916
+            ],
+            [
+              21.2375325,
+              46.5374916
+            ],
+            [
+              21.2375325,
+              46.5181414
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8973070",
+      "properties": {
+        "@id": "relation/8973070",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2595373,
+              46.5315101
+            ],
+            [
+              21.2613078,
+              46.5315101
+            ],
+            [
+              21.2613078,
+              46.5329494
+            ],
+            [
+              21.2595373,
+              46.5329494
+            ],
+            [
+              21.2595373,
+              46.5315101
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8973076",
+      "properties": {
+        "@id": "relation/8973076",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2319503,
+              46.527858
+            ],
+            [
+              21.2454534,
+              46.527858
+            ],
+            [
+              21.2454534,
+              46.5369067
+            ],
+            [
+              21.2319503,
+              46.5369067
+            ],
+            [
+              21.2319503,
+              46.527858
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9036216",
+      "properties": {
+        "@id": "relation/9036216",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1113726,
+              46.4582855
+            ],
+            [
+              21.133278,
+              46.4582855
+            ],
+            [
+              21.133278,
+              46.4865099
+            ],
+            [
+              21.1113726,
+              46.4865099
+            ],
+            [
+              21.1113726,
+              46.4582855
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9036221",
+      "properties": {
+        "@id": "relation/9036221",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0780591,
+              46.489252
+            ],
+            [
+              21.0798508,
+              46.489252
+            ],
+            [
+              21.0798508,
+              46.4909435
+            ],
+            [
+              21.0780591,
+              46.4909435
+            ],
+            [
+              21.0780591,
+              46.489252
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9036226",
+      "properties": {
+        "@id": "relation/9036226",
+        "CLC:code": "112",
+        "CLC:id": "HU-32076",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0876218,
+              46.5003575
+            ],
+            [
+              21.1025964,
+              46.5003575
+            ],
+            [
+              21.1025964,
+              46.5062469
+            ],
+            [
+              21.0876218,
+              46.5062469
+            ],
+            [
+              21.0876218,
+              46.5003575
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9041827",
+      "properties": {
+        "@id": "relation/9041827",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1213917,
+              46.694781
+            ],
+            [
+              21.128197,
+              46.694781
+            ],
+            [
+              21.128197,
+              46.6983453
+            ],
+            [
+              21.1213917,
+              46.6983453
+            ],
+            [
+              21.1213917,
+              46.694781
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9042993",
+      "properties": {
+        "@id": "relation/9042993",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2211313,
+              46.4217108
+            ],
+            [
+              21.2438174,
+              46.4217108
+            ],
+            [
+              21.2438174,
+              46.437341
+            ],
+            [
+              21.2211313,
+              46.437341
+            ],
+            [
+              21.2211313,
+              46.4217108
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9044421",
+      "properties": {
+        "@id": "relation/9044421",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1623601,
+              46.4042809
+            ],
+            [
+              21.2021815,
+              46.4042809
+            ],
+            [
+              21.2021815,
+              46.4294378
+            ],
+            [
+              21.1623601,
+              46.4294378
+            ],
+            [
+              21.1623601,
+              46.4042809
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9044463",
+      "properties": {
+        "@id": "relation/9044463",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1136895,
+              46.3285023
+            ],
+            [
+              21.1521319,
+              46.3285023
+            ],
+            [
+              21.1521319,
+              46.3532705
+            ],
+            [
+              21.1136895,
+              46.3532705
+            ],
+            [
+              21.1136895,
+              46.3285023
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9045926",
+      "properties": {
+        "@id": "relation/9045926",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0892653,
+              46.3627057
+            ],
+            [
+              21.109961,
+              46.3627057
+            ],
+            [
+              21.109961,
+              46.3760378
+            ],
+            [
+              21.0892653,
+              46.3760378
+            ],
+            [
+              21.0892653,
+              46.3627057
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9046414",
+      "properties": {
+        "@id": "relation/9046414",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0131332,
+              46.4865361
+            ],
+            [
+              21.0437912,
+              46.4865361
+            ],
+            [
+              21.0437912,
+              46.5067741
+            ],
+            [
+              21.0131332,
+              46.5067741
+            ],
+            [
+              21.0131332,
+              46.4865361
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9046488",
+      "properties": {
+        "@id": "relation/9046488",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9657965,
+              46.320341
+            ],
+            [
+              20.9785739,
+              46.320341
+            ],
+            [
+              20.9785739,
+              46.3274159
+            ],
+            [
+              20.9657965,
+              46.3274159
+            ],
+            [
+              20.9657965,
+              46.320341
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9046647",
+      "properties": {
+        "@id": "relation/9046647",
+        "landuse": "residential",
+        "name": "Kamaráspuszta (21-es major)",
+        "population": "100",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8473096,
+              46.3374308
+            ],
+            [
+              20.8564442,
+              46.3374308
+            ],
+            [
+              20.8564442,
+              46.3433495
+            ],
+            [
+              20.8473096,
+              46.3433495
+            ],
+            [
+              20.8473096,
+              46.3374308
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9046662",
+      "properties": {
+        "@id": "relation/9046662",
+        "CLC:code": "112",
+        "CLC:id": "HU-35709",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8904131,
+              46.2854532
+            ],
+            [
+              20.9002447,
+              46.2854532
+            ],
+            [
+              20.9002447,
+              46.2941584
+            ],
+            [
+              20.8904131,
+              46.2941584
+            ],
+            [
+              20.8904131,
+              46.2854532
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9050439",
+      "properties": {
+        "@id": "relation/9050439",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8293325,
+              46.3082175
+            ],
+            [
+              20.8312797,
+              46.3082175
+            ],
+            [
+              20.8312797,
+              46.3104038
+            ],
+            [
+              20.8293325,
+              46.3104038
+            ],
+            [
+              20.8293325,
+              46.3082175
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9053207",
+      "properties": {
+        "@id": "relation/9053207",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7955554,
+              46.3117192
+            ],
+            [
+              20.7969636,
+              46.3117192
+            ],
+            [
+              20.7969636,
+              46.3132866
+            ],
+            [
+              20.7955554,
+              46.3132866
+            ],
+            [
+              20.7955554,
+              46.3117192
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9090469",
+      "properties": {
+        "@id": "relation/9090469",
+        "landuse": "residential",
+        "name": "Külsőfecskéspuszta (81-es major)",
+        "population": "65",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8137695,
+              46.3695982
+            ],
+            [
+              20.8225305,
+              46.3695982
+            ],
+            [
+              20.8225305,
+              46.375594
+            ],
+            [
+              20.8137695,
+              46.375594
+            ],
+            [
+              20.8137695,
+              46.3695982
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9090583",
+      "properties": {
+        "@id": "relation/9090583",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7191734,
+              46.3978196
+            ],
+            [
+              20.7536222,
+              46.3978196
+            ],
+            [
+              20.7536222,
+              46.4259542
+            ],
+            [
+              20.7191734,
+              46.4259542
+            ],
+            [
+              20.7191734,
+              46.3978196
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9092028",
+      "properties": {
+        "@id": "relation/9092028",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8134674,
+              46.4509767
+            ],
+            [
+              20.837094,
+              46.4509767
+            ],
+            [
+              20.837094,
+              46.4691125
+            ],
+            [
+              20.8134674,
+              46.4691125
+            ],
+            [
+              20.8134674,
+              46.4509767
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9092080",
+      "properties": {
+        "@id": "relation/9092080",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9510853,
+              46.4473059
+            ],
+            [
+              20.9868461,
+              46.4473059
+            ],
+            [
+              20.9868461,
+              46.4685279
+            ],
+            [
+              20.9510853,
+              46.4685279
+            ],
+            [
+              20.9510853,
+              46.4473059
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9092081",
+      "properties": {
+        "@id": "relation/9092081",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8593515,
+              46.379207
+            ],
+            [
+              20.881763,
+              46.379207
+            ],
+            [
+              20.881763,
+              46.3962427
+            ],
+            [
+              20.8593515,
+              46.3962427
+            ],
+            [
+              20.8593515,
+              46.379207
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9094578",
+      "properties": {
+        "@id": "relation/9094578",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.939877,
+              46.3619005
+            ],
+            [
+              20.9465021,
+              46.3619005
+            ],
+            [
+              20.9465021,
+              46.3664279
+            ],
+            [
+              20.939877,
+              46.3664279
+            ],
+            [
+              20.939877,
+              46.3619005
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9094581",
+      "properties": {
+        "@id": "relation/9094581",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9344635,
+              46.3783201
+            ],
+            [
+              20.9370553,
+              46.3783201
+            ],
+            [
+              20.9370553,
+              46.3806608
+            ],
+            [
+              20.9344635,
+              46.3806608
+            ],
+            [
+              20.9344635,
+              46.3783201
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9097789",
+      "properties": {
+        "@id": "relation/9097789",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7646354,
+              46.4735827
+            ],
+            [
+              20.7733897,
+              46.4735827
+            ],
+            [
+              20.7733897,
+              46.4805627
+            ],
+            [
+              20.7646354,
+              46.4805627
+            ],
+            [
+              20.7646354,
+              46.4735827
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9097795",
+      "properties": {
+        "@id": "relation/9097795",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6968291,
+              46.4998088
+            ],
+            [
+              20.6978851,
+              46.4998088
+            ],
+            [
+              20.6978851,
+              46.500822
+            ],
+            [
+              20.6968291,
+              46.500822
+            ],
+            [
+              20.6968291,
+              46.4998088
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9098011",
+      "properties": {
+        "@id": "relation/9098011",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7310905,
+              46.5207223
+            ],
+            [
+              20.7340258,
+              46.5207223
+            ],
+            [
+              20.7340258,
+              46.5226178
+            ],
+            [
+              20.7310905,
+              46.5226178
+            ],
+            [
+              20.7310905,
+              46.5207223
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9098016",
+      "properties": {
+        "@id": "relation/9098016",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7959127,
+              46.5210498
+            ],
+            [
+              20.8122466,
+              46.5210498
+            ],
+            [
+              20.8122466,
+              46.5431808
+            ],
+            [
+              20.7959127,
+              46.5431808
+            ],
+            [
+              20.7959127,
+              46.5210498
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9098018",
+      "properties": {
+        "@id": "relation/9098018",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7904879,
+              46.5051745
+            ],
+            [
+              20.8075914,
+              46.5051745
+            ],
+            [
+              20.8075914,
+              46.5200956
+            ],
+            [
+              20.7904879,
+              46.5200956
+            ],
+            [
+              20.7904879,
+              46.5051745
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9101511",
+      "properties": {
+        "@id": "relation/9101511",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9766801,
+              46.5965505
+            ],
+            [
+              20.9780487,
+              46.5965505
+            ],
+            [
+              20.9780487,
+              46.5978543
+            ],
+            [
+              20.9766801,
+              46.5978543
+            ],
+            [
+              20.9766801,
+              46.5965505
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9105055",
+      "properties": {
+        "@id": "relation/9105055",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8517541,
+              46.5915892
+            ],
+            [
+              20.8687448,
+              46.5915892
+            ],
+            [
+              20.8687448,
+              46.6040087
+            ],
+            [
+              20.8517541,
+              46.6040087
+            ],
+            [
+              20.8517541,
+              46.5915892
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9108338",
+      "properties": {
+        "@id": "relation/9108338",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7144272,
+              46.4625721
+            ],
+            [
+              20.7162666,
+              46.4625721
+            ],
+            [
+              20.7162666,
+              46.463846
+            ],
+            [
+              20.7144272,
+              46.463846
+            ],
+            [
+              20.7144272,
+              46.4625721
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9108404",
+      "properties": {
+        "@id": "relation/9108404",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7221943,
+              46.412892
+            ],
+            [
+              20.723514,
+              46.412892
+            ],
+            [
+              20.723514,
+              46.4134375
+            ],
+            [
+              20.7221943,
+              46.4134375
+            ],
+            [
+              20.7221943,
+              46.412892
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9155360",
+      "properties": {
+        "@id": "relation/9155360",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7331994,
+              46.5993574
+            ],
+            [
+              20.7409429,
+              46.5993574
+            ],
+            [
+              20.7409429,
+              46.6026155
+            ],
+            [
+              20.7331994,
+              46.6026155
+            ],
+            [
+              20.7331994,
+              46.5993574
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9156280",
+      "properties": {
+        "@id": "relation/9156280",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9399758,
+              46.6504267
+            ],
+            [
+              20.9591682,
+              46.6504267
+            ],
+            [
+              20.9591682,
+              46.6625471
+            ],
+            [
+              20.9399758,
+              46.6625471
+            ],
+            [
+              20.9399758,
+              46.6504267
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9157100",
+      "properties": {
+        "@id": "relation/9157100",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6853719,
+              46.6065163
+            ],
+            [
+              20.6870507,
+              46.6065163
+            ],
+            [
+              20.6870507,
+              46.6086208
+            ],
+            [
+              20.6853719,
+              46.6086208
+            ],
+            [
+              20.6853719,
+              46.6065163
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9157859",
+      "properties": {
+        "@id": "relation/9157859",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.101628,
+              46.754787
+            ],
+            [
+              21.1493384,
+              46.754787
+            ],
+            [
+              21.1493384,
+              46.7976343
+            ],
+            [
+              21.101628,
+              46.7976343
+            ],
+            [
+              21.101628,
+              46.754787
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9157865",
+      "properties": {
+        "@id": "relation/9157865",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9753603,
+              46.552715
+            ],
+            [
+              20.9760993,
+              46.552715
+            ],
+            [
+              20.9760993,
+              46.5570885
+            ],
+            [
+              20.9753603,
+              46.5570885
+            ],
+            [
+              20.9753603,
+              46.552715
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9157866",
+      "properties": {
+        "@id": "relation/9157866",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9753316,
+              46.5465214
+            ],
+            [
+              20.9830975,
+              46.5465214
+            ],
+            [
+              20.9830975,
+              46.5494837
+            ],
+            [
+              20.9753316,
+              46.5494837
+            ],
+            [
+              20.9753316,
+              46.5465214
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9157873",
+      "properties": {
+        "@id": "relation/9157873",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9143644,
+              46.5238491
+            ],
+            [
+              20.9331645,
+              46.5238491
+            ],
+            [
+              20.9331645,
+              46.5323207
+            ],
+            [
+              20.9143644,
+              46.5323207
+            ],
+            [
+              20.9143644,
+              46.5238491
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9157877",
+      "properties": {
+        "@id": "relation/9157877",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9477735,
+              46.5121703
+            ],
+            [
+              20.9719552,
+              46.5121703
+            ],
+            [
+              20.9719552,
+              46.5245748
+            ],
+            [
+              20.9477735,
+              46.5245748
+            ],
+            [
+              20.9477735,
+              46.5121703
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9158331",
+      "properties": {
+        "@id": "relation/9158331",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4742247,
+              46.7564318
+            ],
+            [
+              21.4806537,
+              46.7564318
+            ],
+            [
+              21.4806537,
+              46.7584396
+            ],
+            [
+              21.4742247,
+              46.7584396
+            ],
+            [
+              21.4742247,
+              46.7564318
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9161324",
+      "properties": {
+        "@id": "relation/9161324",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.412947,
+              46.8205165
+            ],
+            [
+              21.4182937,
+              46.8205165
+            ],
+            [
+              21.4182937,
+              46.824433
+            ],
+            [
+              21.412947,
+              46.824433
+            ],
+            [
+              21.412947,
+              46.8205165
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9260084",
+      "properties": {
+        "@id": "relation/9260084",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2082596,
+              46.8059328
+            ],
+            [
+              21.221337,
+              46.8059328
+            ],
+            [
+              21.221337,
+              46.8161634
+            ],
+            [
+              21.2082596,
+              46.8161634
+            ],
+            [
+              21.2082596,
+              46.8059328
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9334276",
+      "properties": {
+        "@id": "relation/9334276",
+        "CLC:code": "112",
+        "CLC:id": "HU-27343",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "source": "© EEA, Koppenhága (2009); Készítette a FÖMI a KvVM megbízásából (2009)",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7849125,
+              46.74676
+            ],
+            [
+              20.8163077,
+              46.74676
+            ],
+            [
+              20.8163077,
+              46.768706
+            ],
+            [
+              20.7849125,
+              46.768706
+            ],
+            [
+              20.7849125,
+              46.74676
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/10742173",
+      "properties": {
+        "@id": "relation/10742173",
+        "CLC:code": "112",
+        "CLC:id": "HU-28471",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "source": "© EEA, Koppenhága (2009); Készítette a FÖMI a KvVM megbízásából (2009)",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7485765,
+              46.6998378
+            ],
+            [
+              20.7564788,
+              46.6998378
+            ],
+            [
+              20.7564788,
+              46.7048855
+            ],
+            [
+              20.7485765,
+              46.7048855
+            ],
+            [
+              20.7485765,
+              46.6998378
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/10744402",
+      "properties": {
+        "@id": "relation/10744402",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8383429,
+              46.8077914
+            ],
+            [
+              20.8536296,
+              46.8077914
+            ],
+            [
+              20.8536296,
+              46.8186481
+            ],
+            [
+              20.8383429,
+              46.8186481
+            ],
+            [
+              20.8383429,
+              46.8077914
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/10779666",
+      "properties": {
+        "@id": "relation/10779666",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.011437,
+              46.8705839
+            ],
+            [
+              21.0362682,
+              46.8705839
+            ],
+            [
+              21.0362682,
+              46.888437
+            ],
+            [
+              21.011437,
+              46.888437
+            ],
+            [
+              21.011437,
+              46.8705839
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/10795892",
+      "properties": {
+        "@id": "relation/10795892",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9294765,
+              46.8608211
+            ],
+            [
+              20.9443229,
+              46.8608211
+            ],
+            [
+              20.9443229,
+              46.868935
+            ],
+            [
+              20.9294765,
+              46.868935
+            ],
+            [
+              20.9294765,
+              46.8608211
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12353777",
+      "properties": {
+        "@id": "relation/12353777",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9680885,
+              46.7555451
+            ],
+            [
+              20.9912539,
+              46.7555451
+            ],
+            [
+              20.9912539,
+              46.7680486
+            ],
+            [
+              20.9680885,
+              46.7680486
+            ],
+            [
+              20.9680885,
+              46.7555451
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12508273",
+      "properties": {
+        "@id": "relation/12508273",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2205239,
+              46.5864339
+            ],
+            [
+              21.2229904,
+              46.5864339
+            ],
+            [
+              21.2229904,
+              46.5882272
+            ],
+            [
+              21.2205239,
+              46.5882272
+            ],
+            [
+              21.2205239,
+              46.5864339
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/13534691",
+      "properties": {
+        "@id": "relation/13534691",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6855062,
+              46.575548
+            ],
+            [
+              20.6894548,
+              46.575548
+            ],
+            [
+              20.6894548,
+              46.5793372
+            ],
+            [
+              20.6855062,
+              46.5793372
+            ],
+            [
+              20.6855062,
+              46.575548
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/13555546",
+      "properties": {
+        "@id": "relation/13555546",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4669153,
+              46.7307975
+            ],
+            [
+              21.4985336,
+              46.7307975
+            ],
+            [
+              21.4985336,
+              46.748143
+            ],
+            [
+              21.4669153,
+              46.748143
+            ],
+            [
+              21.4669153,
+              46.7307975
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/14002754",
+      "properties": {
+        "@id": "relation/14002754",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6817895,
+              46.3900469
+            ],
+            [
+              20.687803,
+              46.3900469
+            ],
+            [
+              20.687803,
+              46.3937025
+            ],
+            [
+              20.6817895,
+              46.3937025
+            ],
+            [
+              20.6817895,
+              46.3900469
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/14002776",
+      "properties": {
+        "@id": "relation/14002776",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6067313,
+              46.4089186
+            ],
+            [
+              20.6274325,
+              46.4089186
+            ],
+            [
+              20.6274325,
+              46.4322251
+            ],
+            [
+              20.6067313,
+              46.4322251
+            ],
+            [
+              20.6067313,
+              46.4089186
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/14029381",
+      "properties": {
+        "@id": "relation/14029381",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6482565,
+              46.4818131
+            ],
+            [
+              20.6574833,
+              46.4818131
+            ],
+            [
+              20.6574833,
+              46.4875272
+            ],
+            [
+              20.6482565,
+              46.4875272
+            ],
+            [
+              20.6482565,
+              46.4818131
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/14332240",
+      "properties": {
+        "@id": "relation/14332240",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1646027,
+              46.6728634
+            ],
+            [
+              21.1651607,
+              46.6728634
+            ],
+            [
+              21.1651607,
+              46.6732516
+            ],
+            [
+              21.1646027,
+              46.6732516
+            ],
+            [
+              21.1646027,
+              46.6728634
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/14332241",
+      "properties": {
+        "@id": "relation/14332241",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1658068,
+              46.6722445
+            ],
+            [
+              21.1675307,
+              46.6722445
+            ],
+            [
+              21.1675307,
+              46.6731911
+            ],
+            [
+              21.1658068,
+              46.6731911
+            ],
+            [
+              21.1658068,
+              46.6722445
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/14365170",
+      "properties": {
+        "@id": "relation/14365170",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.5874216,
+              46.6540158
+            ],
+            [
+              20.5900275,
+              46.6540158
+            ],
+            [
+              20.5900275,
+              46.65529
+            ],
+            [
+              20.5874216,
+              46.65529
+            ],
+            [
+              20.5874216,
+              46.6540158
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/15429623",
+      "properties": {
+        "@id": "relation/15429623",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0005229,
+              46.8083484
+            ],
+            [
+              21.0424573,
+              46.8083484
+            ],
+            [
+              21.0424573,
+              46.8422711
+            ],
+            [
+              21.0005229,
+              46.8422711
+            ],
+            [
+              21.0005229,
+              46.8083484
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/15539838",
+      "properties": {
+        "@id": "relation/15539838",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.142372,
+              47.0103976
+            ],
+            [
+              21.188187,
+              47.0103976
+            ],
+            [
+              21.188187,
+              47.03854
+            ],
+            [
+              21.142372,
+              47.03854
+            ],
+            [
+              21.142372,
+              47.0103976
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/15543978",
+      "properties": {
+        "@id": "relation/15543978",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.5730649,
+              46.8542981
+            ],
+            [
+              20.5825719,
+              46.8542981
+            ],
+            [
+              20.5825719,
+              46.856824
+            ],
+            [
+              20.5730649,
+              46.856824
+            ],
+            [
+              20.5730649,
+              46.8542981
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/15861647",
+      "properties": {
+        "@id": "relation/15861647",
+        "CLC:code": "112",
+        "CLC:id": "HU-23121",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3902299,
+              46.9584548
+            ],
+            [
+              21.4052481,
+              46.9584548
+            ],
+            [
+              21.4052481,
+              46.9727818
+            ],
+            [
+              21.3902299,
+              46.9727818
+            ],
+            [
+              21.3902299,
+              46.9584548
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/16235980",
+      "properties": {
+        "@id": "relation/16235980",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.5899051,
+              46.858283
+            ],
+            [
+              20.6074268,
+              46.858283
+            ],
+            [
+              20.6074268,
+              46.8758453
+            ],
+            [
+              20.5899051,
+              46.8758453
+            ],
+            [
+              20.5899051,
+              46.858283
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/16235981",
+      "properties": {
+        "@id": "relation/16235981",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6058366,
+              46.8677619
+            ],
+            [
+              20.6244241,
+              46.8677619
+            ],
+            [
+              20.6244241,
+              46.8733609
+            ],
+            [
+              20.6058366,
+              46.8733609
+            ],
+            [
+              20.6058366,
+              46.8677619
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/16235982",
+      "properties": {
+        "@id": "relation/16235982",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.6111065,
+              46.8749814
+            ],
+            [
+              20.6310506,
+              46.8749814
+            ],
+            [
+              20.6310506,
+              46.8804893
+            ],
+            [
+              20.6111065,
+              46.8804893
+            ],
+            [
+              20.6111065,
+              46.8749814
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/16760010",
+      "properties": {
+        "@id": "relation/16760010",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.4707358,
+              46.9147485
+            ],
+            [
+              21.5036881,
+              46.9147485
+            ],
+            [
+              21.5036881,
+              46.9305506
+            ],
+            [
+              21.4707358,
+              46.9305506
+            ],
+            [
+              21.4707358,
+              46.9147485
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/17526091",
+      "properties": {
+        "@id": "relation/17526091",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3484792,
+              46.7250232
+            ],
+            [
+              21.4056337,
+              46.7250232
+            ],
+            [
+              21.4056337,
+              46.7550534
+            ],
+            [
+              21.3484792,
+              46.7550534
+            ],
+            [
+              21.3484792,
+              46.7250232
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/17913082",
+      "properties": {
+        "@id": "relation/17913082",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.9326324,
+              47.017156
+            ],
+            [
+              20.9839016,
+              47.017156
+            ],
+            [
+              20.9839016,
+              47.0457368
+            ],
+            [
+              20.9326324,
+              47.0457368
+            ],
+            [
+              20.9326324,
+              47.017156
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/17985550",
+      "properties": {
+        "@id": "relation/17985550",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4898412,
+              46.8718102
+            ],
+            [
+              20.4968921,
+              46.8718102
+            ],
+            [
+              20.4968921,
+              46.8771404
+            ],
+            [
+              20.4898412,
+              46.8771404
+            ],
+            [
+              20.4898412,
+              46.8718102
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18047159",
+      "properties": {
+        "@id": "relation/18047159",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.5839513,
+              46.8331614
+            ],
+            [
+              20.6124085,
+              46.8331614
+            ],
+            [
+              20.6124085,
+              46.8374165
+            ],
+            [
+              20.5839513,
+              46.8374165
+            ],
+            [
+              20.5839513,
+              46.8331614
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18112425",
+      "properties": {
+        "@id": "relation/18112425",
+        "CLC:code": "112",
+        "CLC:id": "HU-24702",
+        "CLC:year": "2006",
+        "landuse": "residential",
+        "source": "© EEA, Koppenhága (2009); Készítette a FÖMI a KvVM megbízásából (2009)",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.5721596,
+              46.8785562
+            ],
+            [
+              21.5974488,
+              46.8785562
+            ],
+            [
+              21.5974488,
+              46.8876787
+            ],
+            [
+              21.5721596,
+              46.8876787
+            ],
+            [
+              21.5721596,
+              46.8785562
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18365328",
+      "properties": {
+        "@id": "relation/18365328",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.5284162,
+              46.8662716
+            ],
+            [
+              20.52949,
+              46.8662716
+            ],
+            [
+              20.52949,
+              46.868106
+            ],
+            [
+              20.5284162,
+              46.868106
+            ],
+            [
+              20.5284162,
+              46.8662716
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18649446",
+      "properties": {
+        "@id": "relation/18649446",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2943469,
+              46.6494419
+            ],
+            [
+              21.2965641,
+              46.6494419
+            ],
+            [
+              21.2965641,
+              46.6512642
+            ],
+            [
+              21.2943469,
+              46.6512642
+            ],
+            [
+              21.2943469,
+              46.6494419
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18649447",
+      "properties": {
+        "@id": "relation/18649447",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2923074,
+              46.6318194
+            ],
+            [
+              21.3461154,
+              46.6318194
+            ],
+            [
+              21.3461154,
+              46.6488392
+            ],
+            [
+              21.2923074,
+              46.6488392
+            ],
+            [
+              21.2923074,
+              46.6318194
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18649448",
+      "properties": {
+        "@id": "relation/18649448",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2819038,
+              46.6330411
+            ],
+            [
+              21.2915703,
+              46.6330411
+            ],
+            [
+              21.2915703,
+              46.6354349
+            ],
+            [
+              21.2819038,
+              46.6354349
+            ],
+            [
+              21.2819038,
+              46.6330411
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18649449",
+      "properties": {
+        "@id": "relation/18649449",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2813486,
+              46.632671
+            ],
+            [
+              21.2817431,
+              46.632671
+            ],
+            [
+              21.2817431,
+              46.6334359
+            ],
+            [
+              21.2813486,
+              46.6334359
+            ],
+            [
+              21.2813486,
+              46.632671
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18649450",
+      "properties": {
+        "@id": "relation/18649450",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2766571,
+              46.6341338
+            ],
+            [
+              21.27707,
+              46.6341338
+            ],
+            [
+              21.27707,
+              46.6344857
+            ],
+            [
+              21.2766571,
+              46.6344857
+            ],
+            [
+              21.2766571,
+              46.6341338
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18649451",
+      "properties": {
+        "@id": "relation/18649451",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.243007,
+              46.6474056
+            ],
+            [
+              21.2461711,
+              46.6474056
+            ],
+            [
+              21.2461711,
+              46.6513821
+            ],
+            [
+              21.243007,
+              46.6513821
+            ],
+            [
+              21.243007,
+              46.6474056
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18649452",
+      "properties": {
+        "@id": "relation/18649452",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2528925,
+              46.6572104
+            ],
+            [
+              21.2612203,
+              46.6572104
+            ],
+            [
+              21.2612203,
+              46.6636382
+            ],
+            [
+              21.2528925,
+              46.6636382
+            ],
+            [
+              21.2528925,
+              46.6572104
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18654358",
+      "properties": {
+        "@id": "relation/18654358",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2666753,
+              46.656365
+            ],
+            [
+              21.2671474,
+              46.656365
+            ],
+            [
+              21.2671474,
+              46.6565754
+            ],
+            [
+              21.2666753,
+              46.6565754
+            ],
+            [
+              21.2666753,
+              46.656365
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18654359",
+      "properties": {
+        "@id": "relation/18654359",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2691985,
+              46.6563811
+            ],
+            [
+              21.2836142,
+              46.6563811
+            ],
+            [
+              21.2836142,
+              46.6661186
+            ],
+            [
+              21.2691985,
+              46.6661186
+            ],
+            [
+              21.2691985,
+              46.6563811
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18654360",
+      "properties": {
+        "@id": "relation/18654360",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2846751,
+              46.6548143
+            ],
+            [
+              21.2968713,
+              46.6548143
+            ],
+            [
+              21.2968713,
+              46.6669468
+            ],
+            [
+              21.2846751,
+              46.6669468
+            ],
+            [
+              21.2846751,
+              46.6548143
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18654361",
+      "properties": {
+        "@id": "relation/18654361",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2906759,
+              46.6516652
+            ],
+            [
+              21.2963645,
+              46.6516652
+            ],
+            [
+              21.2963645,
+              46.6553729
+            ],
+            [
+              21.2906759,
+              46.6553729
+            ],
+            [
+              21.2906759,
+              46.6516652
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18654362",
+      "properties": {
+        "@id": "relation/18654362",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.2920967,
+              46.6347082
+            ],
+            [
+              21.2924934,
+              46.6347082
+            ],
+            [
+              21.2924934,
+              46.6355432
+            ],
+            [
+              21.2920967,
+              46.6355432
+            ],
+            [
+              21.2920967,
+              46.6347082
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18655688",
+      "properties": {
+        "@id": "relation/18655688",
+        "landuse": "residential",
+        "source": "bing",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1266338,
+              46.6684581
+            ],
+            [
+              21.1279624,
+              46.6684581
+            ],
+            [
+              21.1279624,
+              46.669119
+            ],
+            [
+              21.1266338,
+              46.669119
+            ],
+            [
+              21.1266338,
+              46.6684581
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18655689",
+      "properties": {
+        "@id": "relation/18655689",
+        "landuse": "residential",
+        "source": "bing",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1009451,
+              46.6720012
+            ],
+            [
+              21.1140178,
+              46.6720012
+            ],
+            [
+              21.1140178,
+              46.6822384
+            ],
+            [
+              21.1009451,
+              46.6822384
+            ],
+            [
+              21.1009451,
+              46.6720012
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18655690",
+      "properties": {
+        "@id": "relation/18655690",
+        "landuse": "residential",
+        "source": "bing",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1097772,
+              46.6580507
+            ],
+            [
+              21.1357481,
+              46.6580507
+            ],
+            [
+              21.1357481,
+              46.6712418
+            ],
+            [
+              21.1097772,
+              46.6712418
+            ],
+            [
+              21.1097772,
+              46.6580507
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18655691",
+      "properties": {
+        "@id": "relation/18655691",
+        "landuse": "residential",
+        "source": "bing",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1132656,
+              46.6683124
+            ],
+            [
+              21.1262825,
+              46.6683124
+            ],
+            [
+              21.1262825,
+              46.6784801
+            ],
+            [
+              21.1132656,
+              46.6784801
+            ],
+            [
+              21.1132656,
+              46.6683124
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18659081",
+      "properties": {
+        "@id": "relation/18659081",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1481741,
+              46.7574727
+            ],
+            [
+              21.1535973,
+              46.7574727
+            ],
+            [
+              21.1535973,
+              46.7624979
+            ],
+            [
+              21.1481741,
+              46.7624979
+            ],
+            [
+              21.1481741,
+              46.7574727
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/18659239",
+      "properties": {
+        "@id": "relation/18659239",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0345661,
+              46.8703538
+            ],
+            [
+              21.0364429,
+              46.8703538
+            ],
+            [
+              21.0364429,
+              46.8719032
+            ],
+            [
+              21.0345661,
+              46.8719032
+            ],
+            [
+              21.0345661,
+              46.8703538
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/19208642",
+      "properties": {
+        "@id": "relation/19208642",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0536425,
+              46.9498412
+            ],
+            [
+              21.0910776,
+              46.9498412
+            ],
+            [
+              21.0910776,
+              46.9775159
+            ],
+            [
+              21.0536425,
+              46.9775159
+            ],
+            [
+              21.0536425,
+              46.9498412
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/19391073",
+      "properties": {
+        "@id": "relation/19391073",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7486555,
+              46.5064975
+            ],
+            [
+              20.7522092,
+              46.5064975
+            ],
+            [
+              20.7522092,
+              46.5090648
+            ],
+            [
+              20.7486555,
+              46.5090648
+            ],
+            [
+              20.7486555,
+              46.5064975
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/19391075",
+      "properties": {
+        "@id": "relation/19391075",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.765042,
+              46.4928414
+            ],
+            [
+              20.7675247,
+              46.4928414
+            ],
+            [
+              20.7675247,
+              46.4944789
+            ],
+            [
+              20.765042,
+              46.4944789
+            ],
+            [
+              20.765042,
+              46.4928414
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/19469856",
+      "properties": {
+        "@id": "relation/19469856",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.3314293,
+              46.7020772
+            ],
+            [
+              21.3323824,
+              46.7020772
+            ],
+            [
+              21.3323824,
+              46.7029018
+            ],
+            [
+              21.3314293,
+              46.7029018
+            ],
+            [
+              21.3314293,
+              46.7020772
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/19640897",
+      "properties": {
+        "@id": "relation/19640897",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1569133,
+              46.5365401
+            ],
+            [
+              21.1666591,
+              46.5365401
+            ],
+            [
+              21.1666591,
+              46.5413254
+            ],
+            [
+              21.1569133,
+              46.5413254
+            ],
+            [
+              21.1569133,
+              46.5365401
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/19798832",
+      "properties": {
+        "@id": "relation/19798832",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.5307242,
+              46.845177
+            ],
+            [
+              20.5773706,
+              46.845177
+            ],
+            [
+              20.5773706,
+              46.881628
+            ],
+            [
+              20.5307242,
+              46.881628
+            ],
+            [
+              20.5307242,
+              46.845177
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20036565",
+      "properties": {
+        "@id": "relation/20036565",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0573325,
+              47.1512083
+            ],
+            [
+              21.0655841,
+              47.1512083
+            ],
+            [
+              21.0655841,
+              47.1581608
+            ],
+            [
+              21.0573325,
+              47.1581608
+            ],
+            [
+              21.0573325,
+              47.1512083
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20061566",
+      "properties": {
+        "@id": "relation/20061566",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.1943945,
+              47.0900272
+            ],
+            [
+              21.226456,
+              47.0900272
+            ],
+            [
+              21.226456,
+              47.1225817
+            ],
+            [
+              21.1943945,
+              47.1225817
+            ],
+            [
+              21.1943945,
+              47.0900272
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21258567",
+      "properties": {
+        "@id": "relation/21258567",
+        "landuse": "residential",
+        "type": "multipolygon",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4686488,
+              46.8588401
+            ],
+            [
+              20.4926614,
+              46.8588401
+            ],
+            [
+              20.4926614,
+              46.8805251
+            ],
+            [
+              20.4686488,
+              46.8805251
+            ],
+            [
+              20.4686488,
+              46.8588401
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

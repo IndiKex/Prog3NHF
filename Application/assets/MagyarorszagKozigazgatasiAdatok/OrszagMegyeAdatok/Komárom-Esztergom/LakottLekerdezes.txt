@@ -1,0 +1,19 @@
+[out:json][timeout:300];
+
+// Pest vármegye közigazgatási határa
+relation
+  ["boundary"="administrative"]
+  ["admin_level"="6"]
+  ["name"~"^Komárom-Esztergom"]
+  ->.county;
+
+// A vármegye területének előállítása
+.county map_to_area ->.countyArea;
+
+// Lakóterületek lekérdezése a vármegyén belül
+(
+  way["landuse"="residential"](area.countyArea);
+  relation["landuse"="residential"](area.countyArea);
+);
+
+out geom;

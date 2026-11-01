@@ -1,0 +1,1402 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-10-27T14:18:27Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "relation/21335",
+      "properties": {
+        "@id": "relation/21335",
+        "ISO3166-1": "HU",
+        "ISO3166-1:alpha2": "HU",
+        "ISO3166-1:alpha3": "HUN",
+        "ISO3166-1:numeric": "348",
+        "admin_level": "2",
+        "alt_name:eo": "Hungarujo",
+        "alt_name:lfn": "Ungaria",
+        "alt_name:nv": "Azeedíchʼííʼ Dineʼé Bikéyah",
+        "alt_name:vi": "Hung-ga-ri",
+        "boundary": "administrative",
+        "country_code_fips": "HU",
+        "default_language": "hu",
+        "driving_side": "right",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg",
+        "flag:wikidata": "Q81970",
+        "flag:wikipedia": "hu:Magyarország zászlaja",
+        "int_name": "Hungary",
+        "land_area": "administrative",
+        "name": "Magyarország",
+        "name:ab": "Мадиартәыла",
+        "name:ace": "Hongaria",
+        "name:af": "Hongarye",
+        "name:ak": "Hangari",
+        "name:als": "Ungarn",
+        "name:am": "ሀንጋሪ",
+        "name:an": "Hongría",
+        "name:ang": "Ungerland",
+        "name:ar": "المجر",
+        "name:arc": "ܡܓܪ",
+        "name:arz": "المجر",
+        "name:ast": "Hungría",
+        "name:ay": "Hunkariya",
+        "name:az": "Macarıstan",
+        "name:ba": "Венгрия",
+        "name:bar": "Ungarn",
+        "name:bat-smg": "Vengrėjė",
+        "name:bcl": "Hungriya",
+        "name:be": "Венгрыя",
+        "name:be-tarask": "Вугоршчына",
+        "name:bg": "Унгария",
+        "name:bi": "Hungary",
+        "name:bm": "Hɔngri",
+        "name:bn": "হাঙ্গেরি",
+        "name:bo": "ཧུང་གྷ་རི།",
+        "name:bpy": "হাঙ্গেরী",
+        "name:br": "Hungaria",
+        "name:bs": "Mađarska",
+        "name:bxr": "Унгар",
+        "name:ca": "Hongria",
+        "name:ce": "Венгри",
+        "name:ceb": "Unggriya",
+        "name:chr": "ᎲᏂᎦᎵ",
+        "name:ckb": "مەجارستان",
+        "name:cnr": "Mađarska",
+        "name:co": "Ungheria",
+        "name:crh": "Macaristan",
+        "name:cs": "Maďarsko",
+        "name:csb": "Madżarskô",
+        "name:cu": "Ѫгри",
+        "name:cv": "Венгри",
+        "name:cy": "Hwngari",
+        "name:da": "Ungarn",
+        "name:de": "Ungarn",
+        "name:diq": "Macarıstan",
+        "name:dsb": "Hungorska",
+        "name:dv": "ހަންގޭރީ",
+        "name:dz": "ཧཱང་གྷ་རི",
+        "name:ee": "Hungary",
+        "name:el": "Ουγγαρία",
+        "name:eml": "Ungherî",
+        "name:en": "Hungary",
+        "name:eo": "Hungario",
+        "name:es": "Hungría",
+        "name:et": "Ungari",
+        "name:eu": "Hungaria",
+        "name:ext": "Ungria",
+        "name:fa": "مجارستان",
+        "name:ff": "Hunngariya",
+        "name:fi": "Unkari",
+        "name:fo": "Ungarn",
+        "name:fr": "Hongrie",
+        "name:frp": "Hongrie",
+        "name:frr": "Ungarn",
+        "name:fur": "Ongjarie",
+        "name:fy": "Hongarije",
+        "name:ga": "An Ungáir",
+        "name:gag": "Vengriya",
+        "name:gd": "An Ungair",
+        "name:gl": "Hungría",
+        "name:gn": "Hungyria",
+        "name:gu": "હંગેરી",
+        "name:gv": "Yn Ungaar",
+        "name:ha": "Hungari",
+        "name:hak": "Hiûng-ngà-li",
+        "name:haw": "Hunakalia",
+        "name:he": "הונגריה",
+        "name:hi": "हंगरी",
+        "name:hif": "Hungary",
+        "name:hr": "Mađarska",
+        "name:hsb": "Madźarska",
+        "name:ht": "Ongri",
+        "name:hu": "Magyarország",
+        "name:hy": "Հունգարիա",
+        "name:ia": "Hungaria",
+        "name:id": "Hongaria",
+        "name:ie": "Hungaria",
+        "name:ilo": "Hungaria",
+        "name:io": "Hungaria",
+        "name:is": "Ungverjaland",
+        "name:it": "Ungheria",
+        "name:ja": "ハンガリー",
+        "name:jbo": "madjiar",
+        "name:jv": "Hongaria",
+        "name:ka": "უნგრეთი",
+        "name:kaa": "Vengriya",
+        "name:kab": "Hungri",
+        "name:kbd": "Мэжарей",
+        "name:kg": "Hongrie",
+        "name:ki": "Macartsa",
+        "name:kk": "Мажарстан",
+        "name:kl": "Ungarni",
+        "name:km": "ប្រទេសហុងគ្រី",
+        "name:kn": "ಹಂಗೇರಿ",
+        "name:ko": "헝가리",
+        "name:koi": "Мадьярму",
+        "name:krc": "Маджар",
+        "name:ks": "ہَنٛگری",
+        "name:ksh": "Unjann",
+        "name:ku": "Macaristan",
+        "name:kv": "Мадьяр Му",
+        "name:kw": "Hungari",
+        "name:ky": "Мажарстан",
+        "name:la": "Hungaria",
+        "name:lad": "Madjaristan",
+        "name:lb": "Ungarn",
+        "name:lez": "Венгрия",
+        "name:lfn": "Magiar",
+        "name:lg": "Hangare",
+        "name:li": "Hongarieë",
+        "name:lij": "Ungaja",
+        "name:lmo": "Üngheria",
+        "name:ln": "Ungri",
+        "name:lo": "ຮັງກາຣີ",
+        "name:lt": "Vengrija",
+        "name:ltg": "Vengreja",
+        "name:lv": "Ungārija",
+        "name:lzh": "匈牙利",
+        "name:mdf": "Венгеронь мастор",
+        "name:mg": "Hongria",
+        "name:mhr": "Венгрий",
+        "name:mi": "Hanekeria",
+        "name:mk": "Унгарија",
+        "name:ml": "ഹംഗറി",
+        "name:mn": "Унгар",
+        "name:mr": "हंगेरी",
+        "name:mrj": "Венгри",
+        "name:ms": "Hungary",
+        "name:mt": "Ungerija",
+        "name:my": "ဟန်ဂေရီနိုင်ငံ",
+        "name:myv": "Мадьяронь Мастор",
+        "name:mzn": "مجارستون",
+        "name:na": "Ungari",
+        "name:nah": "Hungria",
+        "name:nan": "Magyar-kok",
+        "name:nap": "Ungaria",
+        "name:nds": "Ungarn",
+        "name:nds-nl": "Hongaarnlaand",
+        "name:ne": "हंगेरी",
+        "name:nl": "Hongarije",
+        "name:nn": "Ungarn",
+        "name:no": "Ungarn",
+        "name:nov": "Hungaria",
+        "name:nrm": "Hongrie",
+        "name:nv": "Hángewii",
+        "name:oc": "Ongria",
+        "name:or": "ହଙ୍ଗେରୀ",
+        "name:os": "Венгри",
+        "name:pa": "ਹੰਗਰੀ",
+        "name:pag": "Hungary",
+        "name:pam": "Hungrya",
+        "name:pap": "Hongaria",
+        "name:pcd": "Hongrie",
+        "name:pdc": "Ungarn",
+        "name:pih": "Hungrii",
+        "name:pl": "Węgry",
+        "name:pms": "Ungherìa",
+        "name:pnb": "ہنگری",
+        "name:pnt": "Ουγγαρία",
+        "name:ps": "هنګري",
+        "name:pt": "Hungria",
+        "name:qu": "Unriya",
+        "name:rm": "Ungaria",
+        "name:rmy": "Ungariya",
+        "name:rn": "Hungariya",
+        "name:ro": "Ungaria",
+        "name:roa-rup": "Ungaria",
+        "name:roa-tara": "Ungherie",
+        "name:ru": "Венгрия",
+        "name:rue": "Мадярьско",
+        "name:rw": "Hongiriya",
+        "name:sa": "हंगरी",
+        "name:sah": "Венгрия",
+        "name:scn": "Unghirìa",
+        "name:sco": "Hungary",
+        "name:se": "Ungára",
+        "name:sg": "Hongirùii",
+        "name:sh": "Mađarska",
+        "name:si": "හන්ගේරියානු සමුහාණ්ඩුව",
+        "name:sk": "Maďarsko",
+        "name:sl": "Madžarska",
+        "name:sm": "Hungary",
+        "name:smn": "Unkari",
+        "name:sms": "Unkar",
+        "name:sn": "Hungary",
+        "name:so": "Hungaria",
+        "name:sq": "Hungaria",
+        "name:sr": "Мађарска",
+        "name:sr-Latn": "Mađarska",
+        "name:ss": "IHangareyi",
+        "name:st": "Hungary",
+        "name:stq": "Ungarn",
+        "name:su": "Hungaria",
+        "name:sv": "Ungern",
+        "name:sw": "Hungaria",
+        "name:szl": "Madziary",
+        "name:ta": "அங்கேரி",
+        "name:te": "హంగేరి",
+        "name:tet": "Ungria",
+        "name:tg": "Маҷористон",
+        "name:th": "ประเทศฮังการี",
+        "name:ti": "ሀንጋሪ",
+        "name:tk": "Wengriýa",
+        "name:tl": "Unggarya",
+        "name:to": "Hangakalia",
+        "name:tok": "ma Mosijo",
+        "name:tpi": "Hangari",
+        "name:tr": "Macaristan",
+        "name:ts": "Hungary",
+        "name:tt": "Маҗарстан",
+        "name:tzl": "Máxharphäts",
+        "name:udm": "Венгрия",
+        "name:ug": "ۋېنگرىيە",
+        "name:uk": "Угорщина",
+        "name:ur": "مجارستان",
+        "name:uz": "Mojariston",
+        "name:vec": "Ongarìa",
+        "name:vep": "Mad'jaranma",
+        "name:vi": "Hungary",
+        "name:vls": "Hongareye",
+        "name:vo": "Macarän",
+        "name:vro": "Ungari",
+        "name:war": "Hungarya",
+        "name:wo": "Ongiri",
+        "name:wuu": "匈牙利",
+        "name:xal": "Хунһармудин Орн",
+        "name:xmf": "უნგრეთი",
+        "name:yi": "אונגארן",
+        "name:yo": "Húngárì",
+        "name:yue": "匈牙利",
+        "name:zea": "Honharije",
+        "name:zh": "匈牙利",
+        "name:zh-Hans": "匈牙利",
+        "name:zh-Hant": "匈牙利",
+        "name:zh-Latn-pinyin": "Xiōngyálì",
+        "name:zu": "i-Hungary",
+        "old_name:-2011-12-31": "Magyar Köztársaság",
+        "old_name:be:-2011-12-31": "Венгерская Рэспубліка",
+        "old_name:cs:-2011-12-31": "Maďarská republika",
+        "old_name:el:-2011-12-31": "Δημοκρατία της Ουγγαρίας",
+        "old_name:en:-2011-12-31": "Republic of Hungary",
+        "old_name:es:-2011-12-31": "República de Hungría",
+        "old_name:et:-2011-12-31": "Ungari Vabariik",
+        "old_name:fr:-2011-12-31": "République de Hongrie",
+        "old_name:id:-2011-12-31": "Republik Hongaria",
+        "old_name:it:-2011-12-31": "Repubblica d'Ungheria",
+        "old_name:ja:-2011-12-31": "ハンガリー共和国",
+        "old_name:ku:-2011-12-31": "Komara Macaristanê",
+        "old_name:lb:-2011-12-31": "Republik Ungarn",
+        "old_name:lt:-2011-12-31": "Vengrijos Respublika",
+        "old_name:lv:-2011-12-31": "Ungārijas Republika",
+        "old_name:pl:-2011-12-31": "Republika Węgier",
+        "old_name:ru:-2011-12-31": "Венге́рская Респу́блика",
+        "old_name:sk:-2011-12-31": "Maďarská republika",
+        "old_name:sr:-2011-12-31": "Република Мађарска",
+        "old_name:sv:-2011-12-31": "Republiken Ungern",
+        "old_name:vi": "Hung Gia Lợi",
+        "old_name:vi:-2011-12-31": "Cộng Hòa Hungary",
+        "population": "9603634",
+        "population:date": "2022-10-01",
+        "source:name:oc": "ieo-bdtopoc",
+        "source:population": "https://nepszamlalas2022.ksh.hu",
+        "timezone": "Europe/Budapest",
+        "type": "boundary",
+        "wikidata": "Q28",
+        "wikimedia_commons": "Category:Hungary",
+        "wikipedia": "hu:Magyarország",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.1138866,
+              45.737128
+            ],
+            [
+              22.8965048,
+              45.737128
+            ],
+            [
+              22.8965048,
+              48.585257
+            ],
+            [
+              16.1138866,
+              48.585257
+            ],
+            [
+              16.1138866,
+              45.737128
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22225",
+      "properties": {
+        "@id": "relation/22225",
+        "ISO3166-2": "HU-SO",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Somogy megye",
+        "name:de": "Komitat Schomodei",
+        "name:en": "Somogy",
+        "name:hr": "Šomođska županija",
+        "name:ru": "медье Шомодь",
+        "name:sk": "Šomodská župa",
+        "old_name": "Somogy vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU232",
+        "ref:nuts:3": "HU232",
+        "type": "boundary",
+        "wikidata": "Q190522",
+        "wikipedia": "hu:Somogy megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.8752707,
+              45.8482404
+            ],
+            [
+              18.2128377,
+              45.8482404
+            ],
+            [
+              18.2128377,
+              46.997306
+            ],
+            [
+              16.8752707,
+              46.997306
+            ],
+            [
+              16.8752707,
+              45.8482404
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22234",
+      "properties": {
+        "@id": "relation/22234",
+        "ISO3166-2": "HU-BA",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Baranya megye",
+        "name:de": "Komitat Baranya",
+        "name:en": "Baranya",
+        "name:hr": "Baranjska županija",
+        "name:ru": "медье Баранья",
+        "name:sk": "Baranská župa",
+        "old_name": "Baranya vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU231",
+        "ref:nuts:3": "HU231",
+        "type": "boundary",
+        "wikidata": "Q186195",
+        "wikipedia": "hu:Baranya megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.6247624,
+              45.737128
+            ],
+            [
+              18.8687464,
+              45.737128
+            ],
+            [
+              18.8687464,
+              46.4174558
+            ],
+            [
+              17.6247624,
+              46.4174558
+            ],
+            [
+              17.6247624,
+              45.737128
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22238",
+      "properties": {
+        "@id": "relation/22238",
+        "ISO3166-2": "HU-ZA",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Zala megye",
+        "name:de": "Komitat Zala",
+        "name:en": "Zala",
+        "name:hr": "Zalska županija",
+        "name:ru": "медье Зала",
+        "name:sk": "Zalianska župa",
+        "old_name": "Zala vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU223",
+        "ref:nuts:3": "HU223",
+        "type": "boundary",
+        "wikidata": "Q185374",
+        "wikipedia": "hu:Zala megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.3626409,
+              46.2912226
+            ],
+            [
+              17.4190599,
+              46.2912226
+            ],
+            [
+              17.4190599,
+              47.0490504
+            ],
+            [
+              16.3626409,
+              47.0490504
+            ],
+            [
+              16.3626409,
+              46.2912226
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22239",
+      "properties": {
+        "@id": "relation/22239",
+        "ISO3166-2": "HU-TO",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Tolna megye",
+        "name:de": "Komitat Tolnau",
+        "name:en": "Tolna",
+        "name:hr": "Tolnanska županija",
+        "name:ru": "медье Тольна",
+        "name:sk": "Tolnianska župa",
+        "old_name": "Tolna vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU233",
+        "ref:nuts:3": "HU233",
+        "type": "boundary",
+        "wikidata": "Q191625",
+        "wikipedia": "hu:Tolna megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.001736,
+              46.1084778
+            ],
+            [
+              19.0065256,
+              46.1084778
+            ],
+            [
+              19.0065256,
+              46.8601133
+            ],
+            [
+              18.001736,
+              46.8601133
+            ],
+            [
+              18.001736,
+              46.1084778
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22249",
+      "properties": {
+        "@id": "relation/22249",
+        "ISO3166-2": "HU-GS",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Győr-Moson-Sopron megye",
+        "name:de": "Komitat Győr-Moson-Sopron",
+        "name:en": "Győr-Moson-Sopron",
+        "name:hr": "Đursko-mošonjsko-šopronska županija",
+        "name:ru": "медье Дьёр-Мошон-Шопрон",
+        "name:sk": "Rábsko-mošonsko-šopronská žup",
+        "old_name": "Győr-Moson-Sopron vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU221",
+        "ref:nuts:3": "HU221",
+        "type": "boundary",
+        "wikidata": "Q187753",
+        "wikipedia": "hu:Győr-Moson-Sopron megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.4215432,
+              47.2722962
+            ],
+            [
+              17.9368946,
+              47.2722962
+            ],
+            [
+              17.9368946,
+              48.0224651
+            ],
+            [
+              16.4215432,
+              48.0224651
+            ],
+            [
+              16.4215432,
+              47.2722962
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22250",
+      "properties": {
+        "@id": "relation/22250",
+        "ISO3166-2": "HU-VA",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Vas megye",
+        "name:de": "Komitat Vas",
+        "name:en": "Vas",
+        "name:hr": "Željezna županija",
+        "name:ru": "медье Ваш",
+        "name:sk": "Vašská župa",
+        "old_name": "Vas vármegye",
+        "old_name:de": "Komitat Eisenburg",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU222",
+        "ref:nuts:3": "HU222",
+        "type": "boundary",
+        "wikidata": "Q187677",
+        "wikipedia": "hu:Vas megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.1138866,
+              46.7142388
+            ],
+            [
+              17.2957259,
+              46.7142388
+            ],
+            [
+              17.2957259,
+              47.4608375
+            ],
+            [
+              16.1138866,
+              47.4608375
+            ],
+            [
+              16.1138866,
+              46.7142388
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22252",
+      "properties": {
+        "@id": "relation/22252",
+        "ISO3166-2": "HU-KE",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Komárom-Esztergom megye",
+        "name:de": "Komitat Komorn-Gran",
+        "name:en": "Komárom-Esztergom",
+        "name:hr": "Komoransko-ostrogonska županija",
+        "name:ru": "медье Комаром-Эстергом",
+        "name:sk": "Komárňansko-ostrihomská župa",
+        "old_name": "Komárom-Esztergom vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU212",
+        "ref:nuts:3": "HU212",
+        "type": "boundary",
+        "wikidata": "Q190018",
+        "wikipedia": "hu:Komárom-Esztergom megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.8708444,
+              47.3331933
+            ],
+            [
+              18.9419843,
+              47.3331933
+            ],
+            [
+              18.9419843,
+              47.8227792
+            ],
+            [
+              17.8708444,
+              47.8227792
+            ],
+            [
+              17.8708444,
+              47.3331933
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22255",
+      "properties": {
+        "@id": "relation/22255",
+        "ISO3166-2": "HU-FE",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Fejér megye",
+        "name:de": "Komitat Fejér",
+        "name:en": "Fejér",
+        "name:hr": "Bila županija",
+        "name:ru": "медье Фейер",
+        "name:sk": "Stoličnobelehradská župa",
+        "old_name": "Fehér vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU211",
+        "ref:nuts:3": "HU211",
+        "type": "boundary",
+        "wikidata": "Q187693",
+        "wikipedia": "hu:Fejér megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.0342232,
+              46.6875522
+            ],
+            [
+              18.9674887,
+              46.6875522
+            ],
+            [
+              18.9674887,
+              47.577244
+            ],
+            [
+              18.0342232,
+              47.577244
+            ],
+            [
+              18.0342232,
+              46.6875522
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22259",
+      "properties": {
+        "@id": "relation/22259",
+        "ISO3166-2": "HU-PE",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Pest megye",
+        "name:de": "Komitat Pest",
+        "name:en": "Pest",
+        "name:hr": "Peštanska županija",
+        "name:ru": "вармедье Пешт",
+        "name:sk": "Peštianska župa",
+        "old_name": "Pest vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU120",
+        "ref:nuts:2": "HU12",
+        "ref:nuts:3": "HU120",
+        "type": "boundary",
+        "wikidata": "Q188612",
+        "wikipedia": "hu:Pest megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.6885359,
+              46.9441495
+            ],
+            [
+              20.1126537,
+              46.9441495
+            ],
+            [
+              20.1126537,
+              48.058682
+            ],
+            [
+              18.6885359,
+              48.058682
+            ],
+            [
+              18.6885359,
+              46.9441495
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22260",
+      "properties": {
+        "@id": "relation/22260",
+        "ISO3166-2": "HU-BK",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Bács-Kiskun megye",
+        "name:de": "Komitat Bács-Kiskun",
+        "name:en": "Bács-Kiskun",
+        "name:hr": "Bačko-kiškunska županija",
+        "name:ru": "медье Бач-Кишкун",
+        "name:sk": "Báčsko-malokumánska župa",
+        "name:sr": "Жупанија Бач-Кишкун",
+        "name:sr-Latn": "Županija Bač-Kiškun",
+        "old_name": "Bács-Kiskun vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU331",
+        "ref:nuts:3": "HU331",
+        "type": "boundary",
+        "wikidata": "Q181018",
+        "wikipedia": "hu:Bács-Kiskun megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.733072,
+              45.9047913
+            ],
+            [
+              20.1600896,
+              45.9047913
+            ],
+            [
+              20.1600896,
+              47.1343751
+            ],
+            [
+              18.733072,
+              47.1343751
+            ],
+            [
+              18.733072,
+              45.9047913
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22265",
+      "properties": {
+        "@id": "relation/22265",
+        "ISO3166-2": "HU-CS",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Csongrád-Csanád megye",
+        "name:de": "Komitat Tschongrad-Tschanad",
+        "name:en": "Csongrád-Csanád",
+        "name:hr": "Čongradska-Čanadska županija",
+        "name:ro": "județul Csongrád-Cenad",
+        "name:ru": "медье Чонград-Чанад",
+        "name:sk": "Čongrádsko-čanádska župa",
+        "name:sr": "Жупанија Чонград-Чанад",
+        "name:sr-Latn": "Županija Čongrad-Čanad",
+        "old_name": "Csongrád megye; Csongrád-Csanád vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU333",
+        "ref:nuts:3": "HU333",
+        "type": "boundary",
+        "wikidata": "Q193031",
+        "wikipedia": "hu:Csongrád-Csanád megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.6381849,
+              46.1157964
+            ],
+            [
+              20.775654,
+              46.1157964
+            ],
+            [
+              20.775654,
+              46.8121242
+            ],
+            [
+              19.6381849,
+              46.8121242
+            ],
+            [
+              19.6381849,
+              46.1157964
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22266",
+      "properties": {
+        "@id": "relation/22266",
+        "ISO3166-2": "HU-BE",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Békés megye",
+        "name:de": "Komitat Békés",
+        "name:en": "Békés",
+        "name:hr": "Bekeška županija",
+        "name:ro": "județul Bichiș",
+        "name:ru": "медье Бекеш",
+        "name:sk": "Békešská župa",
+        "old_name": "Békés vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU332",
+        "ref:nuts:3": "HU332",
+        "type": "boundary",
+        "wikidata": "Q191616",
+        "wikipedia": "hu:Békés megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.4075039,
+              46.2429394
+            ],
+            [
+              21.6889507,
+              46.2429394
+            ],
+            [
+              21.6889507,
+              47.2321926
+            ],
+            [
+              20.4075039,
+              47.2321926
+            ],
+            [
+              20.4075039,
+              46.2429394
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22267",
+      "properties": {
+        "@id": "relation/22267",
+        "ISO3166-2": "HU-HB",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Hajdú-Bihar megye",
+        "name:de": "Komitat Hajdú-Bihar",
+        "name:en": "Hajdú-Bihar",
+        "name:hr": "Hajdu-biharska županija",
+        "name:ro": "județul Bihor",
+        "name:ru": "медье Хайду-Бихар",
+        "name:sk": "Hajducko-bihárska župa",
+        "old_name": "Hajdú-Bihar vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU321",
+        "ref:nuts:3": "HU321",
+        "type": "boundary",
+        "wikidata": "Q185368",
+        "wikipedia": "hu:Hajdú-Bihar megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.8232036,
+              46.94139
+            ],
+            [
+              22.1297902,
+              46.94139
+            ],
+            [
+              22.1297902,
+              47.9649709
+            ],
+            [
+              20.8232036,
+              47.9649709
+            ],
+            [
+              20.8232036,
+              46.94139
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22268",
+      "properties": {
+        "@id": "relation/22268",
+        "ISO3166-2": "HU-SZ",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Szabolcs-Szatmár-Bereg megye",
+        "name:de": "Komitat Saboltsch-Sathmar-Berg",
+        "name:en": "Szabolcs-Szatmár-Bereg",
+        "name:ru": "медье Саболч - Сатмар - Берег",
+        "name:sk": "Sabolčsko-satmársko-berežská župa",
+        "name:uk": "медьє Саболч-Сатмар-Береґ",
+        "old_name": "Szabolcs-Szatmár-Bereg vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU323",
+        "ref:nuts:3": "HU323",
+        "type": "boundary",
+        "wikidata": "Q190518",
+        "wikipedia": "hu:Szabolcs-Szatmár-Bereg megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.0787586,
+              47.5916361
+            ],
+            [
+              22.8965048,
+              47.5916361
+            ],
+            [
+              22.8965048,
+              48.4257548
+            ],
+            [
+              21.0787586,
+              48.4257548
+            ],
+            [
+              21.0787586,
+              47.5916361
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22271",
+      "properties": {
+        "@id": "relation/22271",
+        "ISO3166-2": "HU-BZ",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Borsod-Abaúj-Zemplén megye",
+        "name:de": "Komitat Borsod-Abaúj-Zemplén",
+        "name:en": "Borsod-Abaúj-Zemplén",
+        "name:ru": "медье Боршод-Абауй-Земплен",
+        "name:sk": "Boršodsko-abovsko-zemplínska župa",
+        "old_name": "Borsod-Abaúj-Zemplén vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU311",
+        "ref:nuts:3": "HU311",
+        "type": "boundary",
+        "wikidata": "Q188895",
+        "wikipedia": "hu:Borsod-Abaúj-Zemplén megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.0519069,
+              47.6426728
+            ],
+            [
+              22.1288962,
+              47.6426728
+            ],
+            [
+              22.1288962,
+              48.585257
+            ],
+            [
+              20.0519069,
+              48.585257
+            ],
+            [
+              20.0519069,
+              47.6426728
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22273",
+      "properties": {
+        "@id": "relation/22273",
+        "ISO3166-2": "HU-HE",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Heves megye",
+        "name:de": "Komitat Heves",
+        "name:en": "Heves",
+        "name:ru": "медье Хевеш",
+        "name:sk": "Hevešská župa",
+        "old_name": "Heves vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU312",
+        "ref:nuts:3": "HU312",
+        "type": "boundary",
+        "wikidata": "Q191604",
+        "wikipedia": "hu:Heves megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.5709386,
+              47.4204358
+            ],
+            [
+              20.77175,
+              47.4204358
+            ],
+            [
+              20.77175,
+              48.1538622
+            ],
+            [
+              19.5709386,
+              48.1538622
+            ],
+            [
+              19.5709386,
+              47.4204358
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22274",
+      "properties": {
+        "@id": "relation/22274",
+        "ISO3166-2": "HU-NO",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Nógrád megye",
+        "name:de": "Komitat Neuburg",
+        "name:en": "Nógrád",
+        "name:ru": "медье Ноград",
+        "name:sk": "Novohradská župa",
+        "old_name": "Nógrád vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU313",
+        "ref:nuts:3": "HU313",
+        "type": "boundary",
+        "wikidata": "Q194273",
+        "wikipedia": "hu:Nógrád megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.928061,
+              47.6877825
+            ],
+            [
+              20.0933671,
+              47.6877825
+            ],
+            [
+              20.0933671,
+              48.2500725
+            ],
+            [
+              18.928061,
+              48.2500725
+            ],
+            [
+              18.928061,
+              47.6877825
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/22278",
+      "properties": {
+        "@id": "relation/22278",
+        "ISO3166-2": "HU-VE",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Veszprém megye",
+        "name:de": "Komitat Wesprim",
+        "name:en": "Veszprém",
+        "name:hr": "Vesprimaska županija",
+        "name:ru": "медье Веспрем",
+        "name:sk": "Vesprémska župa",
+        "name:uk": "Медьє Веспрем",
+        "old_name": "Veszprém vármegye",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU213",
+        "ref:nuts:3": "HU213",
+        "type": "boundary",
+        "wikidata": "Q188890",
+        "wikipedia": "hu:Veszprém megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.0735579,
+              46.7477886
+            ],
+            [
+              18.2618819,
+              46.7477886
+            ],
+            [
+              18.2618819,
+              47.4859518
+            ],
+            [
+              17.0735579,
+              47.4859518
+            ],
+            [
+              17.0735579,
+              46.7477886
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/26935",
+      "properties": {
+        "@id": "relation/26935",
+        "ISO3166-2": "HU-JN",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Jász-Nagykun-Szolnok megye",
+        "name:de": "Komitat Jász-Nagykun-Szolnok",
+        "name:en": "Jász-Nagykun-Szolnok",
+        "name:ru": "медье Яс-Надькун-Сольнок",
+        "name:sk": "Jasovsko-veľkokumánsko-solnocká župa",
+        "old_name": "Jász-Nagykun-Szolnok vármegye",
+        "old_name:de": "Komitat Jaß-Großkumanien-Sollnock",
+        "place": "county",
+        "place:hu": "megye",
+        "ref:nuts": "HU322",
+        "ref:nuts:3": "HU322",
+        "type": "boundary",
+        "wikidata": "Q189655",
+        "wikipedia": "hu:Jász-Nagykun-Szolnok megye",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.6510411,
+              46.7546668
+            ],
+            [
+              21.0305648,
+              46.7546668
+            ],
+            [
+              21.0305648,
+              47.6826022
+            ],
+            [
+              19.6510411,
+              47.6826022
+            ],
+            [
+              19.6510411,
+              46.7546668
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/37244",
+      "properties": {
+        "@id": "relation/37244",
+        "ISO3166-2": "HU-BU",
+        "admin_level": "6",
+        "boundary": "administrative",
+        "name": "Budapest",
+        "name:ar": "بودابست",
+        "name:az": "Budapeşt",
+        "name:azb": "بوداپست",
+        "name:be": "Будапешт",
+        "name:be-tarask": "Будапэшт",
+        "name:de": "Budapest",
+        "name:el": "Βουδαπέστη",
+        "name:en": "Budapest",
+        "name:es": "Budapest",
+        "name:grc": "Βουδαπέστη",
+        "name:hr": "Budimpešta",
+        "name:hy": "Բուդապեշտ",
+        "name:hyw": "Պուտափեսթ",
+        "name:lt": "Budapeštas",
+        "name:nl": "Boedapest",
+        "name:pl": "Budapeszt",
+        "name:pnt": "Βουδαπέστη",
+        "name:ro": "Budapesta",
+        "name:ru": "Будапешт",
+        "name:sk": "Budapešť",
+        "name:sr": "Будимпешта",
+        "name:uk": "Будапешт",
+        "name:ur": "بوداپست",
+        "place": "region",
+        "ref:nuts:2": "HU11",
+        "ref:nuts:3": "HU110",
+        "type": "boundary",
+        "wikidata": "Q1781",
+        "wikipedia": "hu:Budapest",
+        "@geometry": "bounds"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.9251057,
+              47.3496899
+            ],
+            [
+              19.3349258,
+              47.3496899
+            ],
+            [
+              19.3349258,
+              47.6131468
+            ],
+            [
+              18.9251057,
+              47.6131468
+            ],
+            [
+              18.9251057,
+              47.3496899
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

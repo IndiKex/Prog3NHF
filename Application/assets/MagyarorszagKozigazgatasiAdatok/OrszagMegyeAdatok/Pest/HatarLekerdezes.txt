@@ -1,0 +1,8 @@
+[out:json][timeout:180];
+
+// Országhatár és vármegyehatárok
+(
+  relation["boundary"="administrative"]["admin_level"="6"]["name"~"^Pest"];
+);
+
+out geom;

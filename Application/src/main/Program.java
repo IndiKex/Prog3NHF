@@ -1,9 +1,11 @@
 package main;
 
-import main.accountSystem.AccountData;
+import main.gui.GUI;
+import main.gui.Window;
 
 public class Program {
-	AccountData accountData = new AccountData();
+	
+	GUI gui = new Window();
 	
 	public void runProgram() {
 		initialize();
@@ -12,14 +14,12 @@ public class Program {
 	
 	void initialize() {
 		System.out.println("Initializing program...");
-		DataBaseOrganizer.readData();
 	}
 	
 	void run() {
 		System.out.println("Running program...");
 		
-		GraphicalProgram GR = new GraphicalProgram(this);
-		GR.startGraphicalApplication();
+		gui.start(() -> {close();});
 	}
 	
 	void close() {

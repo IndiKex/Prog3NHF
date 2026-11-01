@@ -1,0 +1,12 @@
+[out:json][timeout:180];
+
+// Magyarország területe
+area["ISO3166-1"="HU"]["admin_level"="2"]->.hu;
+
+// Országhatár és vármegyehatárok
+(
+  relation["boundary"="administrative"]["admin_level"="2"](area.hu);
+  relation["boundary"="administrative"]["admin_level"="6"](area.hu);
+);
+
+out tags geom;
