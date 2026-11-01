@@ -12,7 +12,7 @@ public class Theme {
 	public Color secondaryColor = Color.YELLOW; // Color of icons and text
 	
 	public Color buttonColor = new Color(secondaryColor.getRed(), secondaryColor.getGreen(), secondaryColor.getBlue());
-	public Color buttonHoverColor = buttonColor.darker();
+	public Color buttonHoverColor = new Color(buttonColor.getRed(), buttonColor.getGreen(), buttonColor.getBlue());
 	public Color buttonClickColor = buttonColor.darker().darker();
 	
 	// TODO

@@ -30,10 +30,14 @@ public class SideBarPanel extends JPanel {
 	private void initializeButtons() {
 		buttonPanel = new ButtonPanel(window, new Dimension(60, 200));
 		List<File> iconPaths = List.of(
-			new File("assets/graphics/sidebar/map_button_icon.png")
+			new File("assets/graphics/sidebar/map_button_icon.png"),
+			new File("assets/graphics/sidebar/ticket_button_icon.png"),
+			new File("assets/graphics/sidebar/menu_button_icon.png")
 		);
 		List<Runnable> onClickFunctions = List.of(
-			() -> {setChosenPanel(MainPanels.MAP); window.updateMainPanels();}
+			() -> {setChosenPanel(MainPanels.MAP); window.updateMainPanels();},
+			() -> {setChosenPanel(MainPanels.TICKET); window.updateMainPanels();},
+			() -> {setChosenPanel(MainPanels.MENU); window.updateMainPanels();}
 		);
 		buttonPanel.addButtons(iconPaths, onClickFunctions);
 		this.add(buttonPanel);

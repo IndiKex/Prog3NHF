@@ -9,12 +9,13 @@ import javax.swing.JFrame;
 
 import main.gui.config.Config;
 import main.gui.enums.MainPanels;
+import main.gui.panels.main.MainPanelContainer;
 import main.gui.panels.sidebar.SideBarPanel;
 
 public class Window implements GUI {
-	MainPanels currentMainPanel = MainPanels.MAP;
-	SideBarPanel sideBarPanel;
-	
+	private MainPanels currentMainPanelID = MainPanels.MAP;
+	private SideBarPanel sideBarPanel;
+	private MainPanelContainer mainPanelContainer;
 	
 	private static Config config = new Config();
 	
@@ -54,6 +55,7 @@ public class Window implements GUI {
 	
 	private void initializePanels() {
 		initializeSideBarPanel();
+		initializeMainPanels();
 	}
 	
 	private void initializeSideBarPanel() {
@@ -62,11 +64,19 @@ public class Window implements GUI {
 		
 	}
 	
+	private void initializeMainPanels() {
+		mainPanelContainer = new MainPanelContainer();
+		mainPanelContainer.switchPanel(currentMainPanelID);
+		mainFrame.add(mainPanelContainer);
+	}
+	
 	public void updateMainPanels() {
-		if (currentMainPanel.equals(sideBarPanel.getChosenPanel())) {
+		if (currentMainPanelID.equals(sideBarPanel.getChosenPanel())) {
 			return;
 		}
 		
+		currentMainPanelID = sideBarPanel.getChosenPanel();
+		mainPanelContainer.switchPanel(currentMainPanelID);
 		System.out.println("Main panel changed to " + sideBarPanel.getChosenPanel());
 	}
 }
