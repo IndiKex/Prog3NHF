@@ -14,12 +14,14 @@ public class Program {
 	
 	void initialize() {
 		System.out.println("Initializing program...");
+		
+		gui.initialize(() -> {close();});
 	}
 	
 	void run() {
 		System.out.println("Running program...");
 		
-		gui.start(() -> {close();});
+		gui.start();
 	}
 	
 	void close() {

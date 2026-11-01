@@ -1,0 +1,54 @@
+package main.gui.config.theme;
+
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+
+import javax.swing.ImageIcon;
+
+public class Theme {
+	public Color baseColor = Color.BLUE; 		// Background of the panel
+	public Color secondaryColor = Color.YELLOW; // Color of icons and text
+	
+	public Color buttonColor = new Color(secondaryColor.getRed(), secondaryColor.getGreen(), secondaryColor.getBlue());
+	public Color buttonHoverColor = buttonColor.darker();
+	public Color buttonClickColor = buttonColor.darker().darker();
+	
+	// TODO
+	
+	public static ImageIcon recolorIcon(ImageIcon originalIcon, Color newColor) {
+		Image img = originalIcon.getImage();
+		
+		BufferedImage bi = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
+		
+		Graphics2D g2d = bi.createGraphics();
+		g2d.drawImage(img, 0, 0, null);
+		g2d.dispose();
+		
+		for (int x = 0; x < bi.getWidth(); x++) {
+			for (int y = 0; y < bi.getHeight(); y++) {
+				int argb = bi.getRGB(x, y);
+				
+				int red = (argb >> 16) & 0xff;
+				int green = (argb >> 8) & 0xff;
+				int blue = (argb >> 0) & 0xff;
+				
+				int value = (red + green + blue) / 3;
+				
+				if (value == 0) {
+					int newRGB = (0xff << 24) | (newColor.getRed() << 16) | (newColor.getGreen() << 8) | newColor.getBlue();
+					bi.setRGB(x, y, newRGB);
+				} else {
+					int newRGB = (0 << 24) | (newColor.getRed() << 16) | (newColor.getGreen() << 8) | newColor.getBlue();
+					bi.setRGB(x, y, newRGB);
+				}
+				
+				
+			}
+		}
+		
+		return new ImageIcon(bi);
+		
+	}
+}

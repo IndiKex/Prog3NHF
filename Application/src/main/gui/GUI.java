@@ -1,5 +1,7 @@
 package main.gui;
 
 public interface GUI {
-	public void start(Runnable onExitFunction);
+	public void initialize(Runnable onExitFunction);
+	public void start();
+	public void close();
 }
