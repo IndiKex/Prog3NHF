@@ -5,19 +5,25 @@ import java.util.List;
 
 import javax.swing.JPanel;
 
+import main.gui.Window;
+import main.gui.config.theme.Theme;
 import main.gui.enums.MainPanels;
 import main.gui.panels.TempMainPanel;
+import main.gui.panels.main.menu.MenuPanel;
 
 public class MainPanelContainer extends JPanel {
-	private List<TempMainPanel> mainPanels;
+	private List<JPanel> mainPanels;
 	
 	public MainPanelContainer() {
 		this.setLayout(new CardLayout());
 		
+		Theme theme = Window.getConfig().theme;
+		this.setBackground(theme.baseColor);
+		
 		mainPanels = List.of(
 			new TempMainPanel("Map"),
 			new TempMainPanel("Tickets"),
-			new TempMainPanel("Menu")
+			new MenuPanel()
 		);
 		
 		for (MainPanels panelID : MainPanels.values()) {

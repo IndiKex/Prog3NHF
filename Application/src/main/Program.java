@@ -26,6 +26,10 @@ public class Program {
 	
 	void close() {
 		System.out.println("Closing program...");
+		
+		gui.close();
+		
+		System.exit(0);
 	}
 	
 }

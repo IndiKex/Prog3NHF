@@ -1,6 +1,9 @@
 package main.gui.panels.sidebar;
 
 import java.awt.Dimension;
+import java.awt.GradientPaint;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.GridBagLayout;
 import java.io.File;
 import java.util.List;
@@ -8,6 +11,7 @@ import java.util.List;
 import javax.swing.JPanel;
 
 import main.gui.Window;
+import main.gui.config.theme.Theme;
 import main.gui.enums.MainPanels;
 
 public class SideBarPanel extends JPanel {
@@ -64,6 +68,21 @@ public class SideBarPanel extends JPanel {
 	@Override
 	public Dimension getMaximumSize() {
 		return panelSize;
+	}
+	
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		
+		Graphics2D g2d = (Graphics2D) g;
+		
+		Theme theme = Window.getConfig().theme;
+		GradientPaint gp = new GradientPaint(0, getHeight() / 2, theme.gradientSecondColor, getWidth()/2, getHeight() / 2, theme.baseColor);
+		
+		g2d.setPaint(gp);
+		g2d.fillRect(0, 0, getWidth(), getHeight());
+		
 	}
 	
 }

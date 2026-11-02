@@ -8,12 +8,14 @@ import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 
 public class Theme {
-	public Color baseColor = Color.BLUE; 		// Background of the panel
-	public Color secondaryColor = Color.YELLOW; // Color of icons and text
+	public Color baseColor = new Color(10, 8, 102); 		// Background of the panel
+	public Color gradientSecondColor = baseColor.darker();
+	
+	public Color secondaryColor = new Color(230, 200, 48); // Color of icons and text
 	
 	public Color buttonColor = new Color(secondaryColor.getRed(), secondaryColor.getGreen(), secondaryColor.getBlue());
 	public Color buttonHoverColor = new Color(buttonColor.getRed(), buttonColor.getGreen(), buttonColor.getBlue());
-	public Color buttonClickColor = buttonColor.darker().darker();
+	public Color buttonClickColor = buttonColor.darker();
 	
 	// TODO
 	
@@ -50,5 +52,26 @@ public class Theme {
 		
 		return new ImageIcon(bi);
 		
+	}
+	
+	public static ImageIcon drawOnFixCanvas(ImageIcon originalIcon, int offsetX, int offsetY, int fixWidth, int fixHeight) {
+		Image iconImage = originalIcon.getImage();
+		
+		BufferedImage bi = new BufferedImage(fixWidth, fixHeight, BufferedImage.TYPE_INT_ARGB);
+		
+		Graphics2D g2d = bi.createGraphics();
+		g2d.drawImage(iconImage, offsetX, offsetY, null);
+		g2d.dispose();
+		
+		return new ImageIcon(bi);
+		
+	}
+	
+	public static ImageIcon resizeIcon(ImageIcon originalIcon, int x, int y) {
+		Image iconImage = originalIcon.getImage();
+		
+		Image resized = iconImage.getScaledInstance(x, y, Image.SCALE_SMOOTH);
+		
+		return new ImageIcon(resized);
 	}
 }

@@ -13,7 +13,7 @@ import main.gui.panels.main.MainPanelContainer;
 import main.gui.panels.sidebar.SideBarPanel;
 
 public class Window implements GUI {
-	private MainPanels currentMainPanelID = MainPanels.MAP;
+	private MainPanels currentMainPanelID = MainPanels.MENU;
 	private SideBarPanel sideBarPanel;
 	private MainPanelContainer mainPanelContainer;
 	
@@ -28,6 +28,8 @@ public class Window implements GUI {
 	public void initialize(Runnable onExitFunction) {
 		mainFrame = new JFrame("MAVEnd");
 		mainFrame.setSize(new Dimension(1280, 720));
+		mainFrame.setBackground(config.theme.baseColor);
+		mainFrame.getContentPane().setBackground(config.theme.baseColor);
 		
 		addFunctionToClose(onExitFunction);
 		
@@ -60,6 +62,7 @@ public class Window implements GUI {
 	
 	private void initializeSideBarPanel() {
 		sideBarPanel = new SideBarPanel(this);
+		sideBarPanel.setChosenPanel(currentMainPanelID);
 		mainFrame.add(sideBarPanel, BorderLayout.WEST);
 		
 	}
