@@ -1,0 +1,13 @@
+{
+	"menuConfigButtonUser": "User"
+	"menuConfigButtonSettings": "Settings"
+	"menuConfigButtonAbout": "About"
+	"menuSideAboutLabelCreator": "Created by: "
+	"menuSideAboutInfoCreator": "Reich Marton"
+	"menuSideAboutLabelVersion": "Version: "
+	"menuSideAboutInfoVersion": "0.1b"
+	"menuSideAboutLabelRelease": "Released: "
+	"menuSideAboutInfoRelease": "2026.11.02."
+	"menuSideAboutLabelGitHub": "GitHub: "
+	"menuSideAboutInfoGitHub": "https://github.com/IndiKex/Prog3NHF"
+}

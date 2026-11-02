@@ -8,12 +8,11 @@ import java.awt.Graphics2D;
 import java.awt.GridBagLayout;
 
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 import main.gui.Window;
 import main.gui.config.theme.Theme;
 
-public class TempMainPanel extends JPanel {
+public class TempMainPanel extends VisibleJPanel {
 	public String text;
 	
 	public TempMainPanel(String text) {
@@ -30,21 +29,6 @@ public class TempMainPanel extends JPanel {
 		label.setForeground(Color.WHITE);
 		
 		this.add(label);
-	}
-	
-	
-	@Override
-	protected void paintComponent(Graphics g) {
-		super.paintComponent(g);
-		
-		Graphics2D g2d = (Graphics2D) g;
-		
-		Theme theme = Window.getConfig().theme;
-		GradientPaint gp = new GradientPaint(0, getHeight()/2, theme.gradientSecondColor, 60, getHeight()/2, theme.baseColor);
-		
-		g2d.setPaint(gp);
-		g2d.fillRect(0, 0, getWidth(), getHeight());
-		
 	}
 	
 }

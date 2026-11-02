@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 
 import main.gui.panels.TempMainPanel;
 import main.gui.panels.main.menu.MenuSideMenus;
+import main.gui.panels.main.menu.sidepanels.about.AboutSidePanel;
 
 public class SidePanelContainer extends JPanel {
 	List<JPanel> sidePanels;
@@ -17,7 +18,7 @@ public class SidePanelContainer extends JPanel {
 		sidePanels = List.of(
 				new TempMainPanel("User"),
 				new TempMainPanel("Settings"),
-				new TempMainPanel("About")
+				new AboutSidePanel()
 		);
 		
 		for (MenuSideMenus sideMenuID : MenuSideMenus.values()) {

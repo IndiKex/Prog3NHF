@@ -1,0 +1,31 @@
+package main.gui.panels;
+
+import java.awt.GradientPaint;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+import javax.swing.JPanel;
+
+import main.gui.Window;
+import main.gui.config.theme.Theme;
+
+public class VisibleJPanel extends JPanel {
+	public VisibleJPanel() {
+		Theme theme = Window.getConfig().theme;
+		this.setBackground(theme.baseColor);
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		
+		Graphics2D g2d = (Graphics2D) g;
+		
+		Theme theme = Window.getConfig().theme;
+		GradientPaint gp = new GradientPaint(0, getHeight()/2, theme.gradientSecondColor, 60, getHeight()/2, theme.baseColor);
+		
+		g2d.setPaint(gp);
+		g2d.fillRect(0, 0, getWidth(), getHeight());
+		
+	}
+}

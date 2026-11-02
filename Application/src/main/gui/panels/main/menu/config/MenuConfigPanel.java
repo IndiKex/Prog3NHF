@@ -17,9 +17,10 @@ import javax.swing.JPanel;
 import main.gui.Window;
 import main.gui.config.lang.Language;
 import main.gui.config.theme.Theme;
+import main.gui.panels.VisibleJPanel;
 import main.gui.panels.main.menu.MenuSideMenus;
 
-public class MenuConfigPanel extends JPanel {
+public class MenuConfigPanel extends VisibleJPanel {
 	private MenuSideMenus sideMenu = MenuSideMenus.USER;
 	
 	private Dimension panelSize = new Dimension(275, 720);
@@ -111,24 +112,11 @@ public class MenuConfigPanel extends JPanel {
 	
 	public void setMenuSideMenu(MenuSideMenus sideMenu) {
 		this.sideMenu = sideMenu;
+		updateButtons();
 	}
 	
 	public MenuSideMenus getMenuSideMenu() {
 		return sideMenu;
 	}
 	
-	@Override
-	protected void paintComponent(Graphics g) {
-		super.paintComponent(g);
-		
-		Theme theme = Window.getConfig().theme;
-		Color darkGradientColor = theme.gradientSecondColor;
-		Color lightGradientColor = theme.baseColor;
-		
-		Graphics2D g2d = (Graphics2D) g;
-		GradientPaint gp = new GradientPaint(0, getHeight() / 2, darkGradientColor, 60, getHeight() / 2, lightGradientColor);
-		
-		g2d.setPaint(gp);
-		g2d.fillRect(0, 0, getWidth(), getHeight());
-	}
 }

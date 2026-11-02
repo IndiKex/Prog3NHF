@@ -9,7 +9,7 @@ import main.gui.panels.main.menu.config.MenuConfigPanel;
 import main.gui.panels.main.menu.sidepanels.SidePanelContainer;
 
 public class MenuPanel extends JPanel {
-	MenuSideMenus sideMenu = MenuSideMenus.USER;
+	MenuSideMenus sideMenu = MenuSideMenus.ABOUT;
 	
 	MenuConfigPanel configPanel;
 	
@@ -26,7 +26,9 @@ public class MenuPanel extends JPanel {
 		this.add(configPanel);
 		
 		sidePanelContainer = new SidePanelContainer();
+		sidePanelContainer.switchPanel(sideMenu);
 		this.add(sidePanelContainer);
+		
 	}
 	
 	private void updateSideMenu() {
