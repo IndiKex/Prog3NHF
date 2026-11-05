@@ -8,14 +8,20 @@ import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 
 public class Theme {
-	public Color baseColor = new Color(10, 8, 102); 		// Background of the panel
+	//public Color baseColor = new Color(10, 8, 102); 		// Background of the panel
+	public Color baseColor = new Color(32, 32, 32);
 	public Color gradientSecondColor = baseColor.darker();
 	
-	public Color secondaryColor = new Color(230, 200, 48); // Color of icons and text
+	public Color secondaryColor = new Color(230, 200, 48);
+	//public Color secondaryColor = new Color(200, 50, 200);
 	
 	public Color buttonColor = new Color(secondaryColor.getRed(), secondaryColor.getGreen(), secondaryColor.getBlue());
 	public Color buttonHoverColor = new Color(buttonColor.getRed(), buttonColor.getGreen(), buttonColor.getBlue());
 	public Color buttonClickColor = buttonColor.darker();
+	
+	public Color textColor = Color.WHITE;
+	public Color placeholderTextColor = Color.LIGHT_GRAY;
+	public Color warningColor = Color.RED;
 	
 	// TODO
 	

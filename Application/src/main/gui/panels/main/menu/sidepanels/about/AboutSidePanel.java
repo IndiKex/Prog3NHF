@@ -24,6 +24,7 @@ public class AboutSidePanel extends VisibleJPanel {
 	
 	public AboutSidePanel() {
 		this.setLayout(new BorderLayout());
+		this.setBorder(new EmptyBorder(240, 50, 0, 0)); // top, left, bottom, right
 		
 		initializePanels();
 	}
@@ -40,8 +41,6 @@ public class AboutSidePanel extends VisibleJPanel {
 		infoPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
 		infoPanel.setAlignmentY(Component.CENTER_ALIGNMENT);
 		infoPanel.setOpaque(false);
-		
-		this.setBorder(new EmptyBorder(200, 50, 0, 0)); // top, left, bottom, right
 		
 		addLabels();
 		

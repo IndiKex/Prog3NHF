@@ -28,8 +28,8 @@ public class Window implements GUI {
 	public void initialize(Runnable onExitFunction) {
 		mainFrame = new JFrame("MAVEnd");
 		mainFrame.setSize(new Dimension(1280, 720));
-		mainFrame.setBackground(config.theme.baseColor);
-		mainFrame.getContentPane().setBackground(config.theme.baseColor);
+		mainFrame.setBackground(config.theme.gradientSecondColor);
+		mainFrame.getContentPane().setBackground(config.theme.gradientSecondColor);
 		
 		addFunctionToClose(onExitFunction);
 		

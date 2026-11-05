@@ -6,11 +6,11 @@ import java.util.List;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
-import javax.swing.JPanel;
 
 import main.gui.Window;
+import main.gui.panels.InvisibleJPanel;
 
-public class ButtonPanel extends JPanel {
+public class ButtonPanel extends InvisibleJPanel {
 	Dimension preferredSize;
 	
 	

@@ -2,6 +2,7 @@
 	"menuConfigButtonUser": "User"
 	"menuConfigButtonSettings": "Settings"
 	"menuConfigButtonAbout": "About"
+
 	"menuSideAboutLabelCreator": "Created by: "
 	"menuSideAboutInfoCreator": "Reich Marton"
 	"menuSideAboutLabelVersion": "Version: "
@@ -10,4 +11,33 @@
 	"menuSideAboutInfoRelease": "2026.11.02."
 	"menuSideAboutLabelGitHub": "GitHub: "
 	"menuSideAboutInfoGitHub": "https://github.com/IndiKex/Prog3NHF"
+
+	"menuSideUserAboutLabelUsername": "Username: "
+	"menuSideUserAboutLabelBorn": "Born: "
+	"menuSideUserAboutLabelIDNum": "ID number: "
+	"menuSideUserAboutLabelAddress": "Address: "
+
+	"menuSideUserButtonNewPassword": "Change password"
+	"menuSideUserButtonDelete": "Delete profile"
+	"menuSideUserButtonLogout": "Log out"
+	"menuSideUserButtonLogin": "Log in"
+	"menuSideUserButtonSignup": "Sign up"
+
+	"menuSideUserTextfieldNewPassword": "New password"
+
+	"menuSideUserLoginTextfieldUsername": "Username"
+	"menuSideUserLoginTextfieldPassword": "Password"
+	"menuSideUserLoginButtonLogin": "Log in"
+	"menuSideUserLoginWarningWrongAuthData": "Wrong password or username"
+
+	"menuSideUserSignupTextfieldUsername": "Username"
+	"menuSideUserSignupTextfieldPassword": "Password"
+	"menuSideUserSignupTextfieldDate": "Date of birth"
+	"menuSideUserSignupTextfieldID": "ID number"
+	"menuSideUserSignupTextfieldAddress": "Address"
+	"menuSideUserSignupButtonSignup": "Sign up"
+	"menuSideUserSignupWarningUsernameExists": "User with this username already exists"
+
+	"DateFormat": "<day>/<month>/<year>"
+	"AddressFormat": "<num> <street> <town> <postcode>"
 }

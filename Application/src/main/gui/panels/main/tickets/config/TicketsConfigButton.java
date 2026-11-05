@@ -1,4 +1,4 @@
-package main.gui.panels.main.menu.config;
+package main.gui.panels.main.tickets.config;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -18,12 +18,12 @@ import main.gui.Window;
 import main.gui.config.theme.Theme;
 
 
-public class MenuConfigButton extends JButton {
+public class TicketsConfigButton extends JButton {
 	private boolean chosen = false;
 	private ImageIcon baseIcon;
 	private ImageIcon chosenIcon;
 	
-	public MenuConfigButton(String text, File iconFile, Runnable onClickFunction, Dimension buttonSize) {
+	public TicketsConfigButton(String text, File iconFile, Runnable onClickFunction, Dimension buttonSize) {
 		this.setMaximumSize(buttonSize);
 		this.setPreferredSize(buttonSize);
 		this.setMinimumSize(buttonSize);

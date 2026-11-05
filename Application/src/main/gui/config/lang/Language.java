@@ -31,6 +31,8 @@ public class Language {
 				data.put(lineData[0], lineData[1]);
 			}
 		}
+		
+		br.close();
 	}
 	
 	public String[] parseDataLine(String line) {

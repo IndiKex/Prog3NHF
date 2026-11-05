@@ -5,19 +5,21 @@ import java.util.List;
 
 import javax.swing.JPanel;
 
-import main.gui.panels.TempMainPanel;
+import main.gui.panels.InvisibleJPanel;
 import main.gui.panels.main.menu.MenuSideMenus;
 import main.gui.panels.main.menu.sidepanels.about.AboutSidePanel;
+import main.gui.panels.main.menu.sidepanels.settings.SettingsMenuPanel;
+import main.gui.panels.main.menu.sidepanels.user.UserMenuPanel;
 
-public class SidePanelContainer extends JPanel {
+public class SidePanelContainer extends InvisibleJPanel {
 	List<JPanel> sidePanels;
 	
 	public SidePanelContainer() {
 		this.setLayout(new CardLayout());
 		
 		sidePanels = List.of(
-				new TempMainPanel("User"),
-				new TempMainPanel("Settings"),
+				new UserMenuPanel(),
+				new SettingsMenuPanel(),
 				new AboutSidePanel()
 		);
 		
