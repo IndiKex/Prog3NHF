@@ -38,6 +38,12 @@
 	"menuSideUserSignupButtonSignup": "Sign up"
 	"menuSideUserSignupWarningUsernameExists": "User with this username already exists"
 
+	
+	"ticketsConfigButtonValid": "Valid tickets"
+	"ticketsConfigButtonInvalid": "Invalid tickets"
+	"ticketsConfigButtonPurchase": "Purchase"
+
+
 	"DateFormat": "<day>/<month>/<year>"
 	"AddressFormat": "<num> <street> <town> <postcode>"
 }

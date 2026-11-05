@@ -11,6 +11,7 @@ import main.gui.enums.MainPanels;
 import main.gui.panels.InvisibleJPanel;
 import main.gui.panels.TempMainPanel;
 import main.gui.panels.main.menu.MenuPanel;
+import main.gui.panels.main.tickets.TicketsPanel;
 
 public class MainPanelContainer extends InvisibleJPanel {
 	private List<JPanel> mainPanels;
@@ -23,7 +24,8 @@ public class MainPanelContainer extends InvisibleJPanel {
 		
 		mainPanels = List.of(
 			new TempMainPanel("Map"),
-			new TempMainPanel("Tickets"),
+			//new TempMainPanel("Tickets"),
+			new TicketsPanel(),
 			new MenuPanel()
 		);
 		

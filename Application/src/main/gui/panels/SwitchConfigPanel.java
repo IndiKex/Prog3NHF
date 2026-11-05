@@ -42,7 +42,7 @@ public class SwitchConfigPanel<E extends Enum<E>> extends VisibleJPanel {
 	private void initializeButtons() {
 		buttonPanel = new JPanel();
 		
-		Dimension buttonPanelSize = new Dimension((int)(panelSize.getWidth() * 0.8), 250);
+		Dimension buttonPanelSize = new Dimension((int)(panelSize.getWidth() * 0.9), 250);
 		
 		buttonPanel.setPreferredSize(buttonPanelSize);
 		buttonPanel.setMaximumSize(buttonPanelSize);
@@ -89,7 +89,7 @@ public class SwitchConfigPanel<E extends Enum<E>> extends VisibleJPanel {
 	
 	private void updateButtons() {
 		for (SwitchConfigButton button : buttons) {
-			if (buttons.get(enumValue.ordinal()) == button) {
+			if (buttons.get(buttonEnumValues.indexOf(enumValue)) == button) {
 				button.setChosen(true);
 			} else {
 				button.setChosen(false);
@@ -104,7 +104,7 @@ public class SwitchConfigPanel<E extends Enum<E>> extends VisibleJPanel {
 		updateButtons();
 	}
 	
-	public E getMenuSideMenu() {
+	public E getEnumValue() {
 		return enumValue;
 	}
 	
