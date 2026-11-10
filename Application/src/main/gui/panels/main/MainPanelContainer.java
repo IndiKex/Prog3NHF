@@ -9,6 +9,7 @@ import main.gui.Window;
 import main.gui.config.theme.Theme;
 import main.gui.enums.MainPanels;
 import main.gui.panels.InvisibleJPanel;
+import main.gui.panels.Refreshable;
 import main.gui.panels.TempMainPanel;
 import main.gui.panels.main.menu.MenuPanel;
 import main.gui.panels.main.tickets.TicketsPanel;
@@ -32,6 +33,13 @@ public class MainPanelContainer extends InvisibleJPanel {
 		for (MainPanels panelID : MainPanels.values()) {
 			JPanel panel = mainPanels.get(panelID.ordinal());
 			this.add(panel, panelID.name());
+		}
+	}
+	
+	public void refreshColors() {
+		for (JPanel mainPanel : mainPanels) {
+			Refreshable panel = (Refreshable)mainPanel;
+			panel.refreshColors();
 		}
 	}
 	

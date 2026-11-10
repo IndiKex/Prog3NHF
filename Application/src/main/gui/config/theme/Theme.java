@@ -4,10 +4,15 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Serializable;
 
 import javax.swing.ImageIcon;
 
-public class Theme {
+public class Theme implements Serializable {
 	//public Color baseColor = new Color(10, 8, 102); 		// Background of the panel
 	public Color baseColor = new Color(32, 32, 32);
 	public Color gradientSecondColor = baseColor.darker();
@@ -15,15 +20,89 @@ public class Theme {
 	public Color secondaryColor = new Color(230, 200, 48);
 	//public Color secondaryColor = new Color(200, 50, 200);
 	
-	public Color buttonColor = new Color(secondaryColor.getRed(), secondaryColor.getGreen(), secondaryColor.getBlue());
-	public Color buttonHoverColor = new Color(buttonColor.getRed(), buttonColor.getGreen(), buttonColor.getBlue());
+	public Color buttonColor = secondaryColor;
+	public Color buttonHoverColor = buttonColor;
 	public Color buttonClickColor = buttonColor.darker();
 	
 	public Color textColor = Color.WHITE;
 	public Color placeholderTextColor = Color.LIGHT_GRAY;
 	public Color warningColor = Color.RED;
 	
-	// TODO
+	private void updateDerivedColors() {
+		gradientSecondColor = baseColor.darker();
+		
+		buttonColor = secondaryColor;
+		buttonHoverColor = buttonColor;
+		buttonClickColor = buttonColor.darker();
+	}
+	
+	public static Theme load(File themeFile) throws IOException {
+		Theme theme = new Theme();
+		BufferedReader br = new BufferedReader(new FileReader(themeFile));
+		
+		int i = 0;
+		String line = br.readLine();
+		while (line != null) {
+			String preprocessedLine = preprocessLine(line);
+			if (!preprocessedLine.isEmpty()) {
+				Color parsedColor = parseLine(preprocessedLine);
+				setThemeColors(theme, i, parsedColor);
+				i++;
+			}
+			line = br.readLine();
+		}
+
+		br.close();
+		
+		if (i != 5) {
+			throw new IOException("Not enough colors provided.");
+		}
+		
+		theme.updateDerivedColors();
+		return theme;
+	}
+	
+	private static void setThemeColors(Theme theme, int i, Color color) {
+		switch(i) {
+		case 0 -> theme.baseColor = color;
+		case 1 -> theme.secondaryColor = color;
+		case 2 -> theme.textColor = color;
+		case 3 -> theme.placeholderTextColor = color;
+		case 4 -> theme.warningColor = color;
+		}
+	}
+	
+	private static String preprocessLine(String line) {
+		String res = "";
+		
+		char[] lineArray = line.toCharArray();
+		for (int i = 0; i < line.length(); i++) {
+			char c = lineArray[i];
+			if (c == '#') {
+				res = line.substring(0, i);
+				return res;
+			}
+		}
+		
+		return line;
+	}
+	
+	private static Color parseLine(String line) throws IOException {
+		int red = -1;
+		int blue = -1;
+		int green = -1;
+		
+		String[] splitLine = line.split(",");
+		if (splitLine.length != 3) {
+			throw new IOException("Not 3 color values in THM file.");
+		}
+		
+		red = Integer.parseInt(splitLine[0].trim());
+		blue = Integer.parseInt(splitLine[1].trim());
+		green = Integer.parseInt(splitLine[2].trim());
+		
+		return new Color(red, blue, green);
+	}
 	
 	public static ImageIcon recolorIcon(ImageIcon originalIcon, Color newColor) {
 		Image img = originalIcon.getImage();

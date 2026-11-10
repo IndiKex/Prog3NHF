@@ -1,0 +1,7 @@
+32, 32, 32 	# baseColor
+
+230, 200, 48 	# secondaryColor
+
+255, 255, 255 	# textColor
+200, 200, 200 	# placeholderTextColor
+255, 0, 0 	# warningColor

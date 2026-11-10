@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class SwitchConfigPanel<E extends Enum<E>> extends VisibleJPanel {
@@ -106,6 +107,15 @@ public class SwitchConfigPanel<E extends Enum<E>> extends VisibleJPanel {
 	
 	public E getEnumValue() {
 		return enumValue;
+	}
+	
+	public void refreshColors() {
+		super.refreshColors();
+		
+		for (JButton button : buttons) {
+			Refreshable refreshableButton = (Refreshable) button;
+			refreshableButton.refreshColors();
+		}
 	}
 	
 }

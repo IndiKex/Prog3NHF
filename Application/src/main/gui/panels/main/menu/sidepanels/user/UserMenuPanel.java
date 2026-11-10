@@ -2,11 +2,11 @@ package main.gui.panels.main.menu.sidepanels.user;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
-import java.util.Arrays;
 
 import main.gui.panels.InvisibleJPanel;
+import main.gui.panels.Refreshable;
 
-public class UserMenuPanel extends InvisibleJPanel {
+public class UserMenuPanel extends InvisibleJPanel implements Refreshable {
 	private boolean loggedIn = true;
 	
 	private LoggedInUserMenuPanel loggedInPanel;
@@ -60,5 +60,9 @@ public class UserMenuPanel extends InvisibleJPanel {
 			}
 		}
 		return false;
+	}
+	
+	public void refreshColors() {
+		reInitPanel();
 	}
 }

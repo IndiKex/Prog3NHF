@@ -2,27 +2,25 @@ package main.gui.panels.main.menu.sidepanels.settings;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.AbstractAction;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import main.gui.Window;
+import main.gui.panels.Refreshable;
 import main.gui.panels.VisibleJPanel;
 
-public class SettingsMenuPanel extends VisibleJPanel {
+public class SettingsMenuPanel extends VisibleJPanel implements Refreshable {
 	JPanel buttonPanel;
 	JMenuBar menuBar;
 	List<JMenu> menus;
+	
+	SettingsThemeMenu settingsThemeMenu;
 	
 	public SettingsMenuPanel() {
 		this.setBorder(new EmptyBorder(220, 35, 0, 0)); // top, left, bottom, right
@@ -67,39 +65,17 @@ public class SettingsMenuPanel extends VisibleJPanel {
 	private void addMenus(List<String> menuLabels, List<List<String>> menusItemLabels) {
 		menus = new ArrayList<>();
 
+		settingsThemeMenu = new SettingsThemeMenu(menuLabels.get(0));
+		menus.add(settingsThemeMenu);
+		settingsThemeMenu.addMenuItems();
 		
-		for (int i = 0; i < menuLabels.size(); i++) {
-			JMenu menu = new SideMenu(menuLabels.get(i));
-			menus.add(menu);
-			
-			addMenuItems(menu, menusItemLabels.get(i));
-
-			menuBar.add(menu);
-			menuBar.add(Box.createRigidArea(new Dimension(1, 20)));
-		}
+		menuBar.add(settingsThemeMenu);
+		menuBar.add(Box.createRigidArea(new Dimension(1, 20)));
+		
 	}
 	
-	private void addMenuItems(JMenu menu, List<String> menuItemLabels) {
-		Dimension menuItemSize = new Dimension(120, 40);
-		Font font = new Font("Arial", Font.PLAIN, 20);
-		
-		for (int i = 0; i < menuItemLabels.size(); i++) {
-			String menuItemLabel = menuItemLabels.get(i);
-			
-			JMenuItem menuItem = new JMenuItem(menuItemLabel);
-			menuItem.setBackground(Window.getConfig().theme.baseColor);
-			menuItem.setForeground(Window.getConfig().theme.textColor);
-			menuItem.setBorderPainted(false);
-			menuItem.setPreferredSize(menuItemSize);
-			menuItem.setFont(font);
-			
-			menuItem.addActionListener(new AbstractAction() {
-				public void actionPerformed(ActionEvent e) {
-					System.out.println(menuItemLabel + " was pressed");
-				}
-			});
-			
-			menu.add(menuItem);
-		}
+	public void refreshColors() {
+		super.refreshColors();
+		settingsThemeMenu.refreshColors();
 	}
 }

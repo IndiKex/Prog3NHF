@@ -17,7 +17,13 @@ import main.gui.config.theme.Theme;
 
 
 public class SideBarButton extends JButton {
+	private File iconFile;
+	private int buttonSize;
+	
 	public SideBarButton(File iconFile, Runnable onClickFunction, int buttonSize) {
+		this.buttonSize = buttonSize;
+		this.iconFile = iconFile;
+		
 		this.setMaximumSize(new Dimension(buttonSize, buttonSize));
 		this.setPreferredSize(new Dimension(buttonSize, buttonSize));
 		this.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -43,6 +49,22 @@ public class SideBarButton extends JButton {
 		this.setFocusPainted(false);
 		
 		addClickFunction(onClickFunction);
+	}
+	
+	public void refreshColors() {
+		Theme theme = Window.getConfig().theme;
+		ImageIcon baseIcon = Theme.recolorIcon(new ImageIcon(iconFile.getPath()), theme.buttonColor);
+		ImageIcon hoverIcon = Theme.recolorIcon(new ImageIcon(iconFile.getPath()), theme.buttonHoverColor);
+		ImageIcon clickIcon = Theme.recolorIcon(new ImageIcon(iconFile.getPath()), theme.buttonClickColor);
+		
+		ImageIcon baseResized = Theme.resizeIcon(baseIcon, (int)(buttonSize * 0.8), (int)(buttonSize * 0.8));
+		ImageIcon hoverResized = Theme.resizeIcon(hoverIcon, buttonSize, buttonSize);
+		ImageIcon clickResized = Theme.resizeIcon(clickIcon, buttonSize, buttonSize);
+		
+		//this.setIcon(drawOnFixCanvas(baseIcon, (int)(buttonSize * 0.1), (int)(buttonSize * 0.1), buttonSize, buttonSize));
+		this.setIcon(Theme.drawOnFixCanvas(baseResized, (int)(buttonSize * 0.1), (int)(buttonSize * 0.1), buttonSize, buttonSize));
+		this.setRolloverIcon(hoverResized);
+		this.setPressedIcon(clickResized);
 	}
 	
 	private void addClickFunction(Runnable onClickFunction) {

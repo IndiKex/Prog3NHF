@@ -89,7 +89,7 @@ public class LoggedInUserMenuPanel extends VisibleJPanel {
 			//String infoData = lang.get("menuSideUserAboutInfo" + infoName);
 			
 			JLabel labelObj = new JLabel(labelData + "     ");
-			labelObj.setForeground(Color.WHITE);
+			labelObj.setForeground(theme.textColor);
 			labelObj.setFont(font);
 			labelPanel.add(labelObj);
 			

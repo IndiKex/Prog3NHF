@@ -18,12 +18,17 @@ import main.gui.Window;
 import main.gui.config.theme.Theme;
 
 
-public class SwitchConfigButton extends JButton {
+public class SwitchConfigButton extends JButton implements Refreshable {
 	private boolean chosen = false;
 	private ImageIcon baseIcon;
 	private ImageIcon chosenIcon;
+	private Dimension buttonSize;
+	private File iconFile;
 	
 	public SwitchConfigButton(String text, File iconFile, Runnable onClickFunction, Dimension buttonSize) {
+		this.buttonSize = buttonSize;
+		this.iconFile = iconFile;
+		
 		this.setMaximumSize(buttonSize);
 		this.setPreferredSize(buttonSize);
 		this.setMinimumSize(buttonSize);
@@ -58,12 +63,36 @@ public class SwitchConfigButton extends JButton {
 		
 		this.setText(text);
 		this.setFont(new Font("Arial", Font.PLAIN, 20));
-		this.setForeground(Color.WHITE);
+		this.setForeground(theme.textColor);
 		
 		this.setIconTextGap((int)(baseIcon.getIconWidth() * 0.25));
 		
 		addClickFunction(onClickFunction);
 		addHoverListener();
+	}
+	
+	public void refreshColors() {
+		Dimension iconSize = new Dimension((int)(buttonSize.getHeight() * 0.8), (int)(buttonSize.getHeight() * 0.8));
+		
+		Theme theme = Window.getConfig().theme;
+		ImageIcon baseIconDefault = Theme.recolorIcon(new ImageIcon(iconFile.getPath()), theme.buttonColor);
+		ImageIcon hoverIconDefault = Theme.recolorIcon(new ImageIcon(iconFile.getPath()), theme.buttonHoverColor);
+		ImageIcon clickIconDefault = Theme.recolorIcon(new ImageIcon(iconFile.getPath()), theme.buttonClickColor);
+		
+		ImageIcon baseResized = Theme.resizeIcon(baseIconDefault, (int)(iconSize.getWidth() * 0.8), (int)(iconSize.getHeight() * 0.8));
+		ImageIcon chosenResized = Theme.resizeIcon(baseIconDefault, (int)iconSize.getWidth(), (int)iconSize.getHeight());
+		ImageIcon hoverResized = Theme.resizeIcon(hoverIconDefault, (int)iconSize.getWidth(), (int)iconSize.getHeight());
+		ImageIcon clickResized = Theme.resizeIcon(clickIconDefault, (int)iconSize.getWidth(), (int)iconSize.getHeight());
+		
+		baseIcon = Theme.drawOnFixCanvas(baseResized, (int)(iconSize.getWidth() * 0.1), (int)(iconSize.getHeight() * 0.1), (int)iconSize.getWidth(), (int)iconSize.getHeight());
+		chosenIcon = chosenResized;
+		
+		//this.setIcon(drawOnFixCanvas(baseIcon, (int)(buttonSize * 0.1), (int)(buttonSize * 0.1), buttonSize, buttonSize));
+		this.setIcon(baseIcon);
+		this.setRolloverIcon(hoverResized);
+		this.setPressedIcon(clickResized);
+		
+		this.setForeground(theme.textColor);
 	}
 	
 	private void addClickFunction(Runnable onClickFunction) {

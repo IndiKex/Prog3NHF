@@ -8,13 +8,14 @@ import javax.swing.JPanel;
 import main.gui.Window;
 import main.gui.config.theme.Theme;
 import main.gui.panels.InvisibleJPanel;
+import main.gui.panels.Refreshable;
 import main.gui.panels.SidePanelContainer;
 import main.gui.panels.main.menu.config.MenuConfigPanel;
 import main.gui.panels.main.menu.sidepanels.about.AboutSidePanel;
 import main.gui.panels.main.menu.sidepanels.settings.SettingsMenuPanel;
 import main.gui.panels.main.menu.sidepanels.user.UserMenuPanel;
 
-public class MenuPanel extends InvisibleJPanel {
+public class MenuPanel extends InvisibleJPanel implements Refreshable {
 	MenuSideMenus sideMenu = MenuSideMenus.USER;
 	
 	MenuConfigPanel configPanel;
@@ -23,9 +24,6 @@ public class MenuPanel extends InvisibleJPanel {
 	
 	public MenuPanel() {
 		this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
-		
-		Theme theme = Window.getConfig().theme;
-		//this.setBackground(theme.baseColor);
 		
 		configPanel = new MenuConfigPanel(() -> {updateSideMenu();});
 		configPanel.setEnumValue(sideMenu);
@@ -56,5 +54,10 @@ public class MenuPanel extends InvisibleJPanel {
 		sideMenu = configPanel.getEnumValue();
 		sidePanelContainer.switchPanel(sideMenu);
 		System.out.println("Menu panel changed to " + sideMenu.name());
+	}
+	
+	public void refreshColors() {
+		configPanel.refreshColors();
+		sidePanelContainer.refreshColors();
 	}
 }

@@ -18,6 +18,8 @@ import main.gui.config.theme.Theme;
 
 public class SideMenu extends JMenu {
 	private Dimension menuSize = new Dimension(150, 50);
+	private JLabel textLabel;
+	private JLabel arrowLabel;
 	
 	public SideMenu(String label) {
 		super("");
@@ -29,16 +31,14 @@ public class SideMenu extends JMenu {
 		Border border = BorderFactory.createLineBorder(theme.secondaryColor, 3);
 		this.setBorder(border);
 		
-		this.setBackground(theme.baseColor);
-		
 		Font font = new Font("Arial", Font.PLAIN, 20);
 		
-		JLabel textLabel = new JLabel(label);
+		textLabel = new JLabel(label);
 		textLabel.setForeground(theme.textColor);
 		textLabel.setFont(font);
 		textLabel.setBorder(new EmptyBorder(0, 10, 0, 0)); // top, left, bottom, right
 		
-		JLabel arrowLabel = new JLabel(">");
+		arrowLabel = new JLabel(">");
 		arrowLabel.setForeground(theme.textColor);
 		arrowLabel.setFont(font);
 		arrowLabel.setBorder(new EmptyBorder(0, 0, 0, 10)); // top, left, bottom, right
@@ -57,6 +57,22 @@ public class SideMenu extends JMenu {
 		Border popupBorder = BorderFactory.createLineBorder(theme.secondaryColor, 3);
 		this.getPopupMenu().setBorder(popupBorder);
 		
+	}
+	
+	public void refreshColors() {
+		Theme theme = Window.getConfig().theme;
+		
+		this.setBackground(theme.baseColor);
+		textLabel.setForeground(theme.textColor);
+		arrowLabel.setForeground(theme.textColor);
+		
+		Border border = BorderFactory.createLineBorder(theme.secondaryColor, 3);
+		this.setBorder(border);
+
+		this.getPopupMenu().setBackground(theme.baseColor);
+		
+		Border popupBorder = BorderFactory.createLineBorder(theme.secondaryColor, 3);
+		this.getPopupMenu().setBorder(popupBorder);
 	}
 	
 	@Override

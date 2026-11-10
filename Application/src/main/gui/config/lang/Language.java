@@ -4,23 +4,16 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Language {
+public class Language implements Serializable {
 	public Map<String, String> data;
 	
-	public Language(File languageFile) {
-		try {
-			load(languageFile);
-		} catch (IOException e) {
-			data = new HashMap<>();
-		}
-	}
-	
-	public void load(File languageFile) throws IOException {
-		data = new HashMap<>();
+	public static Language load(File languageFile) throws IOException {
+		Language language = new Language();
+		Map<String, String> data = new HashMap<>();
 		
 		BufferedReader br = new BufferedReader(new FileReader(languageFile));
 		
@@ -32,10 +25,14 @@ public class Language {
 			}
 		}
 		
+		language.data = data;
+		
 		br.close();
+		
+		return language;
 	}
 	
-	public String[] parseDataLine(String line) {
+	public static String[] parseDataLine(String line) {
 		String[] res = new String[2];
 		
 		boolean isInQuotation = false;
@@ -71,7 +68,7 @@ public class Language {
 		return res;
 	}
 	
-	private boolean contains(String s, char c) {
+	private static boolean contains(String s, char c) {
 		for (char cs : s.toCharArray()) {
 			if (cs == c) {
 				return true;

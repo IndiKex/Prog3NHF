@@ -6,11 +6,12 @@ import java.util.List;
 import javax.swing.JPanel;
 
 import main.gui.panels.InvisibleJPanel;
+import main.gui.panels.Refreshable;
 import main.gui.panels.SidePanelContainer;
 import main.gui.panels.TempMainPanel;
 import main.gui.panels.main.tickets.config.TicketsConfigPanel;
 
-public class TicketsPanel extends InvisibleJPanel {
+public class TicketsPanel extends InvisibleJPanel implements Refreshable {
 	private TicketsSidePanels sidePanel = TicketsSidePanels.VALID;
 	
 	private TicketsConfigPanel configPanel;
@@ -46,5 +47,10 @@ public class TicketsPanel extends InvisibleJPanel {
 		
 		sidePanelContainer.switchPanel(sidePanel);
 		System.out.println("Tickets panel changed to " + sidePanel.name());
+	}
+	
+	public void refreshColors() {
+		configPanel.refreshColors();
+		sidePanelContainer.refreshColors();
 	}
 }

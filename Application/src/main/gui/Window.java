@@ -4,6 +4,11 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 import javax.swing.JFrame;
 
@@ -13,11 +18,13 @@ import main.gui.panels.main.MainPanelContainer;
 import main.gui.panels.sidebar.SideBarPanel;
 
 public class Window implements GUI {
-	private MainPanels currentMainPanelID = MainPanels.MENU;
+	private static Window _instance;
+	
+	private MainPanels currentMainPanelID = MainPanels.TICKET;
 	private SideBarPanel sideBarPanel;
 	private MainPanelContainer mainPanelContainer;
 	
-	private static Config config = new Config();
+	private static Config config;
 	
 	private JFrame mainFrame;
 	
@@ -25,15 +32,44 @@ public class Window implements GUI {
 		return config;
 	}
 	
-	public void initialize(Runnable onExitFunction) {
-		mainFrame = new JFrame("MAVEnd");
-		mainFrame.setSize(new Dimension(1280, 720));
+	public void refreshColors() {
 		mainFrame.setBackground(config.theme.gradientSecondColor);
 		mainFrame.getContentPane().setBackground(config.theme.gradientSecondColor);
+		sideBarPanel.refreshColors();
+		mainPanelContainer.refreshColors();
+	}
+	
+	public static Window get_instance() {
+		if (_instance == null)
+			_instance = new Window();
+		return _instance;
+	}
+	
+	public void initialize(Runnable onExitFunction) {
+		try {
+			if (Config.configFile.exists()) {
+				ObjectInputStream in = new ObjectInputStream(new FileInputStream(Config.configFile));
+				config = (Config) in.readObject();
+				in.close();
+			} else {
+				config = new Config();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		mainFrame = new JFrame("MAVEnd");
+		mainFrame.setSize(new Dimension(1280, 720));
+		mainFrame.setResizable(false);
+		
 		
 		addFunctionToClose(onExitFunction);
 		
 		initializePanels();
+		
+		refreshColors();
 	}
 	
 	public void start() {
@@ -41,7 +77,13 @@ public class Window implements GUI {
 	}
 	
 	public void close() {
-		
+		try {
+			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(Config.configFile));
+			out.writeObject(config);
+			out.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	

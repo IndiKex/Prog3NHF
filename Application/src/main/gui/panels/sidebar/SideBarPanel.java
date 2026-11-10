@@ -31,6 +31,11 @@ public class SideBarPanel extends VisibleJPanel {
 		initializeButtons();
 	}
 	
+	public void refreshColors() {
+		super.refreshColors();
+		buttonPanel.refreshColors();
+	}
+	
 	private void initializeButtons() {
 		buttonPanel = new ButtonPanel(window, new Dimension(60, 200));
 		List<File> iconPaths = List.of(

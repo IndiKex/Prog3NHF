@@ -12,8 +12,9 @@ import javax.swing.JLabel;
 import main.gui.Window;
 import main.gui.config.theme.Theme;
 
-public class TempMainPanel extends VisibleJPanel {
+public class TempMainPanel extends VisibleJPanel implements Refreshable {
 	public String text;
+	private JLabel label;
 	
 	public TempMainPanel(String text) {
 		this.text = text;
@@ -23,12 +24,18 @@ public class TempMainPanel extends VisibleJPanel {
 		Theme theme = Window.getConfig().theme;
 		this.setBackground(theme.baseColor);
 		
-		JLabel label = new JLabel(text);
+		label = new JLabel(text);
 		
 		label.setFont(new Font("Arial", Font.BOLD, 72));
-		label.setForeground(Color.WHITE);
+		label.setForeground(theme.textColor);
 		
 		this.add(label);
+	}
+	
+	public void refreshColors() {
+		super.refreshColors();
+		Theme theme = Window.getConfig().theme;
+		label.setForeground(theme.textColor);
 	}
 	
 }

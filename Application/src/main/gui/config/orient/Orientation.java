@@ -1,5 +1,7 @@
 package main.gui.config.orient;
 
-public class Orientation {
+import java.io.Serializable;
+
+public class Orientation implements Serializable {
 	// TODO
 }

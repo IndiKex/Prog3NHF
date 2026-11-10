@@ -11,11 +11,16 @@ import main.gui.Window;
 import main.gui.config.theme.Theme;
 
 public class VisibleJPanel extends JPanel {
+	private Theme theme;
+	
 	public VisibleJPanel() {
 		this.setOpaque(false);
+		theme = Window.getConfig().theme;
 	}
 	
-	
+	public void refreshColors() {
+		theme = Window.getConfig().theme;
+	}
 	
 	@Override
 	protected void paintComponent(Graphics g) {
@@ -23,7 +28,6 @@ public class VisibleJPanel extends JPanel {
 		
 		Graphics2D g2d = (Graphics2D) g;
 		
-		Theme theme = Window.getConfig().theme;
 		GradientPaint gp = new GradientPaint(0, getHeight()/2, theme.gradientSecondColor, 60, getHeight()/2, theme.baseColor);
 		
 		

@@ -16,9 +16,10 @@ import javax.swing.border.EmptyBorder;
 import main.gui.Window;
 import main.gui.config.lang.Language;
 import main.gui.config.theme.Theme;
+import main.gui.panels.Refreshable;
 import main.gui.panels.VisibleJPanel;
 
-public class AboutSidePanel extends VisibleJPanel {
+public class AboutSidePanel extends VisibleJPanel implements Refreshable {
 	private JPanel labelPanel;
 	private JPanel infoPanel;
 	
@@ -26,6 +27,13 @@ public class AboutSidePanel extends VisibleJPanel {
 		this.setLayout(new BorderLayout());
 		this.setBorder(new EmptyBorder(240, 50, 0, 0)); // top, left, bottom, right
 		
+		initializePanels();
+	}
+	
+	public void refreshColors() {
+		super.refreshColors();
+		this.remove(labelPanel);
+		this.remove(infoPanel);
 		initializePanels();
 	}
 	
@@ -60,7 +68,7 @@ public class AboutSidePanel extends VisibleJPanel {
 			String infoData = lang.get("menuSideAboutInfo" + infoName);
 			
 			JLabel labelObj = new JLabel(labelData + "     ");
-			labelObj.setForeground(Color.WHITE);
+			labelObj.setForeground(theme.textColor);
 			labelObj.setFont(font);
 			labelPanel.add(labelObj);
 			

@@ -2,6 +2,7 @@ package main.gui.panels.sidebar;
 
 import java.awt.Dimension;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.Box;
@@ -13,12 +14,19 @@ import main.gui.panels.InvisibleJPanel;
 public class ButtonPanel extends InvisibleJPanel {
 	Dimension preferredSize;
 	
+	private List<SideBarButton> buttons = new ArrayList<>();
 	
 	public ButtonPanel(Window window, Dimension preferredSize) {
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		this.preferredSize = preferredSize;
 		
 		this.setOpaque(false);
+	}
+	
+	public void refreshColors() {
+		for (SideBarButton button : buttons) {
+			button.refreshColors();
+		}
 	}
 	
 	public void addButtons(List<File> paths, List<Runnable> onClickFunctions) {
@@ -30,6 +38,7 @@ public class ButtonPanel extends InvisibleJPanel {
 		
 		for (int i = 0; i < paths.size(); i++) {
 			SideBarButton button = new SideBarButton(paths.get(i), onClickFunctions.get(i), buttonSize);
+			buttons.add(button);
 			this.add(button);
 			
 			if (i < paths.size() - 1) {

@@ -11,6 +11,9 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import main.comm.RequestType;
+import main.comm.request.UserRegistRequest;
+import main.gui.RequestSender;
 import main.gui.Window;
 import main.gui.config.lang.Language;
 import main.gui.config.theme.Theme;
@@ -108,8 +111,19 @@ public class SignupPanel extends JPanel {
 		loginButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				sendRequest();
 				onSignupFunction.run();
 			}
 		});
+	}
+	
+	private void sendRequest() {
+		String username = usernameField.getText();
+		String password = passwordField.getText();
+		String date = dateField.getText();
+		String idnum = IDField.getText();
+		String address = addressField.getText();
+		
+		RequestSender.sendRequest(new UserRegistRequest(username, password, date, idnum, address), RequestType.USERREGIST);
 	}
 }
