@@ -7,7 +7,7 @@ import main.gui.panels.InvisibleJPanel;
 import main.gui.panels.Refreshable;
 
 public class UserMenuPanel extends InvisibleJPanel implements Refreshable {
-	private boolean loggedIn = true;
+	private boolean loggedIn = false;
 	
 	private LoggedInUserMenuPanel loggedInPanel;
 	private LoggedOutUserMenuPanel loggedOutPanel; 

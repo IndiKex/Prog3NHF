@@ -11,6 +11,10 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import main.comm.RequestType;
+import main.comm.asnwer.UserAuthAnswer;
+import main.comm.request.UserAuthRequest;
+import main.gui.RequestSender;
 import main.gui.Window;
 import main.gui.config.lang.Language;
 import main.gui.config.theme.Theme;
@@ -78,6 +82,7 @@ public class LoginPanel extends JPanel {
 		wrongLabel = new JLabel();
 		wrongLabel.setText(lang.get("menuSideUserLoginWarningWrongAuthData"));
 		wrongLabel.setForeground(theme.warningColor);
+		wrongLabel.setVisible(false);
 		
 		buttonPanel.add(loginButton);
 		buttonPanel.add(Box.createRigidArea(new Dimension(10, 10)));
@@ -87,9 +92,50 @@ public class LoginPanel extends JPanel {
 	private void addListener() {
 		loginButton.addActionListener(new ActionListener() {
 			@Override
-			public void actionPerformed(ActionEvent e) {
-				onLoginFunction.run();
+			public void actionPerformed(ActionEvent event) {
+				wrongLabel.setVisible(false);
+				try {
+					handleLogin();
+				} catch (LoginException e) {
+					handleError(e);
+				} catch (EmptyFieldException e) {
+					handleError(e);
+				}
 			}
 		});
 	}
+	
+	private void handleError(LoginException e) {
+		wrongLabel.setText("Wrong username or password");
+		wrongLabel.setVisible(true);
+	}
+	
+	private void handleError(EmptyFieldException e) {
+		wrongLabel.setText("Some fields are empty");
+		wrongLabel.setVisible(true);
+	}
+	
+	private void handleLogin() throws LoginException, EmptyFieldException {
+		if (usernameField.getText().isEmpty() || passwordField.getText().isEmpty()) {
+			throw new EmptyFieldException();
+		}
+		
+		UserAuthAnswer answer = sendRequest();
+		if (!answer.successful) {
+			throw new LoginException();
+		}
+		
+		RequestSender.username = answer.username;
+		onLoginFunction.run();
+	}
+	
+	private UserAuthAnswer sendRequest(){
+		String username = this.usernameField.getText();
+		String password = this.passwordField.getText();
+		
+		return (UserAuthAnswer)RequestSender.sendRequest(new UserAuthRequest(username, password), RequestType.USERAUTH);
+	}
+	
+	private class LoginException extends Exception {}
+	private class EmptyFieldException extends Exception {}
 }

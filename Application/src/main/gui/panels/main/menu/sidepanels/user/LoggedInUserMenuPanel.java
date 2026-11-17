@@ -1,7 +1,6 @@
 package main.gui.panels.main.menu.sidepanels.user;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -18,6 +17,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import main.comm.RequestType;
+import main.comm.asnwer.UserDataAnswer;
+import main.comm.asnwer.UserDeleteAnswer;
+import main.comm.request.UserDataRequest;
+import main.comm.request.UserDeleteRequest;
+import main.gui.RequestSender;
 import main.gui.Window;
 import main.gui.config.lang.Language;
 import main.gui.config.theme.Theme;
@@ -69,7 +74,8 @@ public class LoggedInUserMenuPanel extends VisibleJPanel {
 		addIcon();
 		
 		addButtons();
-		
+
+		containPanel.add(iconLabel, BorderLayout.NORTH);
 		containPanel.add(labelPanel, BorderLayout.WEST);
 		containPanel.add(infoPanel, BorderLayout.CENTER);
 		containPanel.add(buttonPanel, BorderLayout.SOUTH);
@@ -83,23 +89,26 @@ public class LoggedInUserMenuPanel extends VisibleJPanel {
 		Theme theme = Window.getConfig().theme;
 		Font font = new Font("Arial", Font.PLAIN, 20);
 		
+		UserDataAnswer answer = (UserDataAnswer)RequestSender.sendRequest(new UserDataRequest(RequestSender.username), RequestType.USERDATA);
+		List<String> infoDatas = List.of(answer.username, answer.dateOfBirth, answer.IDNumber, answer.address);
+		
 		Language lang = Window.getConfig().language;
-		for (String infoName : infoNames) {
-			String labelData = lang.get("menuSideUserAboutLabel" + infoName);
-			//String infoData = lang.get("menuSideUserAboutInfo" + infoName);
+		for (int i = 0; i < infoNames.size(); i++) {
+			String labelData = lang.get("menuSideUserAboutLabel" + infoNames.get(i));
+			String infoData = infoDatas.get(i);
 			
 			JLabel labelObj = new JLabel(labelData + "     ");
 			labelObj.setForeground(theme.textColor);
 			labelObj.setFont(font);
 			labelPanel.add(labelObj);
 			
-			/*JLabel infoObj = new JLabel(infoData);
+			JLabel infoObj = new JLabel(infoData);
 			infoObj.setForeground(theme.secondaryColor);
 			infoObj.setFont(font);
-			infoPanel.add(infoObj);*/
+			infoPanel.add(infoObj);
 			
 			labelPanel.add(Box.createRigidArea(new Dimension(labelPanel.getWidth(), 20)));
-			//infoPanel.add(Box.createRigidArea(new Dimension(infoPanel.getWidth(), 20)));
+			infoPanel.add(Box.createRigidArea(new Dimension(infoPanel.getWidth(), 20)));
 		}
 	}
 	
@@ -114,7 +123,6 @@ public class LoggedInUserMenuPanel extends VisibleJPanel {
 		iconLabel = new JLabel(recoloredIcon);
 		iconLabel.setOpaque(false);
 		
-		containPanel.add(iconLabel, BorderLayout.NORTH);
 		
 	}
 	
@@ -130,13 +138,7 @@ public class LoggedInUserMenuPanel extends VisibleJPanel {
 		
 		newPasswordPanel = new NewPasswordPanel(buttonSize);
 		
-		deleteProfileButton = new TextButton();
-		String deleteProfileButtonLabel = lang.get("menuSideUserButtonDelete");
-		deleteProfileButton.setText(deleteProfileButtonLabel);
-		deleteProfileButton.setAlignmentX(Component.LEFT_ALIGNMENT);
-		deleteProfileButton.setMaximumSize(buttonSize);
-		deleteProfileButton.setMinimumSize(buttonSize);
-		deleteProfileButton.setPreferredSize(buttonSize);
+		initDeleteButton(buttonSize);
 		
 		initLogoutButton(buttonSize);
 		
@@ -146,6 +148,30 @@ public class LoggedInUserMenuPanel extends VisibleJPanel {
 		buttonPanel.add(deleteProfileButton);
 		buttonPanel.add(Box.createRigidArea(new Dimension(buttonPanel.getWidth(), 20)));
 		buttonPanel.add(logoutButton);
+	}
+	
+	public void initDeleteButton(Dimension buttonSize) {
+		Language lang = Window.getConfig().language;
+		
+		deleteProfileButton = new TextButton();
+		String deleteProfileButtonLabel = lang.get("menuSideUserButtonDelete");
+		deleteProfileButton.setText(deleteProfileButtonLabel);
+		deleteProfileButton.setAlignmentX(Component.LEFT_ALIGNMENT);
+		deleteProfileButton.setMaximumSize(buttonSize);
+		deleteProfileButton.setMinimumSize(buttonSize);
+		deleteProfileButton.setPreferredSize(buttonSize);
+		
+		deleteProfileButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				UserDeleteAnswer answer = sendDeleteRequest();
+				if (!answer.successful) {
+					return;
+				}
+				
+				RequestSender.username = "";
+				onLogoutFunction.run();
+			}
+		});
 	}
 	
 	public void initLogoutButton(Dimension buttonSize) {
@@ -162,9 +188,14 @@ public class LoggedInUserMenuPanel extends VisibleJPanel {
 		logoutButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				RequestSender.username = "";
 				onLogoutFunction.run();
 			}
 		});
+	}
+	
+	private UserDeleteAnswer sendDeleteRequest() {
+		return (UserDeleteAnswer) RequestSender.sendRequest(new UserDeleteRequest(RequestSender.username), RequestType.USERDELETE);
 	}
 	
 }

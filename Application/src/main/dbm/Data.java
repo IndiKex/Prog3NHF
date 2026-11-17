@@ -62,12 +62,50 @@ public class Data implements Serializable {
 		}
 		return "";
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+	    if (this == obj) return true;
 	
-	public boolean equals(Data d) {
-		if (this.dataType != d.dataType) return false;
-		if (this.iData != d.iData) return false;
-		if (this.fData != d.fData) return false;
-		if (!this.sData.equals(d.sData)) return false;
-		return true;
+	    if (obj == null || getClass() != obj.getClass()) {
+	        return false;
+	    }
+	
+	    Data d = (Data) obj;
+	
+	    if (this.dataType != d.dataType) {
+	        return false;
+	    }
+	    
+	    switch (dataType) {
+	        case DataTypes.INT:
+	            return this.iData == d.iData;
+	
+	        case DataTypes.FLOAT:
+	            return Float.compare(this.fData, d.fData) == 0;
+	
+	        case DataTypes.STRING:
+	            return java.util.Objects.equals(
+	                this.sData, d.sData
+	            );
+	    }
+	
+	    return false;
+	}
+	
+	@Override
+	public int hashCode() {
+	    switch (dataType) {
+	        case INT:
+	            return java.util.Objects.hash(dataType, iData);
+
+	        case FLOAT:
+	            return java.util.Objects.hash(dataType, fData);
+
+	        case STRING:
+	            return java.util.Objects.hash(dataType, sData);
+	    }
+
+	    return 0;
 	}
 }

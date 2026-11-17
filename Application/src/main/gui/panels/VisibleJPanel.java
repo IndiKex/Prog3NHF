@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import main.gui.Window;
 import main.gui.config.theme.Theme;
 
-public class VisibleJPanel extends JPanel {
+public class VisibleJPanel extends JPanel implements Refreshable {
 	private Theme theme;
 	
 	public VisibleJPanel() {

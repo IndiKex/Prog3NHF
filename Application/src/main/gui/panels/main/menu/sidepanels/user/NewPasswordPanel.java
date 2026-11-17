@@ -8,9 +8,15 @@ import java.awt.event.ActionListener;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
+import main.comm.RequestType;
+import main.comm.asnwer.UserChangePasswordAnswer;
+import main.comm.request.UserChangePasswordRequest;
+import main.gui.RequestSender;
 import main.gui.Window;
 import main.gui.config.lang.Language;
+import main.gui.config.theme.Theme;
 import main.gui.panels.InvisibleJPanel;
 import main.gui.panels.TextButton;
 import main.gui.panels.TextField;
@@ -18,6 +24,7 @@ import main.gui.panels.TextField;
 public class NewPasswordPanel extends InvisibleJPanel {
 	private JButton passwordButton;
 	private TextField passwordTextfield;
+	private JLabel wrongLabel;
 	private boolean pressed = false;
 	
 	public NewPasswordPanel(Dimension buttonSize) {
@@ -25,6 +32,7 @@ public class NewPasswordPanel extends InvisibleJPanel {
 		this.setAlignmentX(Component.LEFT_ALIGNMENT);
 
 		Language lang = Window.getConfig().language;
+		Theme theme = Window.getConfig().theme;
 		
 		String newPasswordButtonLabel = lang.get("menuSideUserButtonNewPassword");
 		passwordButton = new TextButton();
@@ -44,9 +52,17 @@ public class NewPasswordPanel extends InvisibleJPanel {
 		passwordTextfield.setMaximumSize(textfieldSize);
 		passwordTextfield.setAlignmentX(Component.LEFT_ALIGNMENT);
 		
+		wrongLabel = new JLabel();
+		wrongLabel.setText("Leszophat Karsa Zoltán");
+		wrongLabel.setForeground(theme.warningColor);
+		wrongLabel.setOpaque(false);
+		wrongLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+		
 		this.add(passwordButton);
 		this.add(Box.createRigidArea(new Dimension(10, 0)));
 		this.add(passwordTextfield);
+		this.add(Box.createRigidArea(new Dimension(10, 0)));
+		this.add(wrongLabel);
 		
 		updatePasswordTextfield();
 	}
@@ -56,6 +72,7 @@ public class NewPasswordPanel extends InvisibleJPanel {
 			passwordTextfield.setVisible(true);
 		} else {
 			passwordTextfield.setVisible(false);
+			wrongLabel.setVisible(false);
 		}
 		
 		revalidate();
@@ -65,9 +82,17 @@ public class NewPasswordPanel extends InvisibleJPanel {
 	private void addListener() {
 		passwordButton.addActionListener(new ActionListener() {
 			@Override
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent event) {
 				if (pressed) {
-					pressed = false;
+					try {
+						wrongLabel.setVisible(false);
+						handleChangePassword();
+						pressed = false;
+					} catch (EmptyFieldException e) {
+						handleError(e);
+					} catch (SamePasswordException e) {
+						handleError(e);
+					}
 				} else {
 					pressed = true;
 				}
@@ -75,4 +100,34 @@ public class NewPasswordPanel extends InvisibleJPanel {
 			}
 		});
 	}
+	
+	private void handleError(EmptyFieldException e) {
+		wrongLabel.setText("Some fields are empty");
+		wrongLabel.setVisible(true);
+	}
+	
+	private void handleError(SamePasswordException e) {
+		wrongLabel.setText("New password cannot be the same as the last password");
+		wrongLabel.setVisible(true);
+	}
+	
+	private void handleChangePassword() throws SamePasswordException, EmptyFieldException {
+		if (passwordTextfield.getText().isEmpty()) {
+			throw new EmptyFieldException();
+		}
+		
+		UserChangePasswordAnswer answer = sendRequest();
+		if (!answer.successful) {
+			throw new SamePasswordException();
+		}
+	}
+	
+	private UserChangePasswordAnswer sendRequest() {
+		String newPassword = passwordTextfield.getText();
+		
+		return (UserChangePasswordAnswer) RequestSender.sendRequest(new UserChangePasswordRequest(RequestSender.username, newPassword), RequestType.USERCHANGEPASSWORD);
+	}
+	
+	private class SamePasswordException extends Exception {}
+	private class EmptyFieldException extends Exception {}
 }

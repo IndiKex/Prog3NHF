@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import main.comm.RequestType;
+import main.comm.asnwer.UserRegistAnswer;
 import main.comm.request.UserRegistRequest;
 import main.gui.RequestSender;
 import main.gui.Window;
@@ -101,6 +102,7 @@ public class SignupPanel extends JPanel {
 		wrongLabel = new JLabel();
 		wrongLabel.setText(lang.get("menuSideUserSignupWarningUsernameExists"));
 		wrongLabel.setForeground(theme.warningColor);
+		wrongLabel.setVisible(false);
 		
 		buttonPanel.add(loginButton);
 		buttonPanel.add(Box.createRigidArea(new Dimension(10, 10)));
@@ -110,20 +112,57 @@ public class SignupPanel extends JPanel {
 	private void addListener() {
 		loginButton.addActionListener(new ActionListener() {
 			@Override
-			public void actionPerformed(ActionEvent e) {
-				sendRequest();
-				onSignupFunction.run();
+			public void actionPerformed(ActionEvent event) {
+				wrongLabel.setVisible(false);
+				try {
+					handleSignup();
+				} catch (UserExistsException e) {
+					handleError(e);
+				} catch (EmptyFieldException e) {
+					handleError(e);
+				}
 			}
 		});
 	}
 	
-	private void sendRequest() {
+	private void handleError(UserExistsException e) {
+		wrongLabel.setText("User already exists with this username");
+		wrongLabel.setVisible(true);
+	}
+	
+	private void handleError(EmptyFieldException e) {
+		wrongLabel.setText("Some fields are empty");
+		wrongLabel.setVisible(true);
+	}
+	
+	private void handleSignup() throws UserExistsException, EmptyFieldException {
+		if (usernameField.getText().isEmpty() ||
+			passwordField.getText().isEmpty() ||
+			dateField.getText().isEmpty() ||
+			IDField.getText().isEmpty() ||
+			addressField.getText().isEmpty()) {
+			throw new EmptyFieldException();
+		}
+		
+		UserRegistAnswer answer = sendRequest();
+		if (!answer.successful) {
+			throw new UserExistsException();
+		}
+		
+		RequestSender.username = answer.username;
+		onSignupFunction.run();
+	}
+	
+	private UserRegistAnswer sendRequest() {
 		String username = usernameField.getText();
 		String password = passwordField.getText();
 		String date = dateField.getText();
 		String idnum = IDField.getText();
 		String address = addressField.getText();
 		
-		RequestSender.sendRequest(new UserRegistRequest(username, password, date, idnum, address), RequestType.USERREGIST);
+		return (UserRegistAnswer) RequestSender.sendRequest(new UserRegistRequest(username, password, date, idnum, address), RequestType.USERREGIST);
 	}
+	
+	private class UserExistsException extends Exception {}
+	private class EmptyFieldException extends Exception {}
 }

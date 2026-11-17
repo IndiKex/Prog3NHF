@@ -1,5 +1,11 @@
 package main.comm;
 
 public enum RequestType {
-	USERREGIST
+	USERREGIST,
+	USERDATA,
+	USERAUTH,
+	USERCHANGEPASSWORD,
+	USERDELETE,
+	
+	TICKETLIST
 }

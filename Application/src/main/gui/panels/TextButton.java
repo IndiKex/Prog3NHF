@@ -9,7 +9,7 @@ import javax.swing.border.Border;
 import main.gui.Window;
 import main.gui.config.theme.Theme;
 
-public class TextButton extends JButton {
+public class TextButton extends JButton implements Refreshable {
 	public TextButton() {
 		Font font = new Font("Arial", Font.PLAIN, 20);
 		this.setFont(font);
@@ -17,7 +17,7 @@ public class TextButton extends JButton {
 		refreshColors();
 	}
 	
-	private void refreshColors() {
+	public void refreshColors() {
 		Theme theme = Window.getConfig().theme;
 		
 		this.setBackground(theme.baseColor);

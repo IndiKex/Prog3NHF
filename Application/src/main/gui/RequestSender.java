@@ -7,6 +7,7 @@ import main.comm.request.Request;
 
 public class RequestSender {
 	public static Backend backend;
+	public static String username;
 	
 	public static Answer sendRequest(Request request, RequestType requestType) {
 		return backend.postRequest(request, requestType);

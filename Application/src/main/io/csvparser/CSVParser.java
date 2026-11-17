@@ -37,7 +37,7 @@ public class CSVParser {
 			ArrayList<String> dataRow = new ArrayList<>();
 			
 			BufferedReader br = new BufferedReader(new FileReader(sourceFile));
-			for (int i = 0; i < lineID - 1; i++) {
+			for (int i = 0; i < lineID; i++) {
 				br.readLine();
 			}
 			

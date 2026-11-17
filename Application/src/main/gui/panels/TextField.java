@@ -26,6 +26,13 @@ public class TextField extends JTextField {
 		addListener();
 	}
 	
+	public String getText() {
+		if (usesPlaceholder || super.getText().isEmpty()) {
+			return "";
+		}
+		return super.getText();
+	}
+	
 	public void setPlaceholderText(String placeholder) {
 		this.placeholder = placeholder;
 		updateForeground();

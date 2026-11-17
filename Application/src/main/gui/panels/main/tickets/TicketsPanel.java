@@ -10,6 +10,7 @@ import main.gui.panels.Refreshable;
 import main.gui.panels.SidePanelContainer;
 import main.gui.panels.TempMainPanel;
 import main.gui.panels.main.tickets.config.TicketsConfigPanel;
+import main.gui.panels.main.tickets.sidepanels.ticket_list.TicketListPanel;
 
 public class TicketsPanel extends InvisibleJPanel implements Refreshable {
 	private TicketsSidePanels sidePanel = TicketsSidePanels.VALID;
@@ -17,6 +18,7 @@ public class TicketsPanel extends InvisibleJPanel implements Refreshable {
 	private TicketsConfigPanel configPanel;
 	
 	private SidePanelContainer<TicketsSidePanels> sidePanelContainer;
+	private TicketListPanel ticketListPanel;
 	
 	public TicketsPanel() {
 		this.setLayout(new BorderLayout());
@@ -24,10 +26,11 @@ public class TicketsPanel extends InvisibleJPanel implements Refreshable {
 		configPanel = new TicketsConfigPanel(() -> {updateSidePanels();});
 		this.add(configPanel, BorderLayout.WEST);
 		
+		ticketListPanel = new TicketListPanel();
 		List<JPanel> sidePanels = List.of(
 			new TempMainPanel("Valid tickets"),
 			new TempMainPanel("Invalid tickets"),
-			new TempMainPanel("Purchase tickets")
+			ticketListPanel
 		);
 		List<TicketsSidePanels> sidePanelIDs = List.of(
 			TicketsSidePanels.VALID,
@@ -44,6 +47,10 @@ public class TicketsPanel extends InvisibleJPanel implements Refreshable {
 			return;
 		}
 		sidePanel = configPanel.getEnumValue();
+		
+		if (sidePanel == TicketsSidePanels.PURCHASE) {
+			ticketListPanel.addDataPanels(null, null, null);
+		}
 		
 		sidePanelContainer.switchPanel(sidePanel);
 		System.out.println("Tickets panel changed to " + sidePanel.name());

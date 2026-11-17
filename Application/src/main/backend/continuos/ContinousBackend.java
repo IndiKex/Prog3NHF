@@ -1,10 +1,10 @@
 package main.backend.continuos;
 
 import main.backend.Backend;
+import main.backend.continuos.dbm.DataBaseManager;
 import main.comm.RequestType;
 import main.comm.asnwer.Answer;
 import main.comm.request.Request;
-import main.dbm.DataBaseManager;
 
 public class ContinousBackend implements Backend {
 	private RequestHandler requestHandler = new RequestHandler();
