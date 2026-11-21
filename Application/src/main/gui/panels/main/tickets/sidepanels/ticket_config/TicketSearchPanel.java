@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,10 +27,12 @@ import main.comm.request.TicketAddFareRequest;
 import main.gui.RequestSender;
 import main.gui.Window;
 import main.gui.config.theme.Theme;
+import main.gui.panels.DateChoiceButton;
 import main.gui.panels.InvisibleJPanel;
 import main.gui.panels.Refreshable;
 import main.gui.panels.TextButton;
 import main.gui.panels.TextField;
+import main.gui.panels.TimeField;
 import main.gui.panels.VisibleJLabel;
 import main.gui.panels.VisibleJPanel;
 import main.util.FareCalculator;
@@ -111,6 +114,7 @@ public class TicketSearchPanel extends VisibleJPanel {
 		}
 	}
 	
+	
 	private enum TicketType {
 		TICKET,
 		FARE
@@ -121,8 +125,10 @@ public class TicketSearchPanel extends VisibleJPanel {
 	private List<Refreshable> refreshables = new ArrayList<>();
 	private TextField startStopField;
 	private TextField destStopField;
-	private TextField timeField;
+	private TimeField timeField;
+	private DateChoiceButton timeButton;
 	private TextField peopleField;
+	private JLabel ticketWrongLabel;
 	
 	private String[] areaStrings = {"Bács-Kiskun",
 									"Baranya", 
@@ -145,10 +151,10 @@ public class TicketSearchPanel extends VisibleJPanel {
 									"Zala"};
 	private String[] validLengthStrings = {"2 hét", "1 hónap", "1 év"};
 	private JComboBox areaBox;
-	private TextField validTimeField;
+	private DateChoiceButton validTimeButton;
 	private JComboBox validLengthBox;
 	private VisibleJLabel priceLabel;
-	private JLabel wrongLabel;
+	private JLabel fareWrongLabel;
 	
 	private JPanel switchPanel;
 	
@@ -222,13 +228,11 @@ public class TicketSearchPanel extends VisibleJPanel {
 		areaPanel.add(areaLabel);
 		areaPanel.add(areaBox);
 		
-		
-		validTimeField = new TextField(50);
-		validTimeField.setPlaceholderText("Start of validity");
+		validTimeButton = new DateChoiceButton();
 		
 		JPanel validLengthPanel = new InvisibleJPanel();
 		validLengthPanel.setLayout(new BoxLayout(validLengthPanel, BoxLayout.X_AXIS));
-		VisibleJLabel validLengthLabel = new VisibleJLabel("Area");
+		VisibleJLabel validLengthLabel = new VisibleJLabel("Validity length");
 		validLengthBox = new JComboBox(validLengthStrings);
 		validLengthPanel.add(validLengthLabel);
 		validLengthPanel.add(validLengthBox);
@@ -253,27 +257,27 @@ public class TicketSearchPanel extends VisibleJPanel {
 		buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.X_AXIS));
 		TextButton button = new TextButton();
 		button.setText("Purchase");
-		wrongLabel = new JLabel();
-		wrongLabel.setOpaque(false);
-		wrongLabel.setForeground(Window.getConfig().theme.warningColor);
-		wrongLabel.setVisible(false);
+		fareWrongLabel = new JLabel();
+		fareWrongLabel.setOpaque(false);
+		fareWrongLabel.setForeground(Window.getConfig().theme.warningColor);
+		fareWrongLabel.setVisible(false);
 		buttonPanel.add(button);
-		buttonPanel.add(wrongLabel);
+		buttonPanel.add(fareWrongLabel);
 		
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					wrongLabel.setVisible(false);
+					fareWrongLabel.setVisible(false);
 					handleFarePurchase();
 				} catch (NoUsernameException err) {
-					wrongLabel.setText("Login to purchase fares!");
-					wrongLabel.setVisible(true);
+					fareWrongLabel.setText("Login to purchase fares!");
+					fareWrongLabel.setVisible(true);
 				}
 			}
 		});
 		
 		farePanel.add(areaPanel);
-		farePanel.add(validTimeField);
+		farePanel.add(validTimeButton);
 		farePanel.add(validLengthPanel);
 		farePanel.add(pricePanel);
 		farePanel.add(buttonPanel);
@@ -282,7 +286,7 @@ public class TicketSearchPanel extends VisibleJPanel {
 		
 		refreshables.add(areaLabel);
 		//refreshables.add(areaBox);
-		refreshables.add(validTimeField);
+		refreshables.add(validTimeButton);
 		refreshables.add(validLengthLabel);
 		//refreshables.add(validLengthBox);
 		refreshables.add(button);
@@ -290,7 +294,7 @@ public class TicketSearchPanel extends VisibleJPanel {
 	
 	private void handleFarePurchase() throws NoUsernameException {
 		String area = (String) areaBox.getSelectedItem();
-		LocalDate validityStart = LocalDate.parse(this.validTimeField.getText());
+		LocalDate validityStart = validTimeButton.getDate();
 		String validityLength = (String) validLengthBox.getSelectedItem();
 		int price = FareCalculator.priceCalculator(validityLength);
 		
@@ -321,44 +325,81 @@ public class TicketSearchPanel extends VisibleJPanel {
 		destStopField.setPlaceholderText("Destination stop name");
 		destStopField.getDocument().addDocumentListener(new StopSearchDocumentListener(destStopField));
 		
-		timeField = new TextField(50);
-		timeField.setPlaceholderText("Time of start");
-		timeField.setText(LocalDateTime.now().toString().substring(0,19));
+		
+		JPanel timePanel = new InvisibleJPanel();
+		timePanel.setLayout(new BoxLayout(timePanel, BoxLayout.X_AXIS));
+		timeField = new TimeField();
+		timeButton = new DateChoiceButton();
+		timePanel.add(timeButton);
+		timePanel.add(timeField);
+		
 		peopleField = new TextField(50);
 		peopleField.setPlaceholderText("Number of people");
 		
 		// Search button
+		JPanel buttonPanel = new InvisibleJPanel();
+		buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.X_AXIS));
 		TextButton searchButton = new TextButton();
 		searchButton.setText("Search");
+		ticketWrongLabel = new VisibleJLabel("");
+		ticketWrongLabel.setForeground(Window.getConfig().theme.warningColor);
+		ticketWrongLabel.setVisible(false);
+		buttonPanel.add(searchButton);
+		buttonPanel.add(ticketWrongLabel);
 		
 		searchButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				searchData.startStopName = startStopField.getText();
-				searchData.destStopName = destStopField.getText();
 				try {
-					searchData.startTime = LocalDateTime.parse(timeField.getText());
-				} catch (Exception ignored) {}
-				try {
-					searchData.peopleNum = Integer.parseInt(peopleField.getText());
-				} catch (Exception ignored) {}
-				onSearchRunnable.run();
+					ticketWrongLabel.setVisible(false);
+					handleSearch();
+					onSearchRunnable.run();
+				} catch (EmptyFieldException err) {
+					ticketWrongLabel.setVisible(true);
+					ticketWrongLabel.setText("Some fields are empty");
+				} catch (PeopleFieldNotIntegerException err) {
+					ticketWrongLabel.setVisible(true);
+					ticketWrongLabel.setText("Number of people must be an integer");
+				}
 			}
 		});
 		
 		ticketPanel.add(startStopField);
 		ticketPanel.add(destStopField);
-		ticketPanel.add(timeField);
+		ticketPanel.add(timePanel);
 		ticketPanel.add(peopleField);
-		ticketPanel.add(searchButton);
+		ticketPanel.add(buttonPanel);
 		
 		switchPanel.add(ticketPanel, TicketType.TICKET.name());
 		
 		refreshables.add(startStopField);
 		refreshables.add(destStopField);
 		refreshables.add(timeField);
+		refreshables.add(timeButton);
 		refreshables.add(peopleField);
 		refreshables.add(searchButton);
 	}
+	
+	private void handleSearch() throws EmptyFieldException, PeopleFieldNotIntegerException {
+		if (startStopField.getText().isEmpty() || destStopField.getText().isEmpty() || peopleField.getText().isEmpty()) {
+			throw new EmptyFieldException();
+		}
+		
+		searchData.startStopName = startStopField.getText();
+		searchData.destStopName = destStopField.getText();
+		
+		LocalDate date = timeButton.getDate();
+		LocalTime time = timeField.getTime();
+		searchData.startTime = LocalDateTime.of(date, time);
+		
+		try {
+			searchData.peopleNum = Integer.parseInt(peopleField.getText());
+		} catch (Exception e) {
+			throw new PeopleFieldNotIntegerException();
+		}
+	}
+	
+	private class EmptyFieldException extends Exception {}
+	private class PeopleFieldNotIntegerException extends Exception {}
 	
 	@Override
 	public void refreshColors() {
@@ -368,7 +409,8 @@ public class TicketSearchPanel extends VisibleJPanel {
 		}
 		Theme theme = Window.getConfig().theme;
 		priceLabel.setForeground(theme.secondaryColor);
-		wrongLabel.setForeground(theme.warningColor);
+		fareWrongLabel.setForeground(theme.warningColor);
+		ticketWrongLabel.setForeground(theme.warningColor);
 	}
 
 	public SearchData getSearchData() {

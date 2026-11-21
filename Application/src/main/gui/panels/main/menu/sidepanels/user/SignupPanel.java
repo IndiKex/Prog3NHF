@@ -17,14 +17,18 @@ import main.gui.RequestSender;
 import main.gui.Window;
 import main.gui.config.lang.Language;
 import main.gui.config.theme.Theme;
+import main.gui.panels.DateChoiceButton;
+import main.gui.panels.InvisibleJPanel;
 import main.gui.panels.TextButton;
 import main.gui.panels.TextField;
+import main.gui.panels.VisibleJLabel;
 
 public class SignupPanel extends JPanel {
 	private JButton loginButton;
 	private TextField usernameField;
 	private TextField passwordField;
-	private TextField dateField;
+	private VisibleJLabel dateLabel;
+	private DateChoiceButton dateButton;
 	private TextField IDField;
 	private TextField addressField;
 	private JLabel wrongLabel;
@@ -48,9 +52,22 @@ public class SignupPanel extends JPanel {
 		passwordField = new TextField(50);
 		setupTextField(passwordField, textFieldSize, lang.get("menuSideUserSignupTextfieldPassword"));
 		
-		dateField = new TextField(50);
-		setupTextField(dateField, textFieldSize, lang.get("menuSideUserSignupTextfieldDate"));
+		
+		// Date panel
+		JPanel datePanel = new InvisibleJPanel();
+		datePanel.setLayout(new BoxLayout(datePanel, BoxLayout.X_AXIS));
+		datePanel.setMaximumSize(textFieldSize);
+		datePanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+		
+		dateLabel = new VisibleJLabel("Birthday ");
+		
+		dateButton = new DateChoiceButton();
+		dateButton.setMaximumSize(textFieldSize);
+		
+		datePanel.add(dateLabel);
+		datePanel.add(dateButton);
 
+		
 		IDField = new TextField(50);
 		setupTextField(IDField, textFieldSize, lang.get("menuSideUserSignupTextfieldID"));
 
@@ -66,7 +83,7 @@ public class SignupPanel extends JPanel {
 		this.add(Box.createRigidArea(rigidAreaSize));
 		this.add(passwordField);
 		this.add(Box.createRigidArea(rigidAreaSize));
-		this.add(dateField);
+		this.add(datePanel);
 		this.add(Box.createRigidArea(rigidAreaSize));
 		this.add(IDField);
 		this.add(Box.createRigidArea(rigidAreaSize));
@@ -137,7 +154,6 @@ public class SignupPanel extends JPanel {
 	private void handleSignup() throws UserExistsException, EmptyFieldException {
 		if (usernameField.getText().isEmpty() ||
 			passwordField.getText().isEmpty() ||
-			dateField.getText().isEmpty() ||
 			IDField.getText().isEmpty() ||
 			addressField.getText().isEmpty()) {
 			throw new EmptyFieldException();
@@ -155,7 +171,7 @@ public class SignupPanel extends JPanel {
 	private UserRegistAnswer sendRequest() {
 		String username = usernameField.getText();
 		String password = passwordField.getText();
-		String date = dateField.getText();
+		String date = dateButton.getDate().toString();
 		String idnum = IDField.getText();
 		String address = addressField.getText();
 		

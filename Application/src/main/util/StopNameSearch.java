@@ -9,6 +9,9 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class StopNameSearch {
+	/*
+	 * Returns: a score from 0-100
+	 */
 	private static int countMatchingLetters(String base, String compare) {
 		Map<Character, Integer> letterFrequency = new HashMap<>();
 		for (char baseChar : base.toCharArray()) {
@@ -36,9 +39,21 @@ public class StopNameSearch {
 		List<String> copy = new ArrayList<>();
 		copy.addAll(stopNames);
 		
+		String currentNameLower = currentName.toLowerCase();
+		
 		Map<String, Integer> resMap = new HashMap<>();
 		for (String stopName : stopNames) {
-			resMap.put(stopName, countMatchingLetters(stopName.toLowerCase(), currentName.toLowerCase()));
+			String stopNameLower = stopName.toLowerCase();
+			
+			int nMatching1 = countMatchingLetters(stopNameLower, currentNameLower);
+			int nMatching2 = countMatchingLetters(currentNameLower, stopNameLower);
+			
+			double p1 = (double) nMatching1 / stopNameLower.length();
+			double p2 = (double) nMatching2 / currentNameLower.length();
+			
+			int correctedWeight = (int)(Math.sqrt(p1 * p2) * 100);
+			
+			resMap.put(stopName, correctedWeight);
 		}
 		
 		copy.sort((a, b) -> resMap.get(b) - resMap.get(a));
