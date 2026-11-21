@@ -17,7 +17,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import main.comm.RequestType;
 import main.comm.asnwer.UserDataAnswer;
 import main.comm.asnwer.UserDeleteAnswer;
 import main.comm.request.UserDataRequest;
@@ -89,7 +88,7 @@ public class LoggedInUserMenuPanel extends VisibleJPanel {
 		Theme theme = Window.getConfig().theme;
 		Font font = new Font("Arial", Font.PLAIN, 20);
 		
-		UserDataAnswer answer = (UserDataAnswer)RequestSender.sendRequest(new UserDataRequest(RequestSender.username), RequestType.USERDATA);
+		UserDataAnswer answer = (UserDataAnswer)RequestSender.sendRequest(new UserDataRequest(RequestSender.username));
 		List<String> infoDatas = List.of(answer.username, answer.dateOfBirth, answer.IDNumber, answer.address);
 		
 		Language lang = Window.getConfig().language;
@@ -188,14 +187,14 @@ public class LoggedInUserMenuPanel extends VisibleJPanel {
 		logoutButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				RequestSender.username = "";
+				RequestSender.username = null;
 				onLogoutFunction.run();
 			}
 		});
 	}
 	
 	private UserDeleteAnswer sendDeleteRequest() {
-		return (UserDeleteAnswer) RequestSender.sendRequest(new UserDeleteRequest(RequestSender.username), RequestType.USERDELETE);
+		return (UserDeleteAnswer) RequestSender.sendRequest(new UserDeleteRequest(RequestSender.username));
 	}
 	
 }

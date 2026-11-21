@@ -1,5 +1,6 @@
 package main.backend.continuos;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,60 +9,210 @@ import main.backend.continuos.dbm.DataBaseManager;
 import main.backend.continuos.dbm.Database;
 import main.backend.continuos.dbm.Database.KeyExistsException;
 import main.backend.continuos.dbm.Database.KeyNotExistsException;
-import main.comm.RequestType;
-import main.comm.asnwer.Answer;
+import main.backend.maps.model.MapModel;
+import main.backend.maps.model.Stop;
+import main.backend.maps.search.RouteCalculator;
+import main.backend.maps.search.SearchRoute;
+import main.comm.asnwer.StopNameAnswer;
+import main.comm.asnwer.TicketAddFareAnswer;
+import main.comm.asnwer.TicketAddTicketAnswer;
+import main.comm.asnwer.TicketInvalidListAnswer;
 import main.comm.asnwer.TicketListAnswer;
-import main.comm.asnwer.TicketListAnswer.TicketData;
+import main.comm.asnwer.TicketValidListAnswer;
 import main.comm.asnwer.UserAuthAnswer;
 import main.comm.asnwer.UserChangePasswordAnswer;
 import main.comm.asnwer.UserDataAnswer;
 import main.comm.asnwer.UserDeleteAnswer;
 import main.comm.asnwer.UserRegistAnswer;
-import main.comm.request.Request;
+import main.comm.products.FareData;
+import main.comm.products.TicketData;
+import main.comm.request.StopNameRequest;
+import main.comm.request.TicketAddFareRequest;
+import main.comm.request.TicketAddTicketRequest;
+import main.comm.request.TicketInvalidListRequest;
 import main.comm.request.TicketListRequest;
+import main.comm.request.TicketValidListRequest;
 import main.comm.request.UserAuthRequest;
 import main.comm.request.UserChangePasswordRequest;
 import main.comm.request.UserDataRequest;
 import main.comm.request.UserDeleteRequest;
 import main.comm.request.UserRegistRequest;
+import main.util.FareCalculator;
 
 public class RequestHandler {
-	public Answer handleRequest(Request request, RequestType requestType) {
-		switch (requestType) {
-		case RequestType.USERREGIST: return handleRequest((UserRegistRequest)request);
-		case RequestType.USERDATA: return handleRequest((UserDataRequest)request);
-		case RequestType.USERAUTH: return handleRequest((UserAuthRequest) request);
-		case RequestType.USERCHANGEPASSWORD: return handleRequest((UserChangePasswordRequest) request);
-		case RequestType.USERDELETE: return handleRequest((UserDeleteRequest) request);
-		case RequestType.TICKETLIST: return handleRequest((TicketListRequest) request);
+	
+	public StopNameAnswer handleRequest(StopNameRequest request) {
+		MapModel mapModel = ContinousBackend.get_instance().getMapModel();
+		List<Stop> stops = mapModel.getStations();
+		
+		ArrayList<String> res = new ArrayList<>();
+		res.ensureCapacity(stops.size());
+		
+		for (Stop stop : stops) {
+			res.add(stop.getName());
 		}
-		return null;
+		
+		return new StopNameAnswer(true, true, res);
+	}
+	
+	public TicketAddFareAnswer handleRequest(TicketAddFareRequest request) {
+		if (request.username == null) {
+			return new TicketAddFareAnswer(true, false);
+		}
+		
+		DataBaseManager dbm = DataBaseManager.get_instance();
+		Database fareBase = dbm.getDatabase("fare");
+		
+		List<String> fareData = request.fareData.getData();
+		
+		int i = 0;
+		while(true) {
+			try {
+				List<String> record = List.of(request.username + i, fareData.get(0), fareData.get(1), fareData.get(2));
+				fareBase.addRecord(record);
+				break;
+			} catch (KeyExistsException e) {}
+			i++;
+		}
+		
+		return new TicketAddFareAnswer(true, true);
+	}
+	
+	public TicketAddTicketAnswer handleRequest(TicketAddTicketRequest request) {
+		if (request.username == null) {
+			return new TicketAddTicketAnswer(true, false);
+		}
+		
+		DataBaseManager dbm = DataBaseManager.get_instance();
+		Database ticketBase = dbm.getDatabase("ticket");
+		
+		List<String> ticketData = request.ticketData.getData();
+		
+		int i = 0;
+		while(true) {
+			try {
+				List<String> record = List.of(request.username + i, ticketData.get(0), ticketData.get(1), ticketData.get(2));
+				ticketBase.addRecord(record);
+				break;
+			} catch (KeyExistsException e) {}
+			i++;
+		}
+		
+		return new TicketAddTicketAnswer(true, true);
+	}
+	
+	public TicketValidListAnswer handleRequest(TicketValidListRequest request) {
+		DataBaseManager dbm = DataBaseManager.get_instance();
+		Database ticketBase = dbm.getDatabase("ticket");
+		Database fareBase = dbm.getDatabase("fare");
+		
+		List<TicketData> resTickets = new ArrayList<>();
+		List<FareData> resFares = new ArrayList<>();
+		
+		int i = 0;
+		try {
+			while (true) {
+				List<String> readRecord = ticketBase.getRecord(request.username + i);
+				TicketData ticketData = new TicketData(readRecord.get(1), LocalDateTime.parse(readRecord.get(2)), LocalDateTime.parse(readRecord.get(3)), -1);
+				
+				LocalDateTime now = LocalDateTime.now();
+				LocalDateTime arrivalTime = LocalDateTime.parse(ticketData.getData().get(2));
+				if (arrivalTime.isAfter(now)) {
+					resTickets.add(ticketData);
+				}
+				i++;
+			}
+		} catch (KeyNotExistsException ignored) {}
+		
+		i = 0;
+		try {
+			while (true) {
+				List<String> readRecord = fareBase.getRecord(request.username + i);
+				FareData fareData = new FareData(readRecord.get(1), LocalDate.parse(readRecord.get(2)), readRecord.get(3), -1);
+				
+				LocalDateTime now = LocalDateTime.now();
+				LocalDate validityStart = LocalDate.parse(readRecord.get(2));
+				LocalDate validityEnd = FareCalculator.calculate(validityStart, readRecord.get(3));
+				if (validityEnd.isAfter(now.toLocalDate())) {
+					resFares.add(fareData);
+				}
+				i++;
+			}
+		} catch (KeyNotExistsException ignored) {}
+		
+		return new TicketValidListAnswer(true, true, resTickets, resFares);
+	}
+	
+	public TicketInvalidListAnswer handleRequest(TicketInvalidListRequest request) {
+		DataBaseManager dbm = DataBaseManager.get_instance();
+		Database ticketBase = dbm.getDatabase("ticket");
+		Database fareBase = dbm.getDatabase("fare");
+		
+		List<TicketData> resTickets = new ArrayList<>();
+		List<FareData> resFares = new ArrayList<>();
+		
+		int i = 0;
+		try {
+			while (true) {
+				List<String> readRecord = ticketBase.getRecord(request.username + i);
+				TicketData ticketData = new TicketData(readRecord.get(1), LocalDateTime.parse(readRecord.get(2)), LocalDateTime.parse(readRecord.get(3)), -1);
+				
+				LocalDateTime now = LocalDateTime.now();
+				LocalDateTime arrivalTime = LocalDateTime.parse(ticketData.getData().get(2));
+				if (arrivalTime.isBefore(now)) {
+					resTickets.add(ticketData);
+				}
+				i++;
+			}
+		} catch (KeyNotExistsException ignored) {}
+		
+		i = 0;
+		try {
+			while (true) {
+				List<String> readRecord = fareBase.getRecord(request.username + i);
+				FareData fareData = new FareData(readRecord.get(1), LocalDate.parse(readRecord.get(2)), readRecord.get(3), -1);
+				
+				LocalDateTime now = LocalDateTime.now();
+				LocalDate validityStart = LocalDate.parse(readRecord.get(2));
+				LocalDate validityEnd = FareCalculator.calculate(validityStart, readRecord.get(3));
+				if (validityEnd.isBefore(now.toLocalDate())) {
+					resFares.add(fareData);
+				}
+				i++;
+			}
+		} catch (KeyNotExistsException ignored) {}
+		
+		return new TicketInvalidListAnswer(true, true, resTickets, resFares);
 	}
 	
 	public TicketListAnswer handleRequest(TicketListRequest request) {
-		List<TicketData> data = List.of(
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 8, 30), LocalDateTime.of(2026, 11, 18, 10, 04), 1450),
-			new TicketData("1", LocalDateTime.of(2026, 11, 18, 9, 00), LocalDateTime.of(2026, 11, 18, 11, 40), 1670)
-		);
-		return new TicketListAnswer(true, true, data);
+		MapModel mapModel = ContinousBackend.get_instance().getMapModel();
+		
+		Stop startStop = mapModel.getStopFromName(request.startStopName);
+		Stop destStop = mapModel.getStopFromName(request.destStopName);
+		LocalDateTime startTime = request.startTime;
+		
+		if (startStop == null || destStop == null) {
+			return new TicketListAnswer(true, false, null);
+		}
+		
+		List<TicketData> data = new ArrayList<>();
+		
+		int i = 0;
+		while (data.size() < 10 || i > 2) {
+			List<SearchRoute> searchResult = RouteCalculator.calculateRoute(mapModel, startStop, destStop, startTime);
+			
+			
+			for (SearchRoute searchRoute : searchResult) {
+				TicketData ticketData = new TicketData(searchRoute.getSearchTrips().get(0).getTrip().getTrainRoute().getName(), searchRoute.getFirstTime(), searchRoute.getLastTime(), searchRoute.calculatePrice() * request.peopleNum); 
+				data.add(ticketData);
+			}
+			
+			startTime = LocalDateTime.of(startTime.getYear(), startTime.getMonth(), startTime.getDayOfMonth() + 1, 0, 0, 0);
+			i++;
+		}
+		
+		return new TicketListAnswer(true, true, data.subList(0, Integer.min(data.size(), 10)));
 	}
 	
 	public UserDeleteAnswer handleRequest(UserDeleteRequest request) {

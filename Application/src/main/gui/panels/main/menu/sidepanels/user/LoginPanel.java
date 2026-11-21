@@ -11,7 +11,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import main.comm.RequestType;
 import main.comm.asnwer.UserAuthAnswer;
 import main.comm.request.UserAuthRequest;
 import main.gui.RequestSender;
@@ -133,7 +132,7 @@ public class LoginPanel extends JPanel {
 		String username = this.usernameField.getText();
 		String password = this.passwordField.getText();
 		
-		return (UserAuthAnswer)RequestSender.sendRequest(new UserAuthRequest(username, password), RequestType.USERAUTH);
+		return (UserAuthAnswer)RequestSender.sendRequest(new UserAuthRequest(username, password));
 	}
 	
 	private class LoginException extends Exception {}

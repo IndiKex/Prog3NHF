@@ -1,4 +1,4 @@
-package main.gui.panels.main.tickets.sidepanels.ticket_list;
+package main.gui.panels.main.tickets.sidepanels.product_panels;
 
 import java.awt.BorderLayout;
 import java.time.LocalDateTime;
@@ -15,7 +15,7 @@ import main.gui.panels.Refreshable;
 import main.gui.panels.TextButton;
 import main.gui.panels.VisibleJLabel;
 
-public class TicketDataPanel extends JPanel implements Refreshable {
+public class TicketDataPanel extends JPanel implements Refreshable, ProductDataPanel {
 	private List<Refreshable> refreshables = new ArrayList<>();
 	
 	public TicketDataPanel(String trainID, LocalDateTime departureTime, LocalDateTime arrivalTime, int price) {
@@ -24,6 +24,9 @@ public class TicketDataPanel extends JPanel implements Refreshable {
 		VisibleJLabel departureLabel = new VisibleJLabel(departureTime.toString());
 		VisibleJLabel arrivalLabel = new VisibleJLabel(arrivalTime.toString());
 		VisibleJLabel priceLabel = new VisibleJLabel(Integer.toString(price) + " Ft");
+		if (price < 0) {
+			priceLabel.setVisible(false);
+		}
 		
 		refreshables.add(idLabel);
 		refreshables.add(departureLabel);

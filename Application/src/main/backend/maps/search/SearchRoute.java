@@ -1,17 +1,24 @@
 package main.backend.maps.search;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
 import main.backend.maps.model.Stop;
 
 public class SearchRoute {
+	private LocalDate startDate;
 	private List<Stop> stops;
 	private List<SearchTrip> searchTrips;
 	
-	public SearchRoute(List<Stop> stops, List<SearchTrip> searchTrips) {
+	public SearchRoute(LocalDate startDate, List<Stop> stops, List<SearchTrip> searchTrips) {
+		this.startDate = startDate;
 		this.stops = stops;
 		this.searchTrips = searchTrips;
+	}
+	
+	public int calculatePrice() {
+		return 100 * stops.size();
 	}
 	
 	public Stop getFirstStop() {
@@ -24,12 +31,12 @@ public class SearchRoute {
 	
 	public LocalDateTime getFirstTime() {
 		int firstStopID = searchTrips.get(0).getFirstStopID();
-		return searchTrips.get(0).getTrip().getStopTimes().get(firstStopID).getDepartureTime();
+		return searchTrips.get(0).getTrip().getStopTimes().get(firstStopID).calculateDepartureTime(startDate);
 	}
 	
 	public LocalDateTime getLastTime() {
 		int lastStopID = searchTrips.getLast().getLastStopID();
-		return searchTrips.getLast().getTrip().getStopTimes().get(lastStopID).getArrivalTime();
+		return searchTrips.getLast().getTrip().getStopTimes().get(lastStopID).calculateArrivalTime(startDate);
 	}
 
 	public List<Stop> getStops() {
@@ -46,5 +53,13 @@ public class SearchRoute {
 
 	public void setSearchTrips(List<SearchTrip> searchTrips) {
 		this.searchTrips = searchTrips;
+	}
+
+	public LocalDate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
 	}
 }

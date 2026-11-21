@@ -11,7 +11,7 @@ import javax.swing.border.Border;
 import main.gui.Window;
 import main.gui.config.theme.Theme;
 
-public class TextField extends JTextField {
+public class TextField extends JTextField implements Refreshable {
 	private String placeholder = "";
 	private boolean usesPlaceholder = true;
 	
@@ -33,12 +33,18 @@ public class TextField extends JTextField {
 		return super.getText();
 	}
 	
+	public void setText(String s) {
+		super.setText(s);
+		usesPlaceholder = s.isEmpty() || s.equals(placeholder);
+		updateForeground();
+	}
+	
 	public void setPlaceholderText(String placeholder) {
 		this.placeholder = placeholder;
 		updateForeground();
 	}
 	
-	private void refreshColors() {
+	public void refreshColors() {
 		Theme theme = Window.getConfig().theme;
 		
 		this.setBackground(theme.baseColor);
@@ -53,10 +59,13 @@ public class TextField extends JTextField {
 		
 		if (usesPlaceholder) {
 			this.setForeground(theme.placeholderTextColor);
-			this.setText(placeholder);
+			super.setText(placeholder);
 		} else {
 			this.setForeground(theme.textColor);
-			this.setText("");
+			if (super.getText().equals(placeholder))
+				super.setText("");
+			else
+				super.setText(getText());
 		}
 	}
 	

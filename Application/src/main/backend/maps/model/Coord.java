@@ -16,4 +16,9 @@ public class Coord {
 	public float getLatitude() {
 		return latitude;
 	}
+	
+	public String toString() {
+		String res = "Coord: latitude=" + latitude + ", longitude=" + longitude;
+		return res;
+	}
 }

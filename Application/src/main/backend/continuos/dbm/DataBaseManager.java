@@ -23,6 +23,8 @@ public class DataBaseManager {
 	
 	public DataBaseManager() {
 		initUserDatabase();
+		initTicketDatabase();
+		initFareDatabase();
 	}
 	
 	private void initUserDatabase() {
@@ -37,6 +39,34 @@ public class DataBaseManager {
 			db = null;
 		}
 		databases.put("user",  db);
+	}
+	
+	private void initTicketDatabase() {
+		File dataFile = new File("data/ticket.dat");
+		Database db;
+		try {
+			ObjectInputStream in = new ObjectInputStream(new FileInputStream(dataFile));
+			db = (TicketDatabase) in.readObject();
+		} catch (IOException e) {
+			db = new TicketDatabase(dataFile);
+		} catch (ClassNotFoundException cryAboutIt) {
+			db = null;
+		}
+		databases.put("ticket",  db);
+	}
+	
+	private void initFareDatabase() {
+		File dataFile = new File("data/fare.dat");
+		Database db;
+		try {
+			ObjectInputStream in = new ObjectInputStream(new FileInputStream(dataFile));
+			db = (FareDatabase) in.readObject();
+		} catch (IOException e) {
+			db = new FareDatabase(dataFile);
+		} catch (ClassNotFoundException cryAboutIt) {
+			db = null;
+		}
+		databases.put("fare",  db);
 	}
 	
 	public Database getDatabase(String databaseName) {

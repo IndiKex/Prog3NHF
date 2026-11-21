@@ -37,4 +37,9 @@ public class Stop {
 	public List<StopTime> getStopTimes() {
 		return stopTimes;
 	}
+	
+	public String toString() {
+		String res = "Stop: name=" + name + ", coord=" + coord;
+		return res;
+	}
 }

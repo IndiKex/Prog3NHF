@@ -11,7 +11,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import main.comm.RequestType;
 import main.comm.asnwer.UserRegistAnswer;
 import main.comm.request.UserRegistRequest;
 import main.gui.RequestSender;
@@ -160,7 +159,7 @@ public class SignupPanel extends JPanel {
 		String idnum = IDField.getText();
 		String address = addressField.getText();
 		
-		return (UserRegistAnswer) RequestSender.sendRequest(new UserRegistRequest(username, password, date, idnum, address), RequestType.USERREGIST);
+		return (UserRegistAnswer) RequestSender.sendRequest(new UserRegistRequest(username, password, date, idnum, address));
 	}
 	
 	private class UserExistsException extends Exception {}

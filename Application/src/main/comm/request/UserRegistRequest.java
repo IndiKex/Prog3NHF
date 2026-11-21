@@ -2,6 +2,8 @@ package main.comm.request;
 
 import java.util.Date;
 
+import main.backend.continuos.RequestHandler;
+import main.comm.asnwer.Answer;
 import main.util.Address;
 
 
@@ -18,5 +20,9 @@ public class UserRegistRequest implements Request {
 		this.dateOfBirth = dateOfBirth;
 		this.IDNumber = IDNumber;
 		this.address = address;
+	}
+	
+	public Answer accept(RequestHandler handler) {
+		return handler.handleRequest(this);
 	}
 }

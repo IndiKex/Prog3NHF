@@ -4,14 +4,14 @@ import java.util.List;
 
 public class Trip {
 	private String name;
+	private Service service;
 	private TrainRoute trainRoute;
-	private List<Stop> stops;
 	private List<StopTime> stopTimes;
 	
-	public Trip(String name, TrainRoute trainRoute, List<Stop> stops, List<StopTime> stopTimes) {
+	public Trip(String name, Service service, TrainRoute trainRoute, List<StopTime> stopTimes) {
 		this.name = name;
+		this.service = service;
 		this.trainRoute = trainRoute;
-		this.stops = stops;
 		this.stopTimes = stopTimes;
 	}
 	
@@ -21,14 +21,6 @@ public class Trip {
 	
 	public String getName() {
 		return name;
-	}
-	
-	public void setStops(List<Stop> stops) {
-		this.stops = stops;
-	}
-	
-	public List<Stop> getStops() {
-		return stops;
 	}
 	
 	public void setStopTimes(List<StopTime> stopTimes) {
@@ -45,5 +37,13 @@ public class Trip {
 
 	public void setTrainRoute(TrainRoute trainRoute) {
 		this.trainRoute = trainRoute;
+	}
+
+	public Service getService() {
+		return service;
+	}
+
+	public void setService(Service service) {
+		this.service = service;
 	}
 }

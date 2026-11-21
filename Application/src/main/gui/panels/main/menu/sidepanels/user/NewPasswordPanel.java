@@ -10,7 +10,6 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
-import main.comm.RequestType;
 import main.comm.asnwer.UserChangePasswordAnswer;
 import main.comm.request.UserChangePasswordRequest;
 import main.gui.RequestSender;
@@ -125,7 +124,7 @@ public class NewPasswordPanel extends InvisibleJPanel {
 	private UserChangePasswordAnswer sendRequest() {
 		String newPassword = passwordTextfield.getText();
 		
-		return (UserChangePasswordAnswer) RequestSender.sendRequest(new UserChangePasswordRequest(RequestSender.username, newPassword), RequestType.USERCHANGEPASSWORD);
+		return (UserChangePasswordAnswer) RequestSender.sendRequest(new UserChangePasswordRequest(RequestSender.username, newPassword));
 	}
 	
 	private class SamePasswordException extends Exception {}

@@ -6,6 +6,7 @@ import java.util.List;
 
 import main.backend.maps.model.MapModel;
 import main.backend.maps.model.Stop;
+import main.backend.maps.model.StopTime;
 import main.backend.maps.model.Trip;
 
 public class RouteCalculator {
@@ -19,9 +20,9 @@ public class RouteCalculator {
 			int firstID = -1;
 			int lastID = -1;
 			
-			List<Stop> stops = trip.getStops();
-			for (int j = 0; j < stops.size(); j++) {
-				Stop stop = stops.get(j);
+			List<StopTime> stopTimes = trip.getStopTimes();
+			for (int j = 0; j < stopTimes.size(); j++) {
+				Stop stop = stopTimes.get(j).getStop();
 				
 				if (stop == firstStop) {
 					firstID = j;
@@ -40,19 +41,37 @@ public class RouteCalculator {
 				continue;
 			}
 			
+			StopTime firstStopTime = stopTimes.get(firstID);
+			StopTime lastStopTime = stopTimes.get(lastID);
+			if (firstStopTime.getSequence_id() > lastStopTime.getSequence_id()) {
+				continue;
+			}
+
+			if (trip.getTrainRoute().getName().equals("EC 140 HORTOBÁGY")) {
+				System.out.println("");
+				System.out.println(i);
+				System.out.println(trip.getTrainRoute().getName());
+			}
+			
+			
 			List<Stop> searchRouteStops = new ArrayList<>();
 			for (int j = Integer.min(firstID, lastID); j < Integer.max(firstID, lastID); j++) {
-				searchRouteStops.add(stops.get(j));
+				searchRouteStops.add(stopTimes.get(j).getStop());
 			}
 			
 			SearchTrip searchTrip = new SearchTrip(trip, firstID, lastID);
-			SearchRoute searchRoute = new SearchRoute(searchRouteStops, List.of(searchTrip));
-			usefulSearchRoutes.add(searchRoute);
+			SearchRoute searchRoute = new SearchRoute(startTime.toLocalDate(), searchRouteStops, List.of(searchTrip));
+			
+			
+			if (searchRoute.getFirstTime() != null && searchRoute.getLastTime() != null && searchRoute.getFirstTime().isAfter(startTime)) {
+				usefulSearchRoutes.add(searchRoute);
+			}
 		}
 		
 		orderSearchRoutesByDeparture(usefulSearchRoutes);
 		
-		return usefulSearchRoutes.subList(0, 10);
+		//return usefulSearchRoutes.subList(0, 10);
+		return usefulSearchRoutes;
 	}
 	
 	private static void orderSearchRoutesByDeparture(List<SearchRoute> searchRoutes) {
