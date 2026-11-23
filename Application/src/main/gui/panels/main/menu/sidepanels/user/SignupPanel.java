@@ -17,11 +17,12 @@ import main.gui.RequestSender;
 import main.gui.Window;
 import main.gui.config.lang.Language;
 import main.gui.config.theme.Theme;
-import main.gui.panels.DateChoiceButton;
-import main.gui.panels.InvisibleJPanel;
-import main.gui.panels.TextButton;
-import main.gui.panels.TextField;
-import main.gui.panels.VisibleJLabel;
+import main.gui.panels.util.DateChoiceButton;
+import main.gui.panels.util.InvisibleJPanel;
+import main.gui.panels.util.TextButton;
+import main.gui.panels.util.TextField;
+import main.gui.panels.util.VisibleJLabel;
+import main.gui.panels.util.WrongLabel;
 
 public class SignupPanel extends JPanel {
 	private JButton loginButton;
@@ -59,7 +60,7 @@ public class SignupPanel extends JPanel {
 		datePanel.setMaximumSize(textFieldSize);
 		datePanel.setAlignmentX(Component.LEFT_ALIGNMENT);
 		
-		dateLabel = new VisibleJLabel("Birthday ");
+		dateLabel = new VisibleJLabel(lang.get("menuSideUserSignupTextfieldDate"));
 		
 		dateButton = new DateChoiceButton();
 		dateButton.setMaximumSize(textFieldSize);
@@ -109,14 +110,14 @@ public class SignupPanel extends JPanel {
 		buttonPanel.setOpaque(false);
 		
 		loginButton = new TextButton();
-		loginButton.setText(lang.get("menuSideUserSignupButtonSignup"));
-		Dimension loginButtonSize = new Dimension(100, 40);
+		String text = lang.get("menuSideUserSignupButtonSignup");
+		loginButton.setText(text);
+		Dimension loginButtonSize = new Dimension(text.length() * 15, 40);
 		loginButton.setMaximumSize(loginButtonSize);
 		
 		addListener();
 		
-		wrongLabel = new JLabel();
-		wrongLabel.setText(lang.get("menuSideUserSignupWarningUsernameExists"));
+		wrongLabel = new WrongLabel("");
 		wrongLabel.setForeground(theme.warningColor);
 		wrongLabel.setVisible(false);
 		
@@ -142,12 +143,14 @@ public class SignupPanel extends JPanel {
 	}
 	
 	private void handleError(UserExistsException e) {
-		wrongLabel.setText("User already exists with this username");
+		Language lang = Window.getConfig().language;
+		wrongLabel.setText(lang.get("menuSideUserSignupWarningUsernameExists"));
 		wrongLabel.setVisible(true);
 	}
 	
 	private void handleError(EmptyFieldException e) {
-		wrongLabel.setText("Some fields are empty");
+		Language lang = Window.getConfig().language;
+		wrongLabel.setText(lang.get("menuSideUserSignupWarningEmptyFields"));
 		wrongLabel.setVisible(true);
 	}
 	

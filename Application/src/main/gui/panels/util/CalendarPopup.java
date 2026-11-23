@@ -1,22 +1,27 @@
-package main.gui.panels;
+package main.gui.panels.util;
 
 import java.awt.Component;
+import java.time.LocalDate;
 
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 
-import main.gui.panels.CalendarPanel.CalendarDateListener;
+import main.gui.panels.util.CalendarPanel.CalendarDateListener;
 
 public class CalendarPopup extends JPanel {
 	private JPopupMenu popup;
 	private CalendarPanel calendarPanel;
 	
-	public CalendarPopup(CalendarDateListener calendarDateListener) {
-		calendarPanel = new CalendarPanel(data -> {
+	public CalendarPopup(LocalDate date, CalendarDateListener calendarDateListener) {
+		calendarPanel = new CalendarPanel(date, data -> {
 			calendarDateListener.onCalendarDateClicked(data);
 			popup.setVisible(false);
 			popup = null;
 		});
+	}
+	
+	public CalendarPopup(CalendarDateListener calendarDateListener) {
+		this(LocalDate.now(), calendarDateListener);
 	}
 	
 	public void showPopupBelow(Component invoker) {

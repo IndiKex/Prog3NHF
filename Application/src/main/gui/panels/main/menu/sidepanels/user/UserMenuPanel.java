@@ -3,8 +3,8 @@ package main.gui.panels.main.menu.sidepanels.user;
 import java.awt.BorderLayout;
 import java.awt.Component;
 
-import main.gui.panels.InvisibleJPanel;
-import main.gui.panels.Refreshable;
+import main.gui.panels.util.InvisibleJPanel;
+import main.gui.panels.util.Refreshable;
 
 public class UserMenuPanel extends InvisibleJPanel implements Refreshable {
 	private boolean loggedIn = false;

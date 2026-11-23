@@ -9,7 +9,7 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 
 import main.gui.Window;
-import main.gui.panels.InvisibleJPanel;
+import main.gui.panels.util.InvisibleJPanel;
 
 public class ButtonPanel extends InvisibleJPanel {
 	Dimension preferredSize;

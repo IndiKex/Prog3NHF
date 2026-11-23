@@ -6,16 +6,16 @@ import java.util.List;
 import javax.swing.JPanel;
 
 import main.gui.RequestSender;
-import main.gui.panels.InvisibleJPanel;
-import main.gui.panels.Refreshable;
-import main.gui.panels.SidePanelContainer;
-import main.gui.panels.TempMainPanel;
 import main.gui.panels.main.tickets.config.TicketsConfigPanel;
 import main.gui.panels.main.tickets.sidepanels.ticket_config.TicketSearchPanel;
 import main.gui.panels.main.tickets.sidepanels.ticket_config.TicketSearchPanel.SearchData;
 import main.gui.panels.main.tickets.sidepanels.ticket_invalid.TicketInvalidPanel;
 import main.gui.panels.main.tickets.sidepanels.ticket_list.TicketListPanel;
 import main.gui.panels.main.tickets.sidepanels.ticket_valid.TicketValidPanel;
+import main.gui.panels.util.InvisibleJPanel;
+import main.gui.panels.util.Refreshable;
+import main.gui.panels.util.SidePanelContainer;
+import main.gui.panels.util.TempMainPanel;
 
 public class TicketsPanel extends InvisibleJPanel implements Refreshable {
 	private TicketsSidePanels sidePanel = TicketsSidePanels.VALID;

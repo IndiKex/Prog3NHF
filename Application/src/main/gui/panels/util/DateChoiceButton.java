@@ -1,4 +1,4 @@
-package main.gui.panels;
+package main.gui.panels.util;
 
 import java.time.LocalDate;
 
@@ -9,7 +9,7 @@ public class DateChoiceButton extends TextButton {
 	public DateChoiceButton() {
 		this.setText(date.toString());
 		this.addActionListener(e -> {
-			CalendarPopup popup = new CalendarPopup(d -> {date = d; setText(date.toString());});
+			CalendarPopup popup = new CalendarPopup(date, d -> {date = d; setText(date.toString());});
 			popup.showPopupBelow(this);
 		});
 	}

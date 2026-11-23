@@ -2,6 +2,7 @@ package main.backend.continuos;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -91,7 +92,7 @@ public class RequestHandler {
 		int i = 0;
 		while(true) {
 			try {
-				List<String> record = List.of(request.username + i, ticketData.get(0), ticketData.get(1), ticketData.get(2));
+				List<String> record = List.of(request.username + i, ticketData.get(0), ticketData.get(1), ticketData.get(2), ticketData.get(3), ticketData.get(4));
 				ticketBase.addRecord(record);
 				break;
 			} catch (KeyExistsException e) {}
@@ -113,10 +114,11 @@ public class RequestHandler {
 		try {
 			while (true) {
 				List<String> readRecord = ticketBase.getRecord(request.username + i);
-				TicketData ticketData = new TicketData(readRecord.get(1), LocalDateTime.parse(readRecord.get(2)), LocalDateTime.parse(readRecord.get(3)), -1);
+				System.out.println(readRecord);
+				TicketData ticketData = new TicketData(readRecord.get(1), readRecord.get(2), readRecord.get(3), LocalDateTime.parse(readRecord.get(4)), LocalDateTime.parse(readRecord.get(5)), -1);
 				
 				LocalDateTime now = LocalDateTime.now();
-				LocalDateTime arrivalTime = LocalDateTime.parse(ticketData.getData().get(2));
+				LocalDateTime arrivalTime = LocalDateTime.parse(ticketData.getData().get(4));
 				if (arrivalTime.isAfter(now)) {
 					resTickets.add(ticketData);
 				}
@@ -155,10 +157,10 @@ public class RequestHandler {
 		try {
 			while (true) {
 				List<String> readRecord = ticketBase.getRecord(request.username + i);
-				TicketData ticketData = new TicketData(readRecord.get(1), LocalDateTime.parse(readRecord.get(2)), LocalDateTime.parse(readRecord.get(3)), -1);
+				TicketData ticketData = new TicketData(readRecord.get(1), readRecord.get(2), readRecord.get(3), LocalDateTime.parse(readRecord.get(4)), LocalDateTime.parse(readRecord.get(5)), -1);
 				
 				LocalDateTime now = LocalDateTime.now();
-				LocalDateTime arrivalTime = LocalDateTime.parse(ticketData.getData().get(2));
+				LocalDateTime arrivalTime = LocalDateTime.parse(ticketData.getData().get(4));
 				if (arrivalTime.isBefore(now)) {
 					resTickets.add(ticketData);
 				}
@@ -199,16 +201,16 @@ public class RequestHandler {
 		List<TicketData> data = new ArrayList<>();
 		
 		int i = 0;
-		while (data.size() < 10 || i > 2) {
+		while (data.size() < 10 && i < 2) {
 			List<SearchRoute> searchResult = RouteCalculator.calculateRoute(mapModel, startStop, destStop, startTime);
 			
 			
 			for (SearchRoute searchRoute : searchResult) {
-				TicketData ticketData = new TicketData(searchRoute.getSearchTrips().get(0).getTrip().getTrainRoute().getName(), searchRoute.getFirstTime(), searchRoute.getLastTime(), searchRoute.calculatePrice() * request.peopleNum); 
+				TicketData ticketData = new TicketData(searchRoute.getSearchTrips().get(0).getTrip().getTrainRoute().getName(), request.startStopName, request.destStopName, searchRoute.getFirstTime(), searchRoute.getLastTime(), searchRoute.calculatePrice() * request.peopleNum); 
 				data.add(ticketData);
 			}
 			
-			startTime = LocalDateTime.of(startTime.getYear(), startTime.getMonth(), startTime.getDayOfMonth() + 1, 0, 0, 0);
+			startTime = LocalDateTime.of(startTime.plusDays(1).toLocalDate(), LocalTime.of(0, 0, 0, 0));
 			i++;
 		}
 		

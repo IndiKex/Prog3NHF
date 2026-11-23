@@ -1,4 +1,4 @@
-package main.gui.panels;
+package main.gui.panels.util;
 
 import java.awt.CardLayout;
 import java.util.List;

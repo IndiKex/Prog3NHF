@@ -15,8 +15,8 @@ import javax.swing.border.EmptyBorder;
 
 import main.gui.Window;
 import main.gui.config.lang.Language;
-import main.gui.panels.TextButton;
-import main.gui.panels.VisibleJPanel;
+import main.gui.panels.util.TextButton;
+import main.gui.panels.util.VisibleJPanel;
 
 public class LoggedOutUserMenuPanel extends VisibleJPanel {
 	private JPanel buttonPanel;
@@ -52,6 +52,13 @@ public class LoggedOutUserMenuPanel extends VisibleJPanel {
 		buttonPanel.setOpaque(false);
 		
 		Dimension buttonSize = new Dimension(100, 40);
+
+		Language lang = Window.getConfig().language;
+		String loginButtonLabel = lang.get("menuSideUserButtonLogin");
+		String signupButtonLabel = lang.get("menuSideUserButtonSignup");
+		
+		int maxLength = Integer.max(loginButtonLabel.length(), signupButtonLabel.length());
+		buttonSize.width = maxLength * 15;
 		
 		initLoginButton(buttonSize);
 		initSignupButton(buttonSize);

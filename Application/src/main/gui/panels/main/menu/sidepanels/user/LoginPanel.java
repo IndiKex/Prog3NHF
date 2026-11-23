@@ -17,8 +17,9 @@ import main.gui.RequestSender;
 import main.gui.Window;
 import main.gui.config.lang.Language;
 import main.gui.config.theme.Theme;
-import main.gui.panels.TextButton;
-import main.gui.panels.TextField;
+import main.gui.panels.util.TextButton;
+import main.gui.panels.util.TextField;
+import main.gui.panels.util.WrongLabel;
 
 public class LoginPanel extends JPanel {
 	private JButton loginButton;
@@ -72,14 +73,14 @@ public class LoginPanel extends JPanel {
 		buttonPanel.setOpaque(false);
 		
 		loginButton = new TextButton();
-		loginButton.setText(lang.get("menuSideUserLoginButtonLogin"));
-		Dimension loginButtonSize = new Dimension(100, 40);
+		String text = lang.get("menuSideUserLoginButtonLogin");
+		loginButton.setText(text);
+		Dimension loginButtonSize = new Dimension(text.length() * 15, 40);
 		loginButton.setMaximumSize(loginButtonSize);
 		
 		addListener();
 		
-		wrongLabel = new JLabel();
-		wrongLabel.setText(lang.get("menuSideUserLoginWarningWrongAuthData"));
+		wrongLabel = new WrongLabel(lang.get("menuSideUserLoginWarningWrongAuthData"));
 		wrongLabel.setForeground(theme.warningColor);
 		wrongLabel.setVisible(false);
 		
@@ -105,12 +106,14 @@ public class LoginPanel extends JPanel {
 	}
 	
 	private void handleError(LoginException e) {
-		wrongLabel.setText("Wrong username or password");
+		Language lang = Window.getConfig().language;
+		wrongLabel.setText(lang.get("menuSideUserLoginWarningWrongAuthData"));
 		wrongLabel.setVisible(true);
 	}
 	
 	private void handleError(EmptyFieldException e) {
-		wrongLabel.setText("Some fields are empty");
+		Language lang = Window.getConfig().language;
+		wrongLabel.setText(lang.get("menuSideUserLoginWarningEmptyFields"));
 		wrongLabel.setVisible(true);
 	}
 	

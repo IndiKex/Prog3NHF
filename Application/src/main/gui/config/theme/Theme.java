@@ -28,12 +28,36 @@ public class Theme implements Serializable {
 	public Color placeholderTextColor = Color.LIGHT_GRAY;
 	public Color warningColor = Color.RED;
 	
+	public Color calendarDateColor = textColor;
+	public Color calendarGreyedColor = textColor.darker();
+	public Color calendarNowColor = secondaryColor;
+	
 	private void updateDerivedColors() {
 		gradientSecondColor = baseColor.darker();
 		
 		buttonColor = secondaryColor;
 		buttonHoverColor = buttonColor;
 		buttonClickColor = buttonColor.darker();
+		
+		calendarDateColor = textColor;
+		if (isDark(calendarDateColor)) {
+			calendarGreyedColor = blend(calendarDateColor, Color.WHITE, 0.5f);
+		} else {
+			calendarGreyedColor = blend(calendarDateColor, Color.BLACK, 0.5f);
+		}
+		calendarNowColor = warningColor;
+	}
+	
+	public static Color blend(Color c1, Color c2, float ratio) {
+	    float inv = 1.0f - ratio;
+	    int r = (int)(c1.getRed() * inv + c2.getRed() * ratio);
+	    int g = (int)(c1.getGreen() * inv + c2.getGreen() * ratio);
+	    int b = (int)(c1.getBlue() * inv + c2.getBlue() * ratio);
+	    return new Color(r, g, b);
+	}
+	
+	private boolean isDark(Color color) {
+		return color.getRed() < 20 && color.getBlue() < 20 && color.getGreen() < 20;
 	}
 	
 	public static Theme load(File themeFile) throws IOException {

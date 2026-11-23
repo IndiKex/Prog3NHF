@@ -36,7 +36,16 @@ public class SearchRoute {
 	
 	public LocalDateTime getLastTime() {
 		int lastStopID = searchTrips.getLast().getLastStopID();
-		return searchTrips.getLast().getTrip().getStopTimes().get(lastStopID).calculateArrivalTime(startDate);
+		
+		int firstStopID = searchTrips.get(0).getFirstStopID();
+		LocalDateTime lastStopDate = searchTrips.getLast().getTrip().getStopTimes().get(lastStopID).calculateArrivalTime(startDate);
+		LocalDateTime firstStopDate = searchTrips.get(0).getTrip().getStopTimes().get(firstStopID).calculateDepartureTime(startDate);
+		
+		if (firstStopDate.isAfter(lastStopDate)) {
+			return lastStopDate.plusDays(1);
+		} else {
+			return lastStopDate;
+		}
 	}
 
 	public List<Stop> getStops() {

@@ -25,8 +25,8 @@ import main.gui.RequestSender;
 import main.gui.Window;
 import main.gui.config.lang.Language;
 import main.gui.config.theme.Theme;
-import main.gui.panels.TextButton;
-import main.gui.panels.VisibleJPanel;
+import main.gui.panels.util.TextButton;
+import main.gui.panels.util.VisibleJPanel;
 
 public class LoggedInUserMenuPanel extends VisibleJPanel {
 	private JPanel containPanel;

@@ -16,8 +16,8 @@ import javax.swing.border.EmptyBorder;
 import main.gui.Window;
 import main.gui.config.lang.Language;
 import main.gui.config.theme.Theme;
-import main.gui.panels.Refreshable;
-import main.gui.panels.VisibleJPanel;
+import main.gui.panels.util.Refreshable;
+import main.gui.panels.util.VisibleJPanel;
 
 public class AboutSidePanel extends VisibleJPanel implements Refreshable {
 	private JPanel labelPanel;

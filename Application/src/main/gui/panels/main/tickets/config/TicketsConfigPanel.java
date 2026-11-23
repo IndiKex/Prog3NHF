@@ -5,8 +5,8 @@ import java.util.List;
 
 import main.gui.Window;
 import main.gui.config.lang.Language;
-import main.gui.panels.SwitchConfigPanel;
 import main.gui.panels.main.tickets.TicketsSidePanels;
+import main.gui.panels.util.SwitchConfigPanel;
 
 public class TicketsConfigPanel extends SwitchConfigPanel<TicketsSidePanels> {
 	public TicketsConfigPanel(Runnable onChooseFunction) {

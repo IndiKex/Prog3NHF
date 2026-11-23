@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Serializable;
+import java.time.DayOfWeek;
+import java.time.Month;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,6 +30,8 @@ public class Language implements Serializable {
 		language.data = data;
 		
 		br.close();
+		
+		System.out.println(language.data);
 		
 		return language;
 	}
@@ -81,5 +85,11 @@ public class Language implements Serializable {
 		return data.get(dataID);
 	}
 	
-	// TODO
+	public String get(Month month) {
+		return data.get(month.name());
+	}
+	
+	public String get(DayOfWeek dayOfWeek) {
+		return data.get(dayOfWeek.name());
+	}
 }

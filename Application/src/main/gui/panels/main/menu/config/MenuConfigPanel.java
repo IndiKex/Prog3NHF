@@ -5,8 +5,8 @@ import java.util.List;
 
 import main.gui.Window;
 import main.gui.config.lang.Language;
-import main.gui.panels.SwitchConfigPanel;
 import main.gui.panels.main.menu.MenuSideMenus;
+import main.gui.panels.util.SwitchConfigPanel;
 
 public class MenuConfigPanel extends SwitchConfigPanel<MenuSideMenus> {
 	public MenuConfigPanel(Runnable onChooseFunction) {

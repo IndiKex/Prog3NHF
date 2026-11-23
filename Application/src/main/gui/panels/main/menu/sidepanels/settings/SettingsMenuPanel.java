@@ -12,8 +12,10 @@ import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import main.gui.panels.Refreshable;
-import main.gui.panels.VisibleJPanel;
+import main.gui.Window;
+import main.gui.config.lang.Language;
+import main.gui.panels.util.Refreshable;
+import main.gui.panels.util.VisibleJPanel;
 
 public class SettingsMenuPanel extends VisibleJPanel implements Refreshable {
 	JPanel buttonPanel;
@@ -21,6 +23,7 @@ public class SettingsMenuPanel extends VisibleJPanel implements Refreshable {
 	List<JMenu> menus;
 	
 	SettingsThemeMenu settingsThemeMenu;
+	SettingsLanguageMenu settingsLanguageMenu;
 	
 	public SettingsMenuPanel() {
 		this.setBorder(new EmptyBorder(220, 35, 0, 0)); // top, left, bottom, right
@@ -44,16 +47,16 @@ public class SettingsMenuPanel extends VisibleJPanel implements Refreshable {
 		menuBar.setOpaque(false);
 		menuBar.setBorder(null);
 		
+		Language lang = Window.getConfig().language;
+		
 		List<String> menuLabels = List.of(
-				"Theme",
-				"Language",
-				"Orientation"
+				lang.get("menuSideSettingsThemeLabel"),
+				lang.get("menuSideSettingsLanguageLabel")
 		);
 		
 		List<List<String>> menusItemLabels = List.of(
 				List.of("Light", "Dark", "MAV"),
-				List.of("English", "Hungarian"),
-				List.of("Top", "Bottom", "Left", "Right")
+				List.of("English", "Hungarian")
 		);
 		
 		
@@ -69,13 +72,20 @@ public class SettingsMenuPanel extends VisibleJPanel implements Refreshable {
 		menus.add(settingsThemeMenu);
 		settingsThemeMenu.addMenuItems();
 		
+		settingsLanguageMenu = new SettingsLanguageMenu(menuLabels.get(1));
+		menus.add(settingsLanguageMenu);
+		settingsLanguageMenu.addMenuItems();
+		
 		menuBar.add(settingsThemeMenu);
-		menuBar.add(Box.createRigidArea(new Dimension(1, 20)));
+		menuBar.add(Box.createRigidArea(new Dimension(0, 20)));
+		menuBar.add(settingsLanguageMenu);
+		menuBar.add(Box.createRigidArea(new Dimension(0, 20)));
 		
 	}
 	
 	public void refreshColors() {
 		super.refreshColors();
 		settingsThemeMenu.refreshColors();
+		settingsLanguageMenu.refreshColors();
 	}
 }

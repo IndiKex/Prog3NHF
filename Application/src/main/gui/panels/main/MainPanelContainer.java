@@ -8,11 +8,11 @@ import javax.swing.JPanel;
 import main.gui.Window;
 import main.gui.config.theme.Theme;
 import main.gui.enums.MainPanels;
-import main.gui.panels.InvisibleJPanel;
-import main.gui.panels.Refreshable;
-import main.gui.panels.TempMainPanel;
 import main.gui.panels.main.menu.MenuPanel;
 import main.gui.panels.main.tickets.TicketsPanel;
+import main.gui.panels.util.InvisibleJPanel;
+import main.gui.panels.util.Refreshable;
+import main.gui.panels.util.TempMainPanel;
 
 public class MainPanelContainer extends InvisibleJPanel {
 	private List<JPanel> mainPanels;

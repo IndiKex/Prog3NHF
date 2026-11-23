@@ -9,7 +9,7 @@ public class TicketDatabase extends AbstractDatabase implements Serializable {
 	private int keyField = 0;
 	
 	public TicketDatabase(File dataFile) {
-		super(List.of("username_plus_id", "trainID", "departure_time", "arrival_time"), 0, dataFile);
+		super(List.of("username_plus_id", "trainID", "departure_stop_name", "arrival_stop_name", "departure_time", "arrival_time"), 0, dataFile);
 	}
 	
 }

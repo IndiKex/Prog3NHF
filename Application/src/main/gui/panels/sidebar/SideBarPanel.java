@@ -11,7 +11,7 @@ import java.util.List;
 import main.gui.Window;
 import main.gui.config.theme.Theme;
 import main.gui.enums.MainPanels;
-import main.gui.panels.VisibleJPanel;
+import main.gui.panels.util.VisibleJPanel;
 
 public class SideBarPanel extends VisibleJPanel {
 	Window window;

@@ -16,9 +16,10 @@ import main.gui.RequestSender;
 import main.gui.Window;
 import main.gui.config.lang.Language;
 import main.gui.config.theme.Theme;
-import main.gui.panels.InvisibleJPanel;
-import main.gui.panels.TextButton;
-import main.gui.panels.TextField;
+import main.gui.panels.util.InvisibleJPanel;
+import main.gui.panels.util.TextButton;
+import main.gui.panels.util.TextField;
+import main.gui.panels.util.WrongLabel;
 
 public class NewPasswordPanel extends InvisibleJPanel {
 	private JButton passwordButton;
@@ -51,8 +52,7 @@ public class NewPasswordPanel extends InvisibleJPanel {
 		passwordTextfield.setMaximumSize(textfieldSize);
 		passwordTextfield.setAlignmentX(Component.LEFT_ALIGNMENT);
 		
-		wrongLabel = new JLabel();
-		wrongLabel.setText("Leszophat Karsa Zoltán");
+		wrongLabel = new WrongLabel("");
 		wrongLabel.setForeground(theme.warningColor);
 		wrongLabel.setOpaque(false);
 		wrongLabel.setAlignmentX(Component.LEFT_ALIGNMENT);

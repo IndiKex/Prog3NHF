@@ -43,7 +43,4 @@
 	"ticketsConfigButtonInvalid": "Invalid tickets"
 	"ticketsConfigButtonPurchase": "Purchase"
 
-
-	"DateFormat": "<day>/<month>/<year>"
-	"AddressFormat": "<num> <street> <town> <postcode>"
 }

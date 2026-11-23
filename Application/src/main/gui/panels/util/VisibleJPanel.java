@@ -1,4 +1,4 @@
-package main.gui.panels;
+package main.gui.panels.util;
 
 import java.awt.GradientPaint;
 import java.awt.Graphics;

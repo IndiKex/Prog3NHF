@@ -1,4 +1,4 @@
-package main.gui.panels;
+package main.gui.panels.util;
 
 import java.awt.Font;
 import java.awt.event.FocusEvent;
@@ -14,7 +14,12 @@ import main.gui.config.theme.Theme;
 public class TextField extends JTextField implements Refreshable {
 	private String placeholder = "";
 	private boolean usesPlaceholder = true;
+	boolean changingColor = false;
 	
+	public boolean isChangingColor() {
+		return changingColor;
+	}
+
 	public TextField(int n) {
 		super(n);
 		
@@ -48,10 +53,21 @@ public class TextField extends JTextField implements Refreshable {
 		Theme theme = Window.getConfig().theme;
 		
 		this.setBackground(theme.baseColor);
-		updateForeground();
+		updateForegroundColors();
 		
 		Border border = BorderFactory.createLineBorder(theme.secondaryColor, 3);
 		this.setBorder(border);
+		
+	}
+	
+	private void updateForegroundColors() {
+		Theme theme = Window.getConfig().theme;
+		
+		if (usesPlaceholder) {
+			this.setForeground(theme.placeholderTextColor);
+		} else {
+			this.setForeground(theme.textColor);
+		}
 	}
 	
 	private void updateForeground() {

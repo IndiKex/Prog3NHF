@@ -7,13 +7,13 @@ import javax.swing.JPanel;
 
 import main.gui.Window;
 import main.gui.config.theme.Theme;
-import main.gui.panels.InvisibleJPanel;
-import main.gui.panels.Refreshable;
-import main.gui.panels.SidePanelContainer;
 import main.gui.panels.main.menu.config.MenuConfigPanel;
 import main.gui.panels.main.menu.sidepanels.about.AboutSidePanel;
 import main.gui.panels.main.menu.sidepanels.settings.SettingsMenuPanel;
 import main.gui.panels.main.menu.sidepanels.user.UserMenuPanel;
+import main.gui.panels.util.InvisibleJPanel;
+import main.gui.panels.util.Refreshable;
+import main.gui.panels.util.SidePanelContainer;
 
 public class MenuPanel extends InvisibleJPanel implements Refreshable {
 	MenuSideMenus sideMenu = MenuSideMenus.USER;
