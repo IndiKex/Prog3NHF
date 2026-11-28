@@ -24,7 +24,8 @@ public class LoggedOutUserMenuPanel extends VisibleJPanel {
 	
 	private JPanel loginPanel;
 	private JPanel signupPanel;
-	
+
+	private Dimension buttonSize = new Dimension(100, 40);
 	private JButton loginButton;
 	private JButton signupButton;
 	
@@ -51,7 +52,6 @@ public class LoggedOutUserMenuPanel extends VisibleJPanel {
 		buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.X_AXIS));
 		buttonPanel.setOpaque(false);
 		
-		Dimension buttonSize = new Dimension(100, 40);
 
 		Language lang = Window.getConfig().language;
 		String loginButtonLabel = lang.get("menuSideUserButtonLogin");
@@ -132,6 +132,23 @@ public class LoggedOutUserMenuPanel extends VisibleJPanel {
 	
 	private void initSignupPanel() {
 		signupPanel = new SignupPanel(onLoginFunction);
+	}
+	
+	@Override
+	public void refreshLanguage() {
+		Language lang = Window.getConfig().language;
+		
+		String loginButtonLabel = lang.get("menuSideUserButtonLogin");
+		String signupButtonLabel = lang.get("menuSideUserButtonSignup");
+		
+		int maxLength = Integer.max(loginButtonLabel.length(), signupButtonLabel.length());
+		buttonSize.width = Integer.max(buttonSize.width, maxLength * 15);
+		
+		signupButton.setMaximumSize(buttonSize);
+		loginButton.setMaximumSize(buttonSize);
+
+		loginButton.setText(loginButtonLabel);
+		signupButton.setText(signupButtonLabel);
 	}
 	
 }

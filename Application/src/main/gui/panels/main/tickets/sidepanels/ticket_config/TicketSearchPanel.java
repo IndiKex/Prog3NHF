@@ -10,7 +10,10 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -44,6 +47,7 @@ import main.gui.panels.util.VisibleJLabel;
 import main.gui.panels.util.VisibleJPanel;
 import main.gui.panels.util.WrongLabel;
 import main.util.FareCalculator;
+import main.util.FareCalculator.FareValidityLength;
 import main.util.StopNameSearch;
 
 public class TicketSearchPanel extends VisibleJPanel {
@@ -156,7 +160,7 @@ public class TicketSearchPanel extends VisibleJPanel {
 									"Vas", 
 									"Veszprém", 
 									"Zala"};
-	private String[] validLengthStrings = {"2 hét", "1 hónap", "1 év"};
+	private String[] validLengthStrings;
 	private VisibleJComboBox areaBox;
 	private DateChoiceButton validTimeButton;
 	private VisibleJComboBox validLengthBox;
@@ -237,6 +241,8 @@ public class TicketSearchPanel extends VisibleJPanel {
 	}
 	
 	private void addFarePanel() {
+		Theme theme = Window.getConfig().theme;
+		
 		JPanel farePanel = new InvisibleJPanel();
 		farePanel.setLayout(new BoxLayout(farePanel, BoxLayout.Y_AXIS));
 		
@@ -273,13 +279,15 @@ public class TicketSearchPanel extends VisibleJPanel {
 		validTimePanel.add(validTimeButton);
 		
 		// Valid length panel
+		Map<String, FareValidityLength> fareValidityLengthMap = getFareValidityLengthMap();
+		
 		JPanel validLengthPanel = new InvisibleJPanel();
 		validLengthPanel.setLayout(new BoxLayout(validLengthPanel, BoxLayout.X_AXIS));
 		validLengthPanel.setMaximumSize(componentSize);
 		validLengthPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
 		
 		VisibleJLabel validLengthLabel = new VisibleJLabel(lang.get("ticketsSideSearchFareValidityLengthLabel"));
-		validLengthBox = new VisibleJComboBox(validLengthStrings);
+		validLengthBox = new VisibleJComboBox(fareValidityLengthMap.keySet().toArray());
 		validLengthPanel.add(validLengthLabel);
 		validLengthPanel.add(Box.createRigidArea(new Dimension(10, 0)));
 		validLengthPanel.add(validLengthBox);
@@ -316,7 +324,7 @@ public class TicketSearchPanel extends VisibleJPanel {
 		
 		fareWrongLabel = new WrongLabel("");
 		fareWrongLabel.setOpaque(false);
-		fareWrongLabel.setForeground(Window.getConfig().theme.warningColor);
+		fareWrongLabel.setForeground(theme.warningColor);
 		fareWrongLabel.setVisible(false);
 		buttonPanel.add(button);
 		buttonPanel.add(Box.createRigidArea(new Dimension(10, 0)));
@@ -327,7 +335,11 @@ public class TicketSearchPanel extends VisibleJPanel {
 				try {
 					fareWrongLabel.setVisible(false);
 					handleFarePurchase();
+					fareWrongLabel.setForeground(theme.textColor);
+					fareWrongLabel.setText(lang.get("ticketsSidePurchaseSuccessful"));
+					fareWrongLabel.setVisible(true);
 				} catch (NoUsernameException err) {
+					fareWrongLabel.setForeground(theme.warningColor);
 					fareWrongLabel.setText(lang.get("ticketsSideSearchFareWrong"));
 					fareWrongLabel.setVisible(true);
 				}
@@ -360,13 +372,25 @@ public class TicketSearchPanel extends VisibleJPanel {
 		refreshables.add(button);
 	}
 	
+	private Map<String, FareValidityLength> getFareValidityLengthMap() {
+		Map<String, FareValidityLength> res = new HashMap<>();
+		
+		Language lang = Window.getConfig().language;
+		for (FareValidityLength val : FareValidityLength.values()) {
+			res.put(lang.get(val.name()), val);
+		}
+		return res;
+	}
+	
 	private void handleFarePurchase() throws NoUsernameException {
 		String area = (String) areaBox.getSelectedItem();
 		LocalDate validityStart = validTimeButton.getDate();
-		String validityLength = (String) validLengthBox.getSelectedItem();
+		String validityLengthString = (String) validLengthBox.getSelectedItem();
+		Map<String, FareValidityLength> fareValidityLengthMap = getFareValidityLengthMap();
+		FareValidityLength validityLength = fareValidityLengthMap.get(validityLengthString);
 		int price = FareCalculator.priceCalculator(validityLength);
 		
-		TicketAddFareAnswer answer = (TicketAddFareAnswer) RequestSender.sendRequest(new TicketAddFareRequest(RequestSender.username, new FareData(area, validityStart, validityLength, price)));
+		TicketAddFareAnswer answer = (TicketAddFareAnswer) RequestSender.sendRequest(new TicketAddFareRequest(RequestSender.username, new FareData(area, validityStart, validityLength.name(), price)));
 		
 		if (!answer.successful) {
 			throw new NoUsernameException();
@@ -377,7 +401,8 @@ public class TicketSearchPanel extends VisibleJPanel {
 	
 	private void updateFarePrice() {
 		String validityLength = (String) validLengthBox.getSelectedItem();
-		String priceText = Integer.toString(FareCalculator.priceCalculator(validityLength));
+		Map<String, FareValidityLength> fareValidityLengthMap = getFareValidityLengthMap();
+		String priceText = Integer.toString(FareCalculator.priceCalculator(fareValidityLengthMap.get(validityLength)));
 		priceLabel.setText(priceText);
 	}
 	

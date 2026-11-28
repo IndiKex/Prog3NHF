@@ -341,4 +341,10 @@ public class CalendarPanel extends JPanel implements Refreshable {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void refreshLanguage() {
+		// TODO Auto-generated method stub
+		
+	}
 }

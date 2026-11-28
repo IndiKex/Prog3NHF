@@ -131,4 +131,10 @@ public class VisibleJComboBox<E> extends JComboBox<E> implements Refreshable {
             }
         });
 	}
+
+	@Override
+	public void refreshLanguage() {
+		// TODO Auto-generated method stub
+		
+	}
 }

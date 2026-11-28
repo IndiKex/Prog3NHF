@@ -1,15 +1,11 @@
 package main.gui.panels.sidebar;
 
 import java.awt.Dimension;
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.GridBagLayout;
 import java.io.File;
 import java.util.List;
 
 import main.gui.Window;
-import main.gui.config.theme.Theme;
 import main.gui.enums.MainPanels;
 import main.gui.panels.util.VisibleJPanel;
 

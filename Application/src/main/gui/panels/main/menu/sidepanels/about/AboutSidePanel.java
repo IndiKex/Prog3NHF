@@ -1,7 +1,6 @@
 package main.gui.panels.main.menu.sidepanels.about;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -80,5 +79,14 @@ public class AboutSidePanel extends VisibleJPanel implements Refreshable {
 			labelPanel.add(Box.createRigidArea(new Dimension(labelPanel.getWidth(), 20)));
 			infoPanel.add(Box.createRigidArea(new Dimension(infoPanel.getWidth(), 20)));
 		}
+	}
+	
+	@Override
+	public void refreshLanguage() {
+		labelPanel.removeAll();
+		infoPanel.removeAll();
+		addLabels();
+		revalidate();
+		repaint();
 	}
 }

@@ -17,11 +17,12 @@ import main.gui.Window;
 import main.gui.config.lang.Language;
 import main.gui.config.theme.Theme;
 import main.gui.panels.util.InvisibleJPanel;
+import main.gui.panels.util.Refreshable;
 import main.gui.panels.util.TextButton;
 import main.gui.panels.util.TextField;
 import main.gui.panels.util.WrongLabel;
 
-public class NewPasswordPanel extends InvisibleJPanel {
+public class NewPasswordPanel extends InvisibleJPanel implements Refreshable {
 	private JButton passwordButton;
 	private TextField passwordTextfield;
 	private JLabel wrongLabel;
@@ -101,12 +102,14 @@ public class NewPasswordPanel extends InvisibleJPanel {
 	}
 	
 	private void handleError(EmptyFieldException e) {
-		wrongLabel.setText("Some fields are empty");
+		Language lang = Window.getConfig().language;
+		wrongLabel.setText(lang.get("menuSideUserNewPasswordWarningEmptyField"));
 		wrongLabel.setVisible(true);
 	}
 	
 	private void handleError(SamePasswordException e) {
-		wrongLabel.setText("New password cannot be the same as the last password");
+		Language lang = Window.getConfig().language;
+		wrongLabel.setText(lang.get("menuSideUserNewPasswordWarningSamePassword"));
 		wrongLabel.setVisible(true);
 	}
 	
@@ -129,4 +132,22 @@ public class NewPasswordPanel extends InvisibleJPanel {
 	
 	private class SamePasswordException extends Exception {}
 	private class EmptyFieldException extends Exception {}
+	
+	@Override
+	public void refreshColors() {
+		
+	}
+
+	@Override
+	public void refreshLanguage() {
+		Language lang = Window.getConfig().language;
+		
+		String newPasswordButtonLabel = lang.get("menuSideUserButtonNewPassword");
+		passwordButton.setText(newPasswordButtonLabel);
+		
+		String passwordTextfieldLabel = lang.get("menuSideUserTextfieldNewPassword");
+		passwordTextfield.setPlaceholderText(passwordTextfieldLabel);
+		
+		wrongLabel.setVisible(false);
+	}
 }

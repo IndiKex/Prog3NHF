@@ -30,4 +30,11 @@ public class SidePanelContainer<E extends Enum<E>> extends InvisibleJPanel imple
 		CardLayout cl = (CardLayout)this.getLayout();
 		cl.show(this, enumID.name());
 	}
+
+	@Override
+	public void refreshLanguage() {
+		for (JPanel panel : panels) {
+			((Refreshable)panel).refreshLanguage();
+		}
+	}
 }

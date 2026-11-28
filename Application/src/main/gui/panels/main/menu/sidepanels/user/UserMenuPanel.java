@@ -3,6 +3,7 @@ package main.gui.panels.main.menu.sidepanels.user;
 import java.awt.BorderLayout;
 import java.awt.Component;
 
+import main.gui.RequestSender;
 import main.gui.panels.util.InvisibleJPanel;
 import main.gui.panels.util.Refreshable;
 
@@ -14,6 +15,12 @@ public class UserMenuPanel extends InvisibleJPanel implements Refreshable {
 	
 	public UserMenuPanel() {
 		this.setLayout(new BorderLayout());
+		
+		if (RequestSender.username != null) {
+			loggedIn = true;
+		} else {
+			loggedIn = false;
+		}
 		
 		reInitPanel();
 	}
@@ -63,6 +70,11 @@ public class UserMenuPanel extends InvisibleJPanel implements Refreshable {
 	}
 	
 	public void refreshColors() {
+		reInitPanel();
+	}
+
+	@Override
+	public void refreshLanguage() {
 		reInitPanel();
 	}
 }

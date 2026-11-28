@@ -8,14 +8,18 @@ import javax.swing.JPanel;
 import main.gui.Window;
 import main.gui.config.theme.Theme;
 import main.gui.enums.MainPanels;
+import main.gui.panels.main.map.MapPanel;
 import main.gui.panels.main.menu.MenuPanel;
+import main.gui.panels.main.menu.MenuSideMenus;
 import main.gui.panels.main.tickets.TicketsPanel;
 import main.gui.panels.util.InvisibleJPanel;
 import main.gui.panels.util.Refreshable;
-import main.gui.panels.util.TempMainPanel;
 
-public class MainPanelContainer extends InvisibleJPanel {
+public class MainPanelContainer extends InvisibleJPanel implements Refreshable {
 	private List<JPanel> mainPanels;
+	
+	private MenuPanel menuPanel;
+	private MapPanel mapPanel;
 	
 	public MainPanelContainer() {
 		this.setLayout(new CardLayout());
@@ -23,17 +27,23 @@ public class MainPanelContainer extends InvisibleJPanel {
 		Theme theme = Window.getConfig().theme;
 		//this.setBackground(theme.baseColor);
 		
+		menuPanel = new MenuPanel();
+		mapPanel = new MapPanel();
 		mainPanels = List.of(
-			new TempMainPanel("Map"),
+			mapPanel,
 			//new TempMainPanel("Tickets"),
 			new TicketsPanel(),
-			new MenuPanel()
+			menuPanel
 		);
 		
 		for (MainPanels panelID : MainPanels.values()) {
 			JPanel panel = mainPanels.get(panelID.ordinal());
 			this.add(panel, panelID.name());
 		}
+	}
+	
+	public void setMenuPanelEnumValue(MenuSideMenus sideMenu) {
+		menuPanel.setEnumValue(sideMenu);
 	}
 	
 	public void refreshColors() {
@@ -46,5 +56,11 @@ public class MainPanelContainer extends InvisibleJPanel {
 	public void switchPanel(MainPanels panelID) {
 		CardLayout cl = (CardLayout) this.getLayout();
 		cl.show(this, panelID.name());
+	}
+
+	@Override
+	public void refreshLanguage() {
+		menuPanel.refreshLanguage();
+		this.add(new TicketsPanel(), MainPanels.TICKET.name());
 	}
 }

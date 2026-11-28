@@ -23,4 +23,10 @@ public class VisibleJLabel extends JLabel implements Refreshable {
 		Theme theme = Window.getConfig().theme;
 		this.setForeground(theme.textColor);
 	}
+
+	@Override
+	public void refreshLanguage() {
+		// TODO Auto-generated method stub
+		
+	}
 }

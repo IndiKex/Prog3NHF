@@ -36,7 +36,7 @@ public class LoggedInUserMenuPanel extends VisibleJPanel {
 	
 	private JLabel iconLabel;
 	
-	private JPanel newPasswordPanel;
+	private NewPasswordPanel newPasswordPanel;
 	private JButton deleteProfileButton;
 	private JButton logoutButton;
 	
@@ -195,6 +195,26 @@ public class LoggedInUserMenuPanel extends VisibleJPanel {
 	
 	private UserDeleteAnswer sendDeleteRequest() {
 		return (UserDeleteAnswer) RequestSender.sendRequest(new UserDeleteRequest(RequestSender.username));
+	}
+	
+	@Override
+	public void refreshLanguage() {
+		labelPanel.removeAll();
+		infoPanel.removeAll();
+		addLabels();
+		
+		Language lang = Window.getConfig().language;
+		
+		String deleteProfileButtonLabel = lang.get("menuSideUserButtonDelete");
+		deleteProfileButton.setText(deleteProfileButtonLabel);
+
+		String logoutButtonLabel = lang.get("menuSideUserButtonLogout");
+		logoutButton.setText(logoutButtonLabel);
+		
+		newPasswordPanel.refreshLanguage();
+		
+		this.revalidate();
+		this.repaint();
 	}
 	
 }

@@ -24,6 +24,7 @@ import main.gui.panels.util.InvisibleJPanel;
 import main.gui.panels.util.Refreshable;
 import main.gui.panels.util.VisibleJLabel;
 import main.util.FareCalculator;
+import main.util.FareCalculator.FareValidityLength;
 
 public class FareDataPanel extends ProductDataPanel implements Refreshable {
 	private Dimension size = new Dimension(400, 200);
@@ -32,7 +33,7 @@ public class FareDataPanel extends ProductDataPanel implements Refreshable {
 	private int shadowSize = 20;
 	private int cornerRad = 20;
 	
-	public FareDataPanel(String area, LocalDate validityStart, String validityLength, int price) {
+	public FareDataPanel(String area, LocalDate validityStart, FareValidityLength validityLength, int price) {
 		this.setMaximumSize(size);
 		this.setMinimumSize(size);
 		this.setPreferredSize(size);
@@ -116,5 +117,11 @@ public class FareDataPanel extends ProductDataPanel implements Refreshable {
 		g2d.setColor(borderColor);
 		g2d.setStroke(new BasicStroke(2));
 		g2d.drawRoundRect(shadowSize, 0, width, height, cornerRad, cornerRad);
+	}
+
+	@Override
+	public void refreshLanguage() {
+		// TODO Auto-generated method stub
+		
 	}
 }

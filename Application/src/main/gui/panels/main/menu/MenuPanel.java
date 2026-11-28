@@ -5,8 +5,6 @@ import java.util.List;
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 
-import main.gui.Window;
-import main.gui.config.theme.Theme;
 import main.gui.panels.main.menu.config.MenuConfigPanel;
 import main.gui.panels.main.menu.sidepanels.about.AboutSidePanel;
 import main.gui.panels.main.menu.sidepanels.settings.SettingsMenuPanel;
@@ -46,6 +44,11 @@ public class MenuPanel extends InvisibleJPanel implements Refreshable {
 		
 	}
 	
+	public void setEnumValue(MenuSideMenus sideMenu) {
+		configPanel.setEnumValue(sideMenu);
+		updateSideMenu();
+	}
+	
 	private void updateSideMenu() {
 		if (configPanel.getEnumValue().equals(sideMenu)) {
 			return;
@@ -59,5 +62,11 @@ public class MenuPanel extends InvisibleJPanel implements Refreshable {
 	public void refreshColors() {
 		configPanel.refreshColors();
 		sidePanelContainer.refreshColors();
+	}
+
+	@Override
+	public void refreshLanguage() {
+		configPanel.refreshLanguage();
+		sidePanelContainer.refreshLanguage();
 	}
 }

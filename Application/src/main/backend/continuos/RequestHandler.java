@@ -1,5 +1,6 @@
 package main.backend.continuos;
 
+import java.awt.Point;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -10,10 +11,14 @@ import main.backend.continuos.dbm.DataBaseManager;
 import main.backend.continuos.dbm.Database;
 import main.backend.continuos.dbm.Database.KeyExistsException;
 import main.backend.continuos.dbm.Database.KeyNotExistsException;
+import main.backend.maps.model.Coord;
 import main.backend.maps.model.MapModel;
 import main.backend.maps.model.Stop;
 import main.backend.maps.search.RouteCalculator;
 import main.backend.maps.search.SearchRoute;
+import main.backend.maps.view.ViewData;
+import main.comm.asnwer.MapBorderPointsAnswer;
+import main.comm.asnwer.MapStopDataAnswer;
 import main.comm.asnwer.StopNameAnswer;
 import main.comm.asnwer.TicketAddFareAnswer;
 import main.comm.asnwer.TicketAddTicketAnswer;
@@ -27,6 +32,8 @@ import main.comm.asnwer.UserDeleteAnswer;
 import main.comm.asnwer.UserRegistAnswer;
 import main.comm.products.FareData;
 import main.comm.products.TicketData;
+import main.comm.request.MapBorderPointsRequest;
+import main.comm.request.MapStopDataRequest;
 import main.comm.request.StopNameRequest;
 import main.comm.request.TicketAddFareRequest;
 import main.comm.request.TicketAddTicketRequest;
@@ -39,8 +46,37 @@ import main.comm.request.UserDataRequest;
 import main.comm.request.UserDeleteRequest;
 import main.comm.request.UserRegistRequest;
 import main.util.FareCalculator;
+import main.util.FareCalculator.FareValidityLength;
 
 public class RequestHandler {
+	
+	public MapStopDataAnswer handleRequest(MapStopDataRequest request) {
+		MapModel mapModel = ContinousBackend.get_instance().getMapModel();
+		ArrayList<Point> points = new ArrayList<>();
+		ArrayList<String> names = new ArrayList<>();
+		
+		List<Stop> stops = mapModel.getStations();
+		points.ensureCapacity(stops.size());
+		names.ensureCapacity(stops.size());
+		
+		for (Stop stop : stops) {
+			Coord coord = stop.getCoord();
+			points.add(new Point((int)(coord.getLongitude() * 10000), (int)(coord.getLatitude() * 10000)));
+			names.add(stop.getName());
+		}
+		return new MapStopDataAnswer(true, true, points, names);
+	}
+	
+	public MapBorderPointsAnswer handleRequest(MapBorderPointsRequest request) {
+		ViewData viewData = ContinousBackend.get_instance().getViewData();
+		List<List<Point>> points = new ArrayList<>();
+		for (int i = 0; i < viewData.getBorderDatas().size(); i++) {
+			List<Point> borderPoints = viewData.getBorderDatas().get(i).optimizePoints(request.boundingBox);
+			//List<Point> borderPoints = viewData.getBorderDatas().get(i).getPoints();
+			points.add(borderPoints);
+		}  
+		return new MapBorderPointsAnswer(true, true, points);
+	}
 	
 	public StopNameAnswer handleRequest(StopNameRequest request) {
 		MapModel mapModel = ContinousBackend.get_instance().getMapModel();
@@ -134,7 +170,7 @@ public class RequestHandler {
 				
 				LocalDateTime now = LocalDateTime.now();
 				LocalDate validityStart = LocalDate.parse(readRecord.get(2));
-				LocalDate validityEnd = FareCalculator.calculate(validityStart, readRecord.get(3));
+				LocalDate validityEnd = FareCalculator.calculate(validityStart, FareValidityLength.valueOf(readRecord.get(3)));
 				if (validityEnd.isAfter(now.toLocalDate())) {
 					resFares.add(fareData);
 				}
@@ -176,7 +212,7 @@ public class RequestHandler {
 				
 				LocalDateTime now = LocalDateTime.now();
 				LocalDate validityStart = LocalDate.parse(readRecord.get(2));
-				LocalDate validityEnd = FareCalculator.calculate(validityStart, readRecord.get(3));
+				LocalDate validityEnd = FareCalculator.calculate(validityStart, FareValidityLength.valueOf(readRecord.get(3)));
 				if (validityEnd.isBefore(now.toLocalDate())) {
 					resFares.add(fareData);
 				}
@@ -218,20 +254,6 @@ public class RequestHandler {
 	}
 	
 	public UserDeleteAnswer handleRequest(UserDeleteRequest request) {
-		/*DataBaseManager dbm = DataBaseManager.get_instance();
-		Database userIDBase = dbm.getDatabase("UserID");
-		Database userAuthBase = dbm.getDatabase("UserAuth");
-		
-		List<Data> userIDRecord = userIDBase.readRecord(new Data(request.username));
-		if (userIDRecord == null) {
-			return new UserDeleteAnswer(true, false);
-		}
-		
-		int userID = userIDRecord.get(1).getInt();
-		
-		userIDBase.writeRecord(new Data(request.username), List.of(new Data(request.username), new Data(userID), new Data(0)));
-		
-		return new UserDeleteAnswer(true, true);*/
 		
 		DataBaseManager dbm = DataBaseManager.get_instance();
 		Database userBase = dbm.getDatabase("user");
@@ -245,28 +267,6 @@ public class RequestHandler {
 	}
 	
 	public UserChangePasswordAnswer handleRequest(UserChangePasswordRequest request) {
-		/*DataBaseManager dbm = DataBaseManager.get_instance();
-		Database userIDBase = dbm.getDatabase("UserID");
-		Database userAuthBase = dbm.getDatabase("UserAuth");
-		
-		List<Data> userIDRecord = userIDBase.readRecord(new Data(request.username));
-		if (userIDRecord == null || userIDRecord.get(2).getInt() == 0) {
-			return new UserChangePasswordAnswer(true, false);
-		}
-		
-		int userID = userIDRecord.get(1).getInt();
-		
-		List<Data> userAuthRecord = userAuthBase.readRecord(new Data(userID));
-		if (userAuthRecord == null) {
-			return new UserChangePasswordAnswer(true, false);
-		}
-		if (userAuthRecord.get(1).getString().equals(request.password)) {
-			return new UserChangePasswordAnswer(true, false);
-		}
-		
-		userAuthBase.writeRecord(new Data(userID), List.of(new Data(userID), new Data(request.password)));
-		
-		return new UserChangePasswordAnswer(true, true);*/
 		
 		DataBaseManager dbm = DataBaseManager.get_instance();
 		Database userBase = dbm.getDatabase("user");
@@ -291,28 +291,6 @@ public class RequestHandler {
 	}
 	
 	public UserAuthAnswer handleRequest(UserAuthRequest request) {
-		/*DataBaseManager dbm = DataBaseManager.get_instance();
-		Database userIDBase = dbm.getDatabase("UserID");
-		Database userAuthBase = dbm.getDatabase("UserAuth");
-		
-		List<Data> userIDRecord = userIDBase.readRecord(new Data(request.username));
-		if (userIDRecord == null || userIDRecord.get(2).getInt() == 0) {
-			return new UserAuthAnswer(true, false, null);
-		}
-		
-		int userID = userIDRecord.get(1).getInt();
-		
-		List<Data> userAuthRecord = userAuthBase.readRecord(new Data(userID));
-		if (userAuthRecord == null) {
-			return new UserAuthAnswer(true, false, null);
-		}
-		
-		String readPassword = userAuthRecord.get(1).getString();
-		if (!request.password.equals(readPassword)) {
-			return new UserAuthAnswer(true, false, null);
-		}
-		
-		return new UserAuthAnswer(true, true, request.username);*/
 		
 		DataBaseManager dbm = DataBaseManager.get_instance();
 		Database userBase = dbm.getDatabase("user");
@@ -331,30 +309,6 @@ public class RequestHandler {
 	}
 	
 	public UserDataAnswer handleRequest(UserDataRequest request) {
-		/*DataBaseManager dbm = DataBaseManager.get_instance();
-		Database userIDBase = dbm.getDatabase("UserID");
-		Database userDataBase = dbm.getDatabase("UserData");
-		
-		List<Data> userIDRecord = userIDBase.readRecord(new Data(request.username));
-		if (userIDRecord == null || userIDRecord.get(2).getInt() == 0) {
-			return new UserDataAnswer(true, false, null, null, null, null);
-		}
-		
-		int userID = userIDRecord.get(1).getInt();
-		
-		List<Data> userDataRecord = userDataBase.readRecord(new Data(userID));
-		if (userDataRecord == null) {
-			return new UserDataAnswer(true, false, null, null, null, null);
-		}
-		
-		return new UserDataAnswer(
-				true,
-				true,
-				userDataRecord.get(1).toString(),
-				userDataRecord.get(2).toString(),
-				userDataRecord.get(3).toString(),
-				userDataRecord.get(4).toString()
-		);*/
 		
 		DataBaseManager dbm = DataBaseManager.get_instance();
 		Database userBase = dbm.getDatabase("user");
@@ -369,31 +323,6 @@ public class RequestHandler {
 	}
 	
 	public UserRegistAnswer handleRequest(UserRegistRequest request) {
-		/*DataBaseManager dbm = DataBaseManager.get_instance();
-		Database userIDBase = dbm.getDatabase("UserID");
-		Database userDataBase = dbm.getDatabase("UserData");
-		Database userAuthBase = dbm.getDatabase("UserAuth");
-		
-		List<Data> userIDRecord = userIDBase.readRecord(new Data(request.username));
-		if (userIDRecord != null && userIDRecord.get(2).getInt() == 1) {
-			return new UserRegistAnswer(false, true, "");
-		}
-		
-		int userID = userIDBase.getNRecords();
-		userIDBase.writeRecord(new Data(request.username), List.of(new Data(request.username), new Data(userID), new Data(1)));
-		
-		userDataBase.writeRecord(new Data(userID), List.of(
-				new Data(userID),
-				new Data(request.username),
-				new Data(request.dateOfBirth),
-				new Data(request.IDNumber),
-				new Data(request.address)
-		));
-		
-		userAuthBase.writeRecord(new Data(userID), List.of(new Data(userID), new Data(request.password)));
-		
-		return new UserRegistAnswer(true, true, request.username);*/
-		
 		DataBaseManager dbm = DataBaseManager.get_instance();
 		Database userBase = dbm.getDatabase("user");
 		

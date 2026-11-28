@@ -15,7 +15,6 @@ import main.gui.panels.main.tickets.sidepanels.ticket_valid.TicketValidPanel;
 import main.gui.panels.util.InvisibleJPanel;
 import main.gui.panels.util.Refreshable;
 import main.gui.panels.util.SidePanelContainer;
-import main.gui.panels.util.TempMainPanel;
 
 public class TicketsPanel extends InvisibleJPanel implements Refreshable {
 	private TicketsSidePanels sidePanel = TicketsSidePanels.VALID;
@@ -34,7 +33,7 @@ public class TicketsPanel extends InvisibleJPanel implements Refreshable {
 		configPanel = new TicketsConfigPanel(() -> {updateSidePanels();});
 		this.add(configPanel, BorderLayout.WEST);
 		
-		ticketListPanel = new TicketListPanel();
+		ticketListPanel = new TicketListPanel(() -> {changeToSearchPanel();});
 		ticketSearchPanel = new TicketSearchPanel(() -> {changeSearchResultPanel();});
 		ticketValidPanel = new TicketValidPanel();
 		ticketInvalidPanel = new TicketInvalidPanel();
@@ -53,6 +52,9 @@ public class TicketsPanel extends InvisibleJPanel implements Refreshable {
 		sidePanelContainer = new SidePanelContainer<>(sidePanels, sidePanelIDs);
 		sidePanelContainer.switchPanel(sidePanel);
 		this.add(sidePanelContainer);
+		
+		ticketValidPanel.addDataPanels(RequestSender.username);
+		ticketInvalidPanel.addDataPanels(RequestSender.username);
 	}
 	
 	public void updateSidePanels() {
@@ -61,14 +63,18 @@ public class TicketsPanel extends InvisibleJPanel implements Refreshable {
 		}
 		sidePanel = configPanel.getEnumValue();
 		
-		if (sidePanel == TicketsSidePanels.SEARCHRESULT) {
-			ticketListPanel.addDataPanels(null, null, null, -1);
-		} else if (sidePanel == TicketsSidePanels.VALID) {
+		if (sidePanel == TicketsSidePanels.VALID) {
 			ticketValidPanel.addDataPanels(RequestSender.username);
 		} else if (sidePanel == TicketsSidePanels.INVALID) {
 			ticketInvalidPanel.addDataPanels(RequestSender.username);
 		}
 		
+		sidePanelContainer.switchPanel(sidePanel);
+		System.out.println("Tickets panel changed to " + sidePanel.name());
+	}
+	
+	public void changeToSearchPanel() {
+		sidePanel = TicketsSidePanels.PURCHASE;
 		sidePanelContainer.switchPanel(sidePanel);
 		System.out.println("Tickets panel changed to " + sidePanel.name());
 	}
@@ -83,5 +89,11 @@ public class TicketsPanel extends InvisibleJPanel implements Refreshable {
 	public void refreshColors() {
 		configPanel.refreshColors();
 		sidePanelContainer.refreshColors();
+	}
+	
+	@Override
+	public void refreshLanguage() {
+		// TODO Auto-generated method stub
+		
 	}
 }

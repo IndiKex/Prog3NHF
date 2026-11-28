@@ -6,7 +6,6 @@ import java.io.IOException;
 
 import main.gui.Window;
 import main.gui.config.theme.Theme;
-import main.gui.panels.main.menu.sidepanels.settings.SettingsMenu.AbstractMenuItemActionListener;
 import main.gui.panels.util.Refreshable;
 
 public class SettingsThemeMenu extends SettingsMenu implements Refreshable {
@@ -36,4 +35,5 @@ public class SettingsThemeMenu extends SettingsMenu implements Refreshable {
 	public AbstractMenuItemActionListener createActionListener() {
 		return new MenuItemActionListener();
 	}
+
 }

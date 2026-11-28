@@ -51,4 +51,10 @@ public class VisibleJScrollPane extends JScrollPane implements Refreshable {
             }
 		});
 	}
+
+	@Override
+	public void refreshLanguage() {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -1,10 +1,6 @@
 package main.gui.panels.util;
 
-import java.awt.Color;
 import java.awt.Font;
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.GridBagLayout;
 
 import javax.swing.JLabel;

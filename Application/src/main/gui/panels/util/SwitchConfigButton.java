@@ -1,6 +1,5 @@
 package main.gui.panels.util;
 
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -132,6 +131,12 @@ public class SwitchConfigButton extends JButton implements Refreshable {
 			this.setIcon(baseIcon);
 			this.setIconTextGap((int)(baseIcon.getIconWidth() * 0.1));
 		}
+	}
+
+	@Override
+	public void refreshLanguage() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

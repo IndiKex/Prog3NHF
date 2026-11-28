@@ -1,9 +1,12 @@
 package main.gui.panels.util;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -15,26 +18,33 @@ public class ProductListPanel extends VisibleJPanel implements Refreshable {
 	private JPanel dataHolderPanel;
 	private JScrollPane scrollPane;
 	
+	protected VisibleJLabel emptyListText;
+	private JPanel emptyListTextPanel;
+	
 	public ProductListPanel() {
 		initPanels();
 	}
 	
-	public void clearPanel() {
+	protected void clearPanel() {
 		dataHolderPanel.removeAll();
 	}
 	
-	public void addToDataHolderPanel(JPanel panel) {
+	protected void addToDataHolderPanel(JPanel panel) {
 		dataHolderPanel.add(panel);
 	}
 	
-	public void addProductDataPanel(ProductDataPanel dataPanel) {
+	protected void addProductDataPanel(ProductDataPanel dataPanel) {
 		dataHolderPanel.add(dataPanel);
 		dataPanels.add(dataPanel);
 	}
 	
-	public void addProductDataPanel(JPanel holderPanel, ProductDataPanel dataPanel) {
+	protected void addProductDataPanel(JPanel holderPanel, ProductDataPanel dataPanel) {
 		holderPanel.add(dataPanel);
 		dataPanels.add(dataPanel);
+	}
+	
+	protected void addEmptyListText() {
+		dataHolderPanel.add(emptyListTextPanel);
 	}
 	
 	private void initPanels() {
@@ -47,6 +57,14 @@ public class ProductListPanel extends VisibleJPanel implements Refreshable {
 		this.setLayout(new BorderLayout());
 		this.add(scrollPane, BorderLayout.CENTER);
 		
+		
+		emptyListTextPanel = new InvisibleJPanel();
+		emptyListTextPanel.setLayout(new BoxLayout(emptyListTextPanel, BoxLayout.Y_AXIS));
+		emptyListTextPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
+		emptyListText = new VisibleJLabel("");
+		emptyListText.setAlignmentX(Component.CENTER_ALIGNMENT);
+		emptyListTextPanel.add(Box.createRigidArea(new Dimension(0, 30)));
+		emptyListTextPanel.add(emptyListText);
 	}
 	
 	public void refreshColors() {
@@ -55,5 +73,6 @@ public class ProductListPanel extends VisibleJPanel implements Refreshable {
 		for (ProductDataPanel panel : dataPanels) {
 			panel.refreshColors();
 		}
+		emptyListText.refreshColors();
 	}
 }

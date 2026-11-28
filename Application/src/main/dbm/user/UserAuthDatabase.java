@@ -1,11 +1,8 @@
 package main.dbm.user;
 
 import java.io.File;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import main.dbm.Data;
 import main.dbm.Data.DataTypes;
 import main.dbm.Database;
 import main.dbm.EmptyDatabase;

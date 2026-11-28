@@ -7,7 +7,6 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Point;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -160,6 +159,12 @@ public class TicketDataPanel extends ProductDataPanel implements Refreshable {
 		g2d.fillOval(getWidth() - 10 - horizontalOffset - circleRad, circleCenterHeight - circleRad, circleRad*2, circleRad*2);
 		g2d.setStroke(new BasicStroke(3));
 		g2d.drawLine(shadowSize + 10 + horizontalOffset, circleCenterHeight, getWidth() - 10 - horizontalOffset, circleCenterHeight);
+		
+	}
+
+	@Override
+	public void refreshLanguage() {
+		// TODO Auto-generated method stub
 		
 	}
 	

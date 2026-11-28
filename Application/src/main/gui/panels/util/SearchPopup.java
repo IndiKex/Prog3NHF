@@ -1,8 +1,5 @@
 package main.gui.panels.util;
 
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-
 import javax.swing.BorderFactory;
 import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
@@ -31,6 +28,12 @@ public class SearchPopup extends JPopupMenu implements Refreshable {
 	
 	@Override
 	public void refreshColors() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void refreshLanguage() {
 		// TODO Auto-generated method stub
 		
 	}

@@ -118,4 +118,15 @@ public class SwitchConfigPanel<E extends Enum<E>> extends VisibleJPanel {
 		}
 	}
 	
+	public void setButtonTexts(List<String> buttonTexts) {
+		this.buttonTexts = buttonTexts;
+	}
+	
+	@Override
+	public void refreshLanguage() {
+		for (int i = 0; i < buttons.size(); i++) {
+			buttons.get(i).setText(buttonTexts.get(i));
+		}
+	}
+	
 }

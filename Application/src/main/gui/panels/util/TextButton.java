@@ -26,5 +26,11 @@ public class TextButton extends JButton implements Refreshable {
 		Border border = BorderFactory.createLineBorder(theme.secondaryColor, 3);
 		this.setBorder(border);
 	}
+
+	@Override
+	public void refreshLanguage() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

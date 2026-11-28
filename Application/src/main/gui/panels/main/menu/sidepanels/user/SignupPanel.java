@@ -42,32 +42,35 @@ public class SignupPanel extends JPanel {
 		
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		this.setOpaque(false);
-		
-		Dimension textFieldSize = new Dimension(200, 40);
-		
+
 		Language lang = Window.getConfig().language;
+		
+		// Date panel
+		Dimension dateButtonSize = new Dimension(150, 40);
+		
+		JPanel datePanel = new InvisibleJPanel();
+		datePanel.setLayout(new BoxLayout(datePanel, BoxLayout.X_AXIS));
+		datePanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+		
+		dateLabel = new VisibleJLabel(lang.get("menuSideUserSignupTextfieldDate"));
+		
+		dateButton = new DateChoiceButton();
+		dateButton.setMaximumSize(dateButtonSize);
+		
+		datePanel.add(dateLabel);
+		datePanel.add(Box.createRigidArea(new Dimension(10, 0)));
+		datePanel.add(dateButton);
+		
+		// Calculate dimensions
+		Dimension textFieldSize = new Dimension(datePanel.getPreferredSize().width + 10, 40);
+		datePanel.setPreferredSize(textFieldSize);
+		datePanel.setMaximumSize(textFieldSize);
 		
 		usernameField = new TextField(50);
 		setupTextField(usernameField, textFieldSize, lang.get("menuSideUserSignupTextfieldUsername"));
 		
 		passwordField = new TextField(50);
 		setupTextField(passwordField, textFieldSize, lang.get("menuSideUserSignupTextfieldPassword"));
-		
-		
-		// Date panel
-		JPanel datePanel = new InvisibleJPanel();
-		datePanel.setLayout(new BoxLayout(datePanel, BoxLayout.X_AXIS));
-		datePanel.setMaximumSize(textFieldSize);
-		datePanel.setAlignmentX(Component.LEFT_ALIGNMENT);
-		
-		dateLabel = new VisibleJLabel(lang.get("menuSideUserSignupTextfieldDate"));
-		
-		dateButton = new DateChoiceButton();
-		dateButton.setMaximumSize(textFieldSize);
-		
-		datePanel.add(dateLabel);
-		datePanel.add(dateButton);
-
 		
 		IDField = new TextField(50);
 		setupTextField(IDField, textFieldSize, lang.get("menuSideUserSignupTextfieldID"));

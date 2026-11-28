@@ -17,7 +17,7 @@ public class SettingsLanguageMenu extends SettingsMenu implements Refreshable {
 		public void actionPerformed(ActionEvent e) {
 			try {
 				Window.getConfig().language = Language.load(file);
-				//Window.get_instance().refreshLanguage();
+				Window.get_instance().refreshLanguage();
 			} catch (IOException err) {
 				err.printStackTrace();
 			}

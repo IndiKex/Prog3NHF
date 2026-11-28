@@ -41,6 +41,12 @@ public abstract class SettingsMenu extends SideMenu implements Refreshable {
 			this.setBackground(theme.baseColor);
 			this.setForeground(theme.textColor);
 		}
+
+		@Override
+		public void refreshLanguage() {
+			// TODO Auto-generated method stub
+			
+		}
 	}
 	
 	public SettingsMenu(String text) {
@@ -75,10 +81,24 @@ public abstract class SettingsMenu extends SideMenu implements Refreshable {
 		}
 	}
 	
+	public void refreshLanguage() {
+		
+	}
+	
 	private void loadFiles(File folder) {
 		File[] files = folder.listFiles();
 		for (File file : files) {
-			fileMap.put(file.getName(), file);
+			fileMap.put(getFileName(file), file);
 		}
+	}
+	
+	private String getFileName(File file) {
+		String bomboclat = file.getName();
+		String[] bomboclatSplit = bomboclat.split("\\.");
+		String res = "";
+		for (int i = 0; i < bomboclatSplit.length - 1; i++) {
+			res += bomboclatSplit[i];
+		}
+		return res;
 	}
 }

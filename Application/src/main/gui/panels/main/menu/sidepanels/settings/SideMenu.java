@@ -7,7 +7,6 @@ import java.awt.Font;
 import java.awt.Point;
 
 import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.border.Border;

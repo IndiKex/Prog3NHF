@@ -104,4 +104,10 @@ public class TextField extends JTextField implements Refreshable {
 			}
 		});
 	}
+
+	@Override
+	public void refreshLanguage() {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -8,7 +8,6 @@ import java.util.List;
 
 import main.dbm.Data;
 
-
 public class CSVWriter {
 	public static boolean write(File sourceFile, List<String> fieldNames, List<List<Data>> recordList) {
 		try {

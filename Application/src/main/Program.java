@@ -6,31 +6,46 @@ import main.gui.GUI;
 import main.gui.RequestSender;
 import main.gui.Window;
 
+/**
+ * Initializes, runs, and closes the application.
+ */
 public class Program {
 	
 	GUI gui = Window.get_instance();
 	Backend backend = ContinousBackend.get_instance();
 	
+	/**
+	 * Initializes, runs, and closes the application.
+	 * Implements API for the outside.
+	 */
 	public void runProgram() {
 		initialize();
 		run();
 	}
 	
-	void initialize() {
+	/**
+	 * Initializes the application. Starts the backend and gui.
+	 */
+	private void initialize() {
 		System.out.println("Initializing program...");
 
 		backend.init();
-		RequestSender.backend = backend;
-		gui.initialize(() -> {close();});
+		gui.initialize(backend, () -> {close();});
 	}
 	
-	void run() {
+	/**
+	 * Runs the program. Starts the gui.
+	 */
+	private void run() {
 		System.out.println("Running program...");
 		
 		gui.start();
 	}
 	
-	void close() {
+	/**
+	 * Closes the application. Closes gui and backend.
+	 */
+	private void close() {
 		System.out.println("Closing program...");
 		
 		gui.close();

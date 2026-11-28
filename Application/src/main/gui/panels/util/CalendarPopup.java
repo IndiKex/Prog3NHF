@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
+import javax.swing.border.EmptyBorder;
 
 import main.gui.panels.util.CalendarPanel.CalendarDateListener;
 
@@ -28,7 +29,7 @@ public class CalendarPopup extends JPanel {
 		if (popup == null) {
 			popup = new JPopupMenu();
 			popup.setOpaque(false);
-			//popup.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+			popup.setBorder(new EmptyBorder(0, 0, 0, 0));
 			popup.add(calendarPanel);
 		}
 		popup.show(invoker, 0, invoker.getHeight());

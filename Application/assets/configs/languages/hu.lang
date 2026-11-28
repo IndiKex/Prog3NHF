@@ -22,6 +22,8 @@
 	"menuSideUserButtonLogout": "Kijelentkezés"
 	"menuSideUserButtonLogin": "Bejelentkezés"
 	"menuSideUserButtonSignup": "Regisztráció"
+	"menuSideUserNewPasswordWarningSamePassword": "Az új jelszó nem lehet azonos az előzővel"
+	"menuSideUserNewPasswordWarningEmptyField": "A mező üres"
 
 	"menuSideUserTextfieldNewPassword": "Új jelszó"
 
@@ -73,6 +75,14 @@
 	"ticketsSideListPurchaseWarningNotLggedIn": "Jelentkezz be a vásárláshoz!"
 	"ticketsSideFareDataCountyFareLabel": "Megye bérlet"
 	"ticketsSideFareDataValidityEndLabel": "Érvényesség lejárta"
+	"ticketsSideSearchResultEmptyList": "Nincs járat a két állomás között a következő 2 napban."
+	"ticketsSideValidEmptyList": "A felhasználónak nincs érvényes jegye."
+	"ticketsSideInvalidEmptyList": "A felhasználónak nincs érvénytelen jegye."
+	"ticketsSidePurchaseSuccessful": "Vásárlás sikeres"
+
+	"TWOWEEKS": "2 hét"
+	"ONEMONTH": "1 hónap"
+	"ONEYEAR": "1 év"
 
 	"MONDAY": "Hé"
 	"TUESDAY": "Ke"

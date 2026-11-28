@@ -3,7 +3,6 @@ package main.gui.panels.util;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.RenderingHints;
 
 import javax.swing.JPanel;
 
@@ -36,6 +35,12 @@ public class VisibleJPanel extends JPanel implements Refreshable {
 		g2d.setPaint(gp);
 		g2d.fillRoundRect(0, 0, getWidth(), getHeight(), arcSize, arcSize);
 		g2d.fillRect(0, 0, arcSize, getHeight());
+		
+	}
+
+	@Override
+	public void refreshLanguage() {
+		// TODO Auto-generated method stub
 		
 	}
 }

@@ -7,9 +7,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import main.dbm.Data;
-
+/**
+ * Static class for parsing CSV documents.
+ */
 public class CSVParser {
+	/**
+	 * Parses a CSV document from start to finish. The user can decide what to do with the parsed lines with the container parameter.
+	 * @param sourceFile
+	 * @param tableContainer this object determines what to do with the parsed lines
+	 */
 	public static void parse(File sourceFile, Container tableContainer) {
 		try {
 			FileReader fr = new FileReader(sourceFile);
@@ -32,6 +38,12 @@ public class CSVParser {
 		}
 	}
 	
+	/**
+	 * Parses a single line.
+	 * @param sourceFile
+	 * @param lineID the index of the line to be parsed, the 0th line is the field definition line
+	 * @return a list of strings of the parsed data
+	 */
 	public static List<String> parseLine(File sourceFile, int lineID) {
 		try {
 			ArrayList<String> dataRow = new ArrayList<>();
@@ -70,6 +82,11 @@ public class CSVParser {
 		return new ArrayList<>();
 	}
 	
+	/**
+	 * Parses the field names of the csv document
+	 * @param sourceFile
+	 * @return list of the field names
+	 */
 	public static List<String> getFieldNames(File sourceFile) {
 		List<String> res = new ArrayList<>();
 		try {
@@ -90,6 +107,11 @@ public class CSVParser {
 		return res;
 	}
 	
+	/**
+	 * Parses the field definition line and adds it to the container to deal with them as it likes.
+	 * @param fieldLine
+	 * @param tableContainer object that determines what to do with the field names
+	 */
 	private static void parseFieldLine(String fieldLine, Container tableContainer) {
 		String[] lineSplit = fieldLine.split(",");
 		ArrayList<String> lineSplitList = new ArrayList<>();
@@ -99,6 +121,13 @@ public class CSVParser {
 		tableContainer.addFields(lineSplitList);
 	}
 	
+	/**
+	 * Parses a data line of the csv document and gives it to the container
+	 * @param dataLine
+	 * @param lineIdx index of the line to be read, 0th is the field definition line
+	 * @param rowLength ammount of data in the line
+	 * @param tableContainer object that determines what to do with the datas in the line
+	 */
 	private static void parseDataLine(String dataLine, int lineIdx, int rowLength, Container tableContainer) {
 		ArrayList<String> dataRow = new ArrayList<>();
 		dataRow.ensureCapacity(rowLength);

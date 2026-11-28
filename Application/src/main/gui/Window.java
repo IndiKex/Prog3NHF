@@ -11,17 +11,22 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
+import main.backend.Backend;
 import main.gui.config.Config;
 import main.gui.enums.MainPanels;
 import main.gui.panels.main.MainPanelContainer;
+import main.gui.panels.main.menu.MenuSideMenus;
 import main.gui.panels.sidebar.SideBarPanel;
+import main.gui.panels.util.InvisibleJPanel;
 
 public class Window implements GUI {
 	private static Window _instance;
 	
-	private MainPanels currentMainPanelID = MainPanels.TICKET;
+	private MainPanels currentMainPanelID = MainPanels.MAP;
 	private SideBarPanel sideBarPanel;
+	private JPanel mainPanelContainerHolder;
 	private MainPanelContainer mainPanelContainer;
 	
 	private static Config config;
@@ -39,13 +44,21 @@ public class Window implements GUI {
 		mainPanelContainer.refreshColors();
 	}
 	
+	public void refreshLanguage() {
+		mainPanelContainerHolder.removeAll();
+		this.initializeMainPanels();
+		mainPanelContainer.setMenuPanelEnumValue(MenuSideMenus.SETTINGS);
+		mainPanelContainerHolder.revalidate();
+		mainPanelContainerHolder.repaint();
+	}
+	
 	public static Window get_instance() {
 		if (_instance == null)
 			_instance = new Window();
 		return _instance;
 	}
 	
-	public void initialize(Runnable onExitFunction) {
+	public void initialize(Backend backend, Runnable onExitFunction) {
 		try {
 			if (Config.configFile.exists()) {
 				ObjectInputStream in = new ObjectInputStream(new FileInputStream(Config.configFile));
@@ -60,6 +73,7 @@ public class Window implements GUI {
 			e.printStackTrace();
 		}
 		
+		RequestSender.backend = backend;
 		mainFrame = new JFrame("MAVEnd");
 		mainFrame.setSize(new Dimension(1280, 720));
 		mainFrame.setResizable(false);
@@ -99,7 +113,11 @@ public class Window implements GUI {
 	
 	private void initializePanels() {
 		initializeSideBarPanel();
+		
+		mainPanelContainerHolder = new InvisibleJPanel();
+		mainPanelContainerHolder.setLayout(new BorderLayout());
 		initializeMainPanels();
+		mainFrame.add(mainPanelContainerHolder, BorderLayout.CENTER);
 	}
 	
 	private void initializeSideBarPanel() {
@@ -112,7 +130,7 @@ public class Window implements GUI {
 	private void initializeMainPanels() {
 		mainPanelContainer = new MainPanelContainer();
 		mainPanelContainer.switchPanel(currentMainPanelID);
-		mainFrame.add(mainPanelContainer);
+		mainPanelContainerHolder.add(mainPanelContainer);
 	}
 	
 	public void updateMainPanels() {

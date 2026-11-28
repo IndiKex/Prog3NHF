@@ -2,7 +2,6 @@ package main.backend.maps.model;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class Service {
 	private boolean monday;

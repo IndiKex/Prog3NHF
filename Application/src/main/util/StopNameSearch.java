@@ -1,16 +1,16 @@
 package main.util;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class StopNameSearch {
-	/*
-	 * Returns: a score from 0-100
+	/**
+	 * Calculates the number of matching letters the comparing string can take away from the base string.
+	 * @param base the base String of the operation
+	 * @param compare the String that gets compared to the base
+	 * @return number of letters the comparing string can take away from the base string
 	 */
 	private static int countMatchingLetters(String base, String compare) {
 		Map<Character, Integer> letterFrequency = new HashMap<>();
@@ -35,6 +35,12 @@ public class StopNameSearch {
 		return matching;
 	}
 	
+	/**
+	 * Returns a sorted copy of the given list based on how close is the given String to each element with a non disclosed algorithm.
+	 * @param currentName the name we want to sort by - search by
+	 * @param stopNames the list of elements we want to sort
+	 * @return sorted copy of the given list
+	 */
 	public static List<String> search(String currentName, List<String> stopNames) {
 		List<String> copy = new ArrayList<>();
 		copy.addAll(stopNames);

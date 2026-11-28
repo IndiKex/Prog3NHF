@@ -32,6 +32,7 @@ public class Theme implements Serializable {
 	public Color calendarGreyedColor = textColor.darker();
 	public Color calendarNowColor = secondaryColor;
 	
+	
 	private void updateDerivedColors() {
 		gradientSecondColor = baseColor.darker();
 		

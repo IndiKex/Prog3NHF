@@ -31,4 +31,15 @@ public class TicketsConfigPanel extends SwitchConfigPanel<TicketsSidePanels> {
 		
 		super(TicketsSidePanels.VALID, onChooseFunction, buttonTexts, iconFiles, buttonEnumValues);
 	}
+	
+	@Override
+	public void refreshLanguage() {
+		Language lang = Window.getConfig().language;
+		this.setButtonTexts(List.of(
+				lang.get("ticketsConfigButtonValid"),
+				lang.get("ticketsConfigButtonInvalid"),
+				lang.get("ticketsConfigButtonPurchase")
+		));
+		super.refreshLanguage();
+	}
 }

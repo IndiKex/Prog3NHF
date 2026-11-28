@@ -1,7 +1,9 @@
 package main.gui;
 
+import main.backend.Backend;
+
 public interface GUI {
-	public void initialize(Runnable onExitFunction);
+	public void initialize(Backend backend, Runnable onExitFunction);
 	public void start();
 	public void close();
 }
